@@ -1572,7 +1572,7 @@
             c.classList.remove('hidden');
             document.getElementById('cartItemsList').innerHTML = cart.map(i => `
                 <div class="bg-white rounded-3xl shadow-sm p-6 flex flex-col sm:flex-row items-center gap-6">
-                    <img src="${i.image_url||'https://via.placeholder.com/120'}" alt="${i.name}" class="w-28 h-28 object-cover rounded-2xl shadow-md" onerror="this.src='https://via.placeholder.com/120'">
+                    <img src="${i.image_url||'https://via.placeholder.com/120'}" alt="${i.name}" class="w-28 h-28 object-cover rounded-2xl shadow-md" onerror="this.onerror=null;this.src='https://placehold.co/120x120'">
                     <div class="flex-1"><h4 class="font-bold font-khmer text-lg">${i.name}</h4><p class="text-dark font-bold text-2xl mt-2">${formatCurrency(i.price)}</p></div>
                     <div class="flex items-center space-x-4">
                         <button onclick="updateCartQty('${i.id}',${i.quantity-1})" class="w-10 h-10 rounded-xl border-2 border-gray-200 flex items-center justify-center font-bold hover:bg-dark hover:text-white hover:border-dark transition-all">-</button>
@@ -1616,7 +1616,7 @@
             return `
                 <div class="product-card" data-aos="fade-up">
                     <div class="product-image-wrapper cursor-pointer" onclick="navigateTo('product-detail','${p.id}')">
-                        <img src="${p.image_url||'https://via.placeholder.com/400x500'}" alt="${p.name}" class="product-image" loading="lazy" onerror="this.src='https://via.placeholder.com/400x500'">
+                        <img src="${p.image_url||'https://via.placeholder.com/400x500'}" alt="${p.name}" class="product-image" loading="lazy"onerror="this.onerror=null;this.src='https://placehold.co/400x500'">
                         <div class="absolute top-4 left-4 flex flex-col gap-2"><span class="badge-premium">ថ្មី</span><span class="badge-hot">ពេញនិយម</span></div>
                         <button class="wishlist-btn" onclick="event.stopPropagation(); this.classList.toggle('active');"><i class="far fa-heart"></i></button>
                         <div class="quick-view-overlay">
