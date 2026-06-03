@@ -1,0 +1,1919 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ខ្មែរសប - គេហទំព័រលក់ទំនិញអនឡាញលេខ១ នៅកម្ពុជា ផ្តល់ជូននូវផលិតផលមានគុណភាព តម្លៃសមរម្យ ដឹកជញ្ជូនទូទាំងប្រទេស">
+    <title>ខ្មែរសប | KhmerShop - ទិញទំនិញអនឡាញនៅកម្ពុជា</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a1a2e',
+                        'primary-light': '#16213e',
+                        secondary: '#e94560',
+                        'secondary-light': '#ff6b81',
+                        accent: '#0f3460',
+                        'accent-light': '#1a508b',
+                        gold: '#f5c518',
+                        'gold-light': '#ffd700',
+                        cream: '#faf3e0',
+                        dark: '#0d1117',
+                        'dark-light': '#161b22',
+                        success: '#00c853',
+                        danger: '#ff1744',
+                        info: '#2979ff'
+                    },
+                    fontFamily: {
+                        khmer: ['Battambang', 'Kantumruy Pro', 'sans-serif'],
+                        heading: ['Battambang', 'sans-serif'],
+                        body: ['Inter', 'system-ui', 'sans-serif'],
+                        display: ['Poppins', 'sans-serif']
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'float-delay': 'float 6s ease-in-out 2s infinite',
+                        'float-slow': 'float 8s ease-in-out 4s infinite',
+                        'pulse-soft': 'pulseSoft 2s ease-in-out infinite',
+                        'pulse-glow': 'pulseGlow 2s ease-in-out infinite',
+                        'slide-up': 'slideUp 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
+                        'slide-down': 'slideDown 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+                        'fade-in': 'fadeIn 0.6s ease-out',
+                        'fade-in-up': 'fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1)',
+                        'bounce-gentle': 'bounceGentle 2s infinite',
+                        'shine': 'shine 3s infinite',
+                        'rotate-slow': 'rotateSlow 20s linear infinite',
+                        'scale-in': 'scaleIn 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+                        'ripple': 'ripple 1.5s infinite',
+                        'sparkle': 'sparkle 1.5s infinite'
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': {
+                                transform: 'translateY(0px) rotate(0deg)'
+                            },
+                            '50%': {
+                                transform: 'translateY(-30px) rotate(5deg)'
+                            }
+                        },
+                        pulseSoft: {
+                            '0%, 100%': {
+                                transform: 'scale(1)'
+                            },
+                            '50%': {
+                                transform: 'scale(1.05)'
+                            }
+                        },
+                        pulseGlow: {
+                            '0%, 100%': {
+                                boxShadow: '0 0 20px rgba(233, 69, 96, 0.4)'
+                            },
+                            '50%': {
+                                boxShadow: '0 0 40px rgba(233, 69, 96, 0.8), 0 0 60px rgba(233, 69, 96, 0.4)'
+                            }
+                        },
+                        slideUp: {
+                            '0%': {
+                                transform: 'translateY(40px)',
+                                opacity: '0'
+                            },
+                            '100%': {
+                                transform: 'translateY(0)',
+                                opacity: '1'
+                            }
+                        },
+                        slideDown: {
+                            '0%': {
+                                transform: 'translateY(-20px)',
+                                opacity: '0'
+                            },
+                            '100%': {
+                                transform: 'translateY(0)',
+                                opacity: '1'
+                            }
+                        },
+                        fadeIn: {
+                            '0%': {
+                                opacity: '0'
+                            },
+                            '100%': {
+                                opacity: '1'
+                            }
+                        },
+                        fadeInUp: {
+                            '0%': {
+                                transform: 'translateY(30px)',
+                                opacity: '0'
+                            },
+                            '100%': {
+                                transform: 'translateY(0)',
+                                opacity: '1'
+                            }
+                        },
+                        bounceGentle: {
+                            '0%, 100%': {
+                                transform: 'translateY(0)'
+                            },
+                            '50%': {
+                                transform: 'translateY(-8px)'
+                            }
+                        },
+                        shine: {
+                            '0%': {
+                                backgroundPosition: '-200% center'
+                            },
+                            '100%': {
+                                backgroundPosition: '200% center'
+                            }
+                        },
+                        rotateSlow: {
+                            '0%': {
+                                transform: 'rotate(0deg)'
+                            },
+                            '100%': {
+                                transform: 'rotate(360deg)'
+                            }
+                        },
+                        scaleIn: {
+                            '0%': {
+                                transform: 'scale(0.8)',
+                                opacity: '0'
+                            },
+                            '100%': {
+                                transform: 'scale(1)',
+                                opacity: '1'
+                            }
+                        },
+                        ripple: {
+                            '0%': {
+                                transform: 'scale(0)',
+                                opacity: '1'
+                            },
+                            '100%': {
+                                transform: 'scale(4)',
+                                opacity: '0'
+                            }
+                        },
+                        sparkle: {
+                            '0%, 100%': {
+                                opacity: '0',
+                                transform: 'scale(0)'
+                            },
+                            '50%': {
+                                opacity: '1',
+                                transform: 'scale(1)'
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Battambang:wght@300;400;700;900&family=Inter:wght@300;400;500;600;700;800;900&family=Kantumruy+Pro:wght@300;400;700&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #1a1a2e;
+            --primary-light: #16213e;
+            --secondary: #e94560;
+            --accent: #0f3460;
+            --gold: #f5c518;
+            --dark: #0d1117;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            font-family: 'Inter', 'Battambang', 'Kantumruy Pro', sans-serif;
+            background-color: #fafafa;
+            color: #1a1a2e;
+            line-height: 1.7;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, var(--secondary), #ff6b81);
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--gold);
+        }
+
+        ::selection {
+            background: var(--secondary);
+            color: white;
+        }
+
+        .page {
+            display: none;
+            animation: fadeSlideIn 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .page.active {
+            display: block;
+        }
+        @keyframes fadeSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+        }
+        .glass-dark {
+            background: rgba(13, 17, 23, 0.85);
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, var(--secondary), #ff6b81, var(--gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 900;
+        }
+        .gradient-text-gold {
+            background: linear-gradient(135deg, var(--gold), #ffe082, var(--gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .glow {
+            box-shadow: 0 0 30px rgba(233, 69, 96, 0.3), 0 0 60px rgba(233, 69, 96, 0.1);
+            transition: all 0.4s ease;
+        }
+        .glow:hover {
+            box-shadow: 0 0 50px rgba(233, 69, 96, 0.5), 0 0 100px rgba(233, 69, 96, 0.2);
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+            display: flex;
+            flex-direction: column;
+        }
+        .product-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 24px 48px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card .product-image-wrapper {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 4 / 5;
+            overflow: hidden;
+            background: #f5f5f5;
+            flex-shrink: 0;
+        }
+        @media (max-width: 640px) {
+            .product-card .product-image-wrapper {
+                aspect-ratio: 3 / 4;
+            }
+        }
+
+        .product-card .product-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .product-card:hover .product-image {
+            transform: scale(1.12);
+        }
+
+        .wishlist-btn {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            z-index: 10;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .wishlist-btn:hover {
+            transform: scale(1.15);
+            box-shadow: 0 6px 20px rgba(233, 69, 96, 0.3);
+        }
+
+        .quick-view-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        .product-card:hover .quick-view-overlay {
+            opacity: 1;
+        }
+
+        .badge-premium {
+            background: linear-gradient(135deg, #1a1a2e, #0f3460);
+            color: var(--gold);
+            font-size: 0.7rem;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border: 1px solid rgba(245, 197, 24, 0.3);
+        }
+        .badge-hot {
+            background: linear-gradient(135deg, #e94560, #ff6b81);
+            color: white;
+            font-size: 0.7rem;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-weight: 700;
+            animation: pulseSoft 2s infinite;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: white;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 24px rgba(26, 26, 46, 0.3);
+            letter-spacing: 0.5px;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(26, 26, 46, 0.4);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, #e94560, #ff6b81);
+            color: white;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 24px rgba(233, 69, 96, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-secondary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(233, 69, 96, 0.5);
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, #f5c518, #ffd700);
+            color: #1a1a2e;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 700;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 24px rgba(245, 197, 24, 0.3);
+        }
+        .btn-gold:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(245, 197, 24, 0.5);
+        }
+
+        .toast-container {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .toast {
+            padding: 18px 28px;
+            border-radius: 20px;
+            color: white;
+            font-weight: 600;
+            animation: slideInRight 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            min-width: 320px;
+            backdrop-filter: blur(20px);
+        }
+        .toast-success {
+            background: linear-gradient(135deg, #00c853, #00e676);
+        }
+        .toast-error {
+            background: linear-gradient(135deg, #ff1744, #ff5252);
+        }
+        .toast-info {
+            background: linear-gradient(135deg, #2979ff, #448aff);
+        }
+        @keyframes slideInRight {
+            from {
+                transform: translateX(120%) scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0) scale(1);
+                opacity: 1;
+            }
+        }
+
+        .hero-blob {
+            position: absolute;
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+            animation: blobMorph 8s ease-in-out infinite;
+        }
+        @keyframes blobMorph {
+            0%,
+            100% {
+                border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+            }
+            50% {
+                border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+            }
+        }
+
+        .mobile-menu-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 100;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
+            backdrop-filter: blur(4px);
+        }
+        .mobile-menu-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 85%;
+            max-width: 400px;
+            height: 100%;
+            background: white;
+            z-index: 101;
+            transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 0 80px rgba(0, 0, 0, 0.3);
+            border-radius: 0 30px 30px 0;
+        }
+        .mobile-menu.active {
+            left: 0;
+        }
+
+        .sparkle-dot {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: var(--gold);
+            border-radius: 50%;
+            animation: sparkle 2s infinite;
+            box-shadow: 0 0 8px var(--gold);
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="sparkle-dot" style="top:10%;left:5%;animation-delay:0s;"></div>
+    <div class="sparkle-dot" style="top:20%;right:10%;animation-delay:0.5s;"></div>
+    <div class="sparkle-dot" style="bottom:30%;left:15%;animation-delay:1s;"></div>
+    <div class="sparkle-dot" style="top:50%;right:5%;animation-delay:1.5s;"></div>
+    <div class="sparkle-dot" style="bottom:10%;right:20%;animation-delay:2s;"></div>
+
+    <div class="toast-container" id="toastContainer"></div>
+
+    <header id="mainHeader" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+        <div class="bg-dark text-white/80 py-2 hidden md:block">
+            <div class="container mx-auto px-6 flex justify-between items-center text-xs tracking-wider">
+                <div class="flex items-center space-x-8">
+                    <span class="flex items-center"><i class="fas fa-phone-alt mr-2 text-gold text-xs"></i> 012 345 678</span>
+                    <span class="flex items-center"><i class="fas fa-envelope mr-2 text-gold text-xs"></i> info@khmershop.com</span>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <span class="font-khmer">🚚 ដឹកជញ្ជូនឥតគិតថ្លៃ សម្រាប់ការបញ្ជាទិញលើសពី 50$</span>
+                    <span class="text-gold">|</span>
+                    <span class="font-khmer">📞 ជំនួយ 24/7</span>
+                </div>
+            </div>
+        </div>
+
+        <nav class="glass border-b border-white/10 transition-all duration-500" id="mainNav">
+            <div class="container mx-auto px-6 py-4">
+                <div class="flex justify-between items-center">
+                    <div onclick="navigateTo('home')" class="flex items-center space-x-3 cursor-pointer group">
+                        <div class="relative">
+                            <div
+                                class="w-12 h-12 bg-gradient-to-br from-secondary to-secondary-light rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
+                                <i class="fas fa-shopping-bag text-xl text-white"></i>
+                            </div>
+                            <span class="absolute -top-1 -right-1 w-3 h-3 bg-gold rounded-full animate-pulse-soft"></span>
+                        </div>
+                        <div>
+                            <h1 class="text-xl font-bold text-dark font-khmer tracking-wide">ខ្មែរសប</h1>
+                            <p class="text-[10px] text-gray-500 font-semibold tracking-[0.2em] uppercase">KhmerShop</p>
+                        </div>
+                    </div>
+
+                    <div class="hidden lg:flex items-center space-x-1">
+                        <button onclick="navigateTo('home')"
+                            class="nav-link px-5 py-2.5 rounded-full font-khmer font-semibold text-sm text-gray-700 hover:bg-secondary/10 hover:text-secondary transition-all duration-300">ទំព័រដើម</button>
+                        <button onclick="navigateTo('products')"
+                            class="nav-link px-5 py-2.5 rounded-full font-khmer font-semibold text-sm text-gray-700 hover:bg-secondary/10 hover:text-secondary transition-all duration-300">ផលិតផល</button>
+                        <button onclick="navigateTo('about')"
+                            class="nav-link px-5 py-2.5 rounded-full font-khmer font-semibold text-sm text-gray-700 hover:bg-secondary/10 hover:text-secondary transition-all duration-300">អំពីយើង</button>
+                        <button onclick="navigateTo('contact')"
+                            class="nav-link px-5 py-2.5 rounded-full font-khmer font-semibold text-sm text-gray-700 hover:bg-secondary/10 hover:text-secondary transition-all duration-300">ទំនាក់ទំនង</button>
+                    </div>
+
+                    <div class="hidden md:flex flex-1 max-w-lg mx-8">
+                        <div class="relative w-full group">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-r from-secondary to-gold rounded-full blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-300">
+                            </div>
+                            <input type="text" id="mainSearch" placeholder="ស្វែងរកផលិតផល..."
+                                class="relative w-full pl-12 pr-4 py-3 bg-white border-2 border-gray-100 rounded-full focus:outline-none focus:border-secondary/50 transition-all font-khmer text-sm shadow-sm">
+                            <i
+                                class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-hover:text-secondary transition-colors"></i>
+                            <button onclick="searchProducts()"
+                                class="absolute right-1.5 top-1/2 -translate-y-1/2 bg-gradient-to-r from-secondary to-secondary-light text-white px-5 py-2 rounded-full hover:shadow-lg transition-all font-khmer text-xs font-bold">
+                                ស្វែងរក
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center space-x-2">
+                        <button onclick="navigateTo('cart')"
+                            class="relative p-2.5 hover:bg-gray-100 rounded-full transition-all group">
+                            <i
+                                class="fas fa-shopping-bag text-lg text-gray-700 group-hover:text-secondary transition-colors"></i>
+                            <span id="cartCountBadge"
+                                class="absolute -top-0.5 -right-0.5 bg-gradient-to-r from-secondary to-secondary-light text-white text-[10px] w-5 h-5 rounded-full flex items-center justify-center font-bold shadow-lg animate-bounce-gentle">0</span>
+                        </button>
+                        <button onclick="navigateTo('admin-login')"
+                            class="hidden md:flex items-center space-x-2 px-5 py-2.5 bg-dark text-white rounded-full hover:bg-dark-light transition-all font-khmer text-xs font-semibold shadow-md">
+                            <i class="fas fa-user-shield text-gold"></i><span>Admin</span>
+                        </button>
+                        <button id="mobileMenuBtn"
+                            class="lg:hidden p-2.5 hover:bg-gray-100 rounded-full transition-all">
+                            <i class="fas fa-bars text-xl text-gray-700"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="p-8">
+            <div class="flex justify-between items-center mb-10">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-shopping-bag text-2xl text-secondary"></i>
+                    <h2 class="text-xl font-bold text-dark font-khmer">ខ្មែរសប</h2>
+                </div>
+                <button onclick="closeMobileMenu()"
+                    class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition-all">
+                    <i class="fas fa-times text-lg"></i>
+                </button>
+            </div>
+            <div class="space-y-1">
+                <button onclick="navigateTo('home'); closeMobileMenu();"
+                    class="w-full text-left px-5 py-4 rounded-2xl hover:bg-secondary/5 font-khmer font-semibold flex items-center space-x-4 transition-all">
+                    <span class="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center"><i
+                            class="fas fa-home text-secondary"></i></span><span>ទំព័រដើម</span>
+                </button>
+                <button onclick="navigateTo('products'); closeMobileMenu();"
+                    class="w-full text-left px-5 py-4 rounded-2xl hover:bg-secondary/5 font-khmer font-semibold flex items-center space-x-4 transition-all">
+                    <span class="w-10 h-10 rounded-xl bg-green-50 flex items-center justify-center"><i
+                            class="fas fa-th-large text-accent"></i></span><span>ផលិតផល</span>
+                </button>
+                <button onclick="navigateTo('cart'); closeMobileMenu();"
+                    class="w-full text-left px-5 py-4 rounded-2xl hover:bg-secondary/5 font-khmer font-semibold flex items-center space-x-4 transition-all">
+                    <span class="w-10 h-10 rounded-xl bg-orange-50 flex items-center justify-center"><i
+                            class="fas fa-shopping-bag text-orange-500"></i></span><span>កន្ត្រកទំនិញ</span>
+                </button>
+                <button onclick="navigateTo('checkout'); closeMobileMenu();"
+                    class="w-full text-left px-5 py-4 rounded-2xl hover:bg-secondary/5 font-khmer font-semibold flex items-center space-x-4 transition-all">
+                    <span class="w-10 h-10 rounded-xl bg-purple-50 flex items-center justify-center"><i
+                            class="fas fa-credit-card text-purple-500"></i></span><span>ការទូទាត់</span>
+                </button>
+                <hr class="my-6 border-gray-100">
+                <button onclick="navigateTo('admin-login'); closeMobileMenu();"
+                    class="w-full text-left px-5 py-4 rounded-2xl bg-dark text-white font-khmer font-semibold flex items-center space-x-4 transition-all hover:bg-dark-light">
+                    <span class="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center"><i
+                            class="fas fa-user-shield text-gold"></i></span><span>Admin Panel</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <main id="mainContent" class="min-h-screen pt-20">
+
+        <div id="page-home" class="page active">
+            <section
+                class="relative min-h-[90vh] flex items-center bg-gradient-to-br from-dark via-primary to-accent overflow-hidden">
+                <div class="hero-blob absolute -top-40 -right-40 w-[600px] h-[600px] bg-secondary/20 blur-3xl"></div>
+                <div class="hero-blob absolute -bottom-40 -left-40 w-[500px] h-[500px] bg-accent/30 blur-3xl"
+                    style="animation-delay: 4s;"></div>
+                <div class="hero-blob absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-gold/10 blur-3xl"
+                    style="animation-delay: 2s;"></div>
+                <div class="absolute inset-0 opacity-[0.03]"
+                    style="background-image: radial-gradient(circle, #fff 1px, transparent 1px); background-size: 40px 40px;">
+                </div>
+                <div class="container mx-auto px-6 relative z-10 py-20">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        <div class="space-y-8" data-aos="fade-right" data-aos-duration="1200">
+                            <div
+                                class="inline-flex items-center bg-white/10 backdrop-blur-xl rounded-full px-5 py-2.5 border border-white/20">
+                                <span
+                                    class="w-2.5 h-2.5 bg-green-400 rounded-full mr-3 animate-pulse shadow-lg shadow-green-400/50"></span>
+                                <span class="text-white/90 text-sm font-khmer tracking-wide">🔥 បញ្ចុះតម្លៃពិសេសរហូតដល់
+                                    50%</span>
+                            </div>
+                            <h1
+                                class="text-5xl md:text-7xl lg:text-8xl font-display font-black leading-[1.05] text-white">
+                                ទិញទំនិញ<br>
+                                <span class="gradient-text">មានគុណភាព</span><br>
+                                <span class="text-white/80">តម្លៃសមរម្យ</span>
+                            </h1>
+                            <p class="text-lg md:text-xl text-white/60 font-khmer leading-relaxed max-w-lg">
+                                ស្វែងរកផលិតផលរាប់ពាន់មុខ ពីម៉ាកល្បីៗ
+                                ជាមួយការដឹកជញ្ជូនលឿនបំផុតទូទាំងប្រទេសកម្ពុជា
+                            </p>
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <button onclick="navigateTo('products')"
+                                    class="btn-secondary text-lg px-10 py-4 font-khmer font-bold ripple-container">
+                                    <i class="fas fa-shopping-bag mr-2"></i> ទិញឥឡូវនេះ
+                                </button>
+                                <button onclick="navigateTo('about')"
+                                    class="border-2 border-white/30 text-white px-10 py-4 rounded-full font-khmer font-bold hover:bg-white/10 hover:border-white/50 transition-all duration-300">
+                                    <i class="fas fa-play-circle mr-2"></i> ស្វែងយល់បន្ថែម
+                                </button>
+                            </div>
+                            <div class="flex items-center space-x-8 pt-6">
+                                <div class="flex items-center space-x-2 text-white/70">
+                                    <i class="fas fa-shield-halved text-xl text-gold"></i>
+                                    <span class="text-sm font-khmer">សុវត្ថិភាព 100%</span>
+                                </div>
+                                <div class="flex items-center space-x-2 text-white/70">
+                                    <i class="fas fa-truck-fast text-xl text-accent"></i>
+                                    <span class="text-sm font-khmer">ដឹកជញ្ជូនលឿន</span>
+                                </div>
+                                <div class="flex items-center space-x-2 text-white/70">
+                                    <i class="fas fa-undo text-xl text-blue-400"></i>
+                                    <span class="text-sm font-khmer">សងប្រាក់វិញ</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hidden lg:flex justify-center relative" data-aos="fade-left" data-aos-duration="1200">
+                            <div class="relative animate-float">
+                                <div class="w-80 h-80 bg-white/5 rounded-full absolute -top-10 -left-10 blur-3xl"></div>
+                                <div
+                                    class="relative bg-white/10 backdrop-blur-xl rounded-[40px] p-8 border border-white/20 shadow-2xl">
+                                    <div
+                                        class="bg-gradient-to-br from-dark-light to-dark rounded-[30px] p-10 text-center relative overflow-hidden">
+                                        <div class="absolute top-4 right-4 flex space-x-2">
+                                            <span class="w-3 h-3 rounded-full bg-secondary"></span>
+                                            <span class="w-3 h-3 rounded-full bg-gold"></span>
+                                            <span class="w-3 h-3 rounded-full bg-accent"></span>
+                                        </div>
+                                        <i class="fas fa-shopping-bag text-8xl text-white/20"></i>
+                                        <p class="text-white font-khmer font-bold text-2xl mt-6">ផលិតផលថ្មីៗ</p>
+                                        <p class="text-white/50 font-khmer mt-2">រាប់ពាន់មុខ</p>
+                                        <div class="mt-6 flex justify-center space-x-2">
+                                            <span class="w-2 h-2 bg-gold rounded-full animate-pulse"></span>
+                                            <span class="w-2 h-2 bg-gold rounded-full animate-pulse"
+                                                style="animation-delay:0.3s;"></span>
+                                            <span class="w-2 h-2 bg-gold rounded-full animate-pulse"
+                                                style="animation-delay:0.6s;"></span>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="absolute -top-6 -right-6 bg-gradient-to-br from-secondary to-secondary-light text-white rounded-2xl px-5 py-3 font-bold shadow-2xl animate-pulse-glow text-sm">
+                                        🎉 -30%
+                                    </div>
+                                    <div
+                                        class="absolute -bottom-4 -left-4 bg-gradient-to-br from-gold to-gold-light text-dark rounded-2xl px-5 py-3 font-bold shadow-2xl animate-bounce-gentle text-sm">
+                                        ⚡ បញ្ចុះតម្លៃ
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center animate-bounce-gentle">
+                    <span class="text-white/40 text-xs font-khmer mb-2">រមូរចុះក្រោម</span>
+                    <i class="fas fa-chevron-down text-white/40"></i>
+                </div>
+            </section>
+
+            <section class="py-20 bg-white relative">
+                <div class="container mx-auto px-6">
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                        <div class="group text-center p-8 rounded-3xl hover:bg-white hover:shadow-2xl transition-all duration-500 cursor-pointer border border-transparent hover:border-gray-100"
+                            data-aos="fade-up" data-aos-delay="0">
+                            <div
+                                class="w-20 h-20 bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:shadow-xl transition-all duration-500">
+                                <i class="fas fa-truck text-3xl text-blue-600"></i>
+                            </div>
+                            <h3 class="font-bold text-lg mb-3 font-khmer">ដឹកជញ្ជូនឥតគិតថ្លៃ</h3>
+                            <p class="text-gray-500 text-sm font-khmer">សម្រាប់ការបញ្ជាទិញលើសពី 50$</p>
+                        </div>
+                        <div class="group text-center p-8 rounded-3xl hover:bg-white hover:shadow-2xl transition-all duration-500 cursor-pointer border border-transparent hover:border-gray-100"
+                            data-aos="fade-up" data-aos-delay="100">
+                            <div
+                                class="w-20 h-20 bg-gradient-to-br from-green-50 to-green-100 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:shadow-xl transition-all duration-500">
+                                <i class="fas fa-shield-halved text-3xl text-green-600"></i>
+                            </div>
+                            <h3 class="font-bold text-lg mb-3 font-khmer">ការពារអ្នកទិញ</h3>
+                            <p class="text-gray-500 text-sm font-khmer">សងប្រាក់វិញ 100% បើមានបញ្ហា</p>
+                        </div>
+                        <div class="group text-center p-8 rounded-3xl hover:bg-white hover:shadow-2xl transition-all duration-500 cursor-pointer border border-transparent hover:border-gray-100"
+                            data-aos="fade-up" data-aos-delay="200">
+                            <div
+                                class="w-20 h-20 bg-gradient-to-br from-orange-50 to-orange-100 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:shadow-xl transition-all duration-500">
+                                <i class="fas fa-credit-card text-3xl text-orange-600"></i>
+                            </div>
+                            <h3 class="font-bold text-lg mb-3 font-khmer">បង់ប្រាក់ងាយស្រួល</h3>
+                            <p class="text-gray-500 text-sm font-khmer">ABA, ACLEDA, Wing, COD</p>
+                        </div>
+                        <div class="group text-center p-8 rounded-3xl hover:bg-white hover:shadow-2xl transition-all duration-500 cursor-pointer border border-transparent hover:border-gray-100"
+                            data-aos="fade-up" data-aos-delay="300">
+                            <div
+                                class="w-20 h-20 bg-gradient-to-br from-purple-50 to-purple-100 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:shadow-xl transition-all duration-500">
+                                <i class="fas fa-headset text-3xl text-purple-600"></i>
+                            </div>
+                            <h3 class="font-bold text-lg mb-3 font-khmer">ជំនួយ 24/7</h3>
+                            <p class="text-gray-500 text-sm font-khmer">គាំទ្រអតិថិជនគ្រប់ពេល</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="py-20 bg-gray-50/50">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-16" data-aos="fade-up">
+                        <span
+                            class="text-secondary font-bold text-sm tracking-widest uppercase mb-4 block font-khmer">ផលិតផលពេញនិយម</span>
+                        <h2 class="text-4xl md:text-5xl font-display font-black text-dark mb-6 font-khmer">
+                            អ្វីដែលអតិថិជន <span class="gradient-text">ចូលចិត្ត</span>
+                        </h2>
+                        <p class="text-gray-500 font-khmer max-w-2xl mx-auto text-lg">ស្វែងយល់ពីផលិតផលដែលអតិថិជនភាគច្រើនជ្រើសរើស
+                            និងពេញចិត្តបំផុត</p>
+                    </div>
+                    <div id="featuredProductsGrid"
+                        class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
+                        <div class="col-span-full flex justify-center py-20">
+                            <div class="text-center">
+                                <div
+                                    class="w-20 h-20 border-4 border-secondary border-t-transparent rounded-full animate-spin mx-auto mb-6">
+                                </div>
+                                <p class="text-gray-400 font-khmer text-lg">កំពុងផ្ទុកផលិតផលល្អៗ...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="py-20">
+                <div class="container mx-auto px-6">
+                    <div class="relative bg-gradient-to-br from-dark via-primary to-accent rounded-[40px] p-12 md:p-20 text-center overflow-hidden"
+                        data-aos="fade-up">
+                        <div class="absolute inset-0 opacity-10"
+                            style="background-image: radial-gradient(circle at 20% 80%, #fff 1px, transparent 1px), radial-gradient(circle at 80% 20%, #fff 1px, transparent 1px); background-size: 60px 60px;">
+                        </div>
+                        <div class="hero-blob absolute -top-20 -right-20 w-80 h-80 bg-secondary/20 blur-3xl"></div>
+                        <div class="hero-blob absolute -bottom-20 -left-20 w-80 h-80 bg-gold/20 blur-3xl"
+                            style="animation-delay: 4s;"></div>
+                        <div class="relative z-10">
+                            <span
+                                class="inline-block bg-white/20 backdrop-blur-xl text-white px-6 py-2 rounded-full text-sm font-bold mb-6 font-khmer border border-white/20">🎁
+                                ពិសេសសម្រាប់អ្នក</span>
+                            <h2
+                                class="text-4xl md:text-6xl font-display font-black text-white mb-6 font-khmer leading-tight">
+                                បញ្ចុះតម្លៃរហូតដល់ <span class="gradient-text-gold">50%</span>
+                            </h2>
+                            <p class="text-xl text-white/70 mb-10 font-khmer max-w-2xl mx-auto">សម្រាប់សមាជិកថ្មី! ប្រញាប់ឡើង
+                                ចំនួនមានកំណត់</p>
+                            <button onclick="navigateTo('products')"
+                                class="btn-gold text-xl px-12 py-5 font-khmer font-bold inline-flex items-center gap-3">
+                                ទិញឥឡូវនេះ <i class="fas fa-arrow-right animate-bounce-gentle"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="page-products" class="page">
+            <div class="container mx-auto px-6 py-16">
+                <div class="text-center mb-16">
+                    <span
+                        class="text-secondary font-bold text-sm tracking-widest uppercase mb-4 block font-khmer">ផលិតផលទាំងអស់</span>
+                    <h2 class="text-4xl md:text-5xl font-display font-black text-dark mb-6 font-khmer">ស្វែងរក <span
+                            class="gradient-text">អ្វីដែលអ្នកត្រូវការ</span></h2>
+                    <div class="flex justify-center mt-8">
+                        <div class="relative w-full max-w-xl">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-r from-secondary/20 to-gold/20 rounded-full blur-xl">
+                            </div>
+                            <input type="text" id="productsSearch" placeholder="ស្វែងរកផលិតផល..."
+                                class="relative w-full pl-14 pr-6 py-4 bg-white border-2 border-gray-100 rounded-full focus:outline-none focus:border-secondary/50 transition-all font-khmer text-lg shadow-lg">
+                            <i
+                                class="fas fa-search absolute left-5 top-1/2 -translate-y-1/2 text-gray-400 text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+                <div id="productsGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
+                    <div class="col-span-full flex justify-center py-20">
+                        <div class="text-center">
+                            <div
+                                class="w-20 h-20 border-4 border-secondary border-t-transparent rounded-full animate-spin mx-auto mb-6">
+                            </div>
+                            <p class="text-gray-400 font-khmer text-lg">កំពុងផ្ទុក...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="page-product-detail" class="page">
+            <div class="container mx-auto px-6 py-16">
+                <div class="bg-white rounded-[40px] shadow-2xl overflow-hidden" data-aos="fade-up">
+                    <div class="grid grid-cols-1 lg:grid-cols-2">
+                        <div
+                            class="bg-gradient-to-br from-gray-50 to-gray-100 p-12 flex items-center justify-center relative overflow-hidden">
+                            <div class="absolute inset-0 opacity-5"
+                                style="background-image: radial-gradient(circle, #000 1px, transparent 1px); background-size: 20px 20px;">
+                            </div>
+                            <img id="detailImage" src="https://via.placeholder.com/500" alt="Product"
+                                class="relative max-w-full max-h-[500px] object-contain rounded-3xl shadow-2xl">
+                        </div>
+                        <div class="p-12 lg:p-16 space-y-8">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="badge-premium font-khmer">ម៉ូតថ្មី</span>
+                                <span class="badge-hot font-khmer">ពេញនិយម</span>
+                            </div>
+                            <h1 id="detailName"
+                                class="text-3xl lg:text-4xl font-display font-black text-dark font-khmer leading-tight">
+                            </h1>
+                            <p id="detailCategory" class="text-sm text-gray-400 font-khmer tracking-wide"></p>
+                            <div class="flex items-center space-x-2">
+                                <div class="flex text-gold"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star-half-alt"></i></div>
+                                <span class="text-sm text-gray-400">(128 ការវាយតម្លៃ)</span>
+                            </div>
+                            <p id="detailPrice" class="text-5xl font-display font-black text-dark"></p>
+                            <p id="detailDescription" class="text-gray-600 leading-relaxed font-khmer text-lg"></p>
+                            <p id="detailStock" class="font-khmer text-lg"></p>
+                            <div class="flex items-center space-x-6">
+                                <span class="font-khmer font-bold text-dark">ចំនួន៖</span>
+                                <div class="flex items-center space-x-3">
+                                    <button onclick="changeDetailQty(-1)"
+                                        class="w-12 h-12 rounded-2xl border-2 border-gray-200 flex items-center justify-center text-xl font-bold hover:bg-dark hover:text-white hover:border-dark transition-all">-</button>
+                                    <input type="number" id="detailQty" value="1" min="1"
+                                        class="w-16 text-center border-2 border-gray-200 rounded-2xl py-3 text-lg font-bold"
+                                        readonly>
+                                    <button onclick="changeDetailQty(1)"
+                                        class="w-12 h-12 rounded-2xl border-2 border-gray-200 flex items-center justify-center text-xl font-bold hover:bg-dark hover:text-white hover:border-dark transition-all">+</button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col sm:flex-row gap-4 pt-6">
+                                <button id="detailAddToCart"
+                                    class="btn-primary flex-1 text-center font-khmer text-lg py-5">
+                                    <i class="fas fa-shopping-bag mr-2"></i> បន្ថែមចូលកន្ត្រក
+                                </button>
+                                <button id="detailBuyNow"
+                                    class="btn-secondary flex-1 text-center font-khmer text-lg py-5">
+                                    <i class="fas fa-bolt mr-2"></i> ទិញភ្លាមៗ
+                                </button>
+                            </div>
+                            <div class="flex items-center space-x-6 pt-4 text-sm text-gray-400">
+                                <span class="flex items-center"><i class="fas fa-truck mr-2 text-accent"></i>
+                                    ដឹកជញ្ជូនឥតគិតថ្លៃ</span>
+                                <span class="flex items-center"><i class="fas fa-undo mr-2 text-blue-400"></i> សងវិញ
+                                    7ថ្ងៃ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="page-cart" class="page">
+            <div class="container mx-auto px-6 py-16">
+                <div class="text-center mb-12">
+                    <span
+                        class="text-secondary font-bold text-sm tracking-widest uppercase mb-4 block font-khmer">កន្ត្រកទំនិញ</span>
+                    <h2 class="text-4xl md:text-5xl font-display font-black text-dark font-khmer">ទំនិញរបស់អ្នក</h2>
+                </div>
+                <div id="cartEmpty" class="text-center py-20 hidden">
+                    <i class="fas fa-shopping-bag text-8xl text-gray-200 mb-8"></i>
+                    <p class="text-2xl text-gray-400 font-khmer mb-8">កន្ត្រកទំនិញរបស់អ្នកទទេ</p>
+                    <button onclick="navigateTo('products')"
+                        class="btn-secondary font-khmer text-lg px-10 py-4">
+                        <i class="fas fa-store mr-2"></i> បន្តទិញទំនិញ
+                    </button>
+                </div>
+                <div id="cartContent" class="hidden">
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                        <div id="cartItemsList" class="lg:col-span-2 space-y-6"></div>
+                        <div class="lg:col-span-1">
+                            <div class="bg-white rounded-[30px] shadow-2xl p-10 sticky top-32">
+                                <h3 class="text-2xl font-display font-black text-dark mb-8 font-khmer">សង្ខេប</h3>
+                                <div class="space-y-5 text-lg">
+                                    <div class="flex justify-between"><span
+                                            class="font-khmer text-gray-500">សរុបទំនិញ</span><span id="cartSubtotal"
+                                            class="font-bold">$0.00</span></div>
+                                    <div class="flex justify-between"><span
+                                            class="font-khmer text-gray-500">ដឹកជញ្ជូន</span><span
+                                            class="text-success font-bold font-khmer">ឥតគិតថ្លៃ</span></div>
+                                    <hr class="border-gray-100">
+                                    <div class="flex justify-between text-2xl font-display font-black">
+                                        <span class="font-khmer">សរុប</span><span id="cartTotal"
+                                            class="text-dark">$0.00</span>
+                                    </div>
+                                </div>
+                                <button onclick="navigateTo('checkout')"
+                                    class="btn-gold w-full text-center mt-8 text-lg font-khmer font-bold py-5">
+                                    <i class="fas fa-lock mr-2"></i> បន្តទៅការទូទាត់
+                                </button>
+                                <div class="flex justify-center space-x-3 mt-6 text-sm text-gray-400">
+                                    <span>ABA</span><span>•</span><span>ACLEDA</span><span>•</span><span>Wing</span><span>•</span><span>COD</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="page-checkout" class="page">
+            <div class="container mx-auto px-6 py-16">
+                <div class="text-center mb-12">
+                    <span
+                        class="text-secondary font-bold text-sm tracking-widest uppercase mb-4 block font-khmer">ការទូទាត់</span>
+                    <h2 class="text-4xl md:text-5xl font-display font-black text-dark font-khmer">បញ្ចប់ការបញ្ជាទិញ</h2>
+                </div>
+                <div id="checkoutFormContainer">
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                        <div class="lg:col-span-2 space-y-8">
+                            <div class="bg-white rounded-[30px] shadow-xl p-10">
+                                <h3 class="text-xl font-display font-bold mb-8 font-khmer flex items-center"><span
+                                        class="w-10 h-10 rounded-2xl bg-red-50 flex items-center justify-center mr-3"><i
+                                            class="fas fa-map-marker-alt text-secondary"></i></span>ព័ត៌មានដឹកជញ្ជូន</h3>
+                                <div class="space-y-6">
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                        <div><label
+                                                class="block text-sm font-bold mb-2 font-khmer">ឈ្មោះពេញ *</label><input
+                                                type="text" id="checkoutName"
+                                                class="w-full px-5 py-4 border-2 border-gray-100 rounded-2xl focus:border-secondary focus:outline-none font-khmer"
+                                                placeholder="សូមបញ្ចូលឈ្មោះ"></div>
+                                        <div><label
+                                                class="block text-sm font-bold mb-2 font-khmer">លេខទូរស័ព្ទ *</label><input
+                                                type="tel" id="checkoutPhone"
+                                                class="w-full px-5 py-4 border-2 border-gray-100 rounded-2xl focus:border-secondary focus:outline-none"
+                                                placeholder="012 345 678"></div>
+                                    </div>
+                                    <div><label
+                                            class="block text-sm font-bold mb-2 font-khmer">អាសយដ្ឋាន *</label><textarea
+                                            id="checkoutAddress" rows="3"
+                                            class="w-full px-5 py-4 border-2 border-gray-100 rounded-2xl focus:border-secondary focus:outline-none font-khmer"
+                                            placeholder="ផ្ទះលេខ ផ្លូវ សង្កាត់ ខណ្ឌ ក្រុង"></textarea></div>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-[30px] shadow-xl p-10">
+                                <h3 class="text-xl font-display font-bold mb-8 font-khmer flex items-center"><span
+                                        class="w-10 h-10 rounded-2xl bg-green-50 flex items-center justify-center mr-3"><i
+                                            class="fas fa-wallet text-accent"></i></span>វិធីបង់ប្រាក់</h3>
+                                <div class="space-y-4" id="paymentMethods">
+                                    <label
+                                        class="flex items-center p-5 border-2 border-gray-100 rounded-2xl cursor-pointer hover:border-secondary/50 transition-all"><input
+                                            type="radio" name="payment" value="ABA" checked
+                                            class="w-5 h-5 text-secondary mr-4">
+                                        <div>
+                                            <p class="font-bold font-khmer">ABA Pay</p>
+                                            <p class="text-sm text-gray-500 font-khmer">ស្កេន QR Code ដើម្បីទូទាត់</p>
+                                        </div>
+                                    </label>
+                                    <label
+                                        class="flex items-center p-5 border-2 border-gray-100 rounded-2xl cursor-pointer hover:border-secondary/50 transition-all"><input
+                                            type="radio" name="payment" value="ACLEDA"
+                                            class="w-5 h-5 text-secondary mr-4">
+                                        <div>
+                                            <p class="font-bold font-khmer">ACLEDA Bank</p>
+                                            <p class="text-sm text-gray-500 font-khmer">ស្កេន QR Code ដើម្បីទូទាត់</p>
+                                        </div>
+                                    </label>
+                                    <label
+                                        class="flex items-center p-5 border-2 border-gray-100 rounded-2xl cursor-pointer hover:border-secondary/50 transition-all"><input
+                                            type="radio" name="payment" value="Wing"
+                                            class="w-5 h-5 text-secondary mr-4">
+                                        <div>
+                                            <p class="font-bold font-khmer">Wing Money</p>
+                                            <p class="text-sm text-gray-500 font-khmer">ស្កេន QR Code ដើម្បីទូទាត់</p>
+                                        </div>
+                                    </label>
+                                    <label
+                                        class="flex items-center p-5 border-2 border-gray-100 rounded-2xl cursor-pointer hover:border-secondary/50 transition-all"><input
+                                            type="radio" name="payment" value="COD"
+                                            class="w-5 h-5 text-secondary mr-4">
+                                        <div>
+                                            <p class="font-bold font-khmer">បង់ពេលទទួលទំនិញ (COD)</p>
+                                            <p class="text-sm text-gray-500 font-khmer">បង់ប្រាក់នៅពេលទទួលទំនិញ</p>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div id="qrSection" class="mt-8 p-8 bg-gray-50 rounded-2xl text-center">
+                                    <p class="font-bold mb-4 font-khmer text-lg">ស្កេន QR Code ដើម្បីទូទាត់</p>
+                                    <img id="qrCodeImg"
+                                        src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=ABA"
+                                        alt="QR Code" class="mx-auto rounded-2xl shadow-lg">
+                                    <p id="qrInstructions" class="text-sm text-gray-500 mt-4 font-khmer"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-1">
+                            <div class="bg-white rounded-[30px] shadow-2xl p-10 sticky top-32">
+                                <h3 class="text-xl font-display font-bold mb-8 font-khmer">សង្ខេប</h3>
+                                <div id="checkoutItems" class="space-y-4 mb-6 max-h-60 overflow-y-auto"></div>
+                                <hr class="mb-6 border-gray-100">
+                                <div class="flex justify-between text-2xl font-display font-black mb-8"><span
+                                        class="font-khmer">សរុប</span><span id="checkoutTotal"
+                                        class="text-dark">$0.00</span></div>
+                                <button id="placeOrderBtn"
+                                    class="btn-gold w-full text-center text-lg font-khmer font-bold py-5"><i
+                                        class="fas fa-check-circle mr-2"></i> បញ្ជាការទិញ</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="orderSuccess" class="hidden text-center py-20">
+                    <div
+                        class="w-28 h-28 bg-gradient-to-br from-green-50 to-green-100 rounded-full flex items-center justify-center mx-auto mb-8 animate-bounce-gentle shadow-2xl">
+                        <i class="fas fa-check-circle text-6xl text-success"></i>
+                    </div>
+                    <h2 class="text-4xl font-display font-black text-dark mb-4 font-khmer">ការបញ្ជាទិញជោគជ័យ! 🎉</h2>
+                    <p class="text-gray-500 mb-2 font-khmer text-lg">លេខសម្គាល់៖ <strong id="successOrderId"
+                            class="text-dark text-2xl"></strong></p>
+                    <p class="text-gray-400 font-khmer mb-10">យើងនឹងផ្ញើរព័ត៌មានទៅកាន់អ្នកក្នុងពេលឆាប់ៗ</p>
+                    <button onclick="navigateTo('home')"
+                        class="btn-primary font-khmer text-lg px-12 py-5"><i class="fas fa-home mr-2"></i>
+                        ទៅកាន់ទំព័រដើម</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="page-admin-login" class="page">
+            <div
+                class="min-h-screen flex items-center justify-center bg-gradient-to-br from-dark via-primary to-accent p-6">
+                <div class="bg-white/10 backdrop-blur-2xl rounded-[40px] p-12 w-full max-w-md border border-white/20 shadow-2xl"
+                    data-aos="zoom-in">
+                    <div class="text-center mb-10">
+                        <div
+                            class="w-24 h-24 bg-gradient-to-br from-secondary to-secondary-light rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl animate-pulse-glow">
+                            <i class="fas fa-user-shield text-4xl text-white"></i>
+                        </div>
+                        <h2 class="text-3xl font-display font-black text-white font-khmer">Admin Panel</h2>
+                        <p class="text-white/60 font-khmer mt-2">ចូលប្រព័ន្ធគ្រប់គ្រង</p>
+                    </div>
+                    <div class="space-y-5">
+                        <div>
+                            <label class="block text-sm font-bold mb-2 font-khmer text-white/80">ឈ្មោះអ្នកប្រើ</label>
+                            <div class="relative">
+                                <i
+                                    class="fas fa-user absolute left-5 top-1/2 -translate-y-1/2 text-white/40"></i>
+                                <input type="text" id="adminUsername"
+                                    class="w-full pl-14 pr-5 py-4 bg-white/10 border border-white/20 rounded-2xl text-white placeholder-white/30 focus:outline-none focus:border-secondary/50 font-khmer"
+                                    placeholder="admin">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold mb-2 font-khmer text-white/80">ពាក្យសម្ងាត់</label>
+                            <div class="relative">
+                                <i
+                                    class="fas fa-lock absolute left-5 top-1/2 -translate-y-1/2 text-white/40"></i>
+                                <input type="password" id="adminPassword"
+                                    class="w-full pl-14 pr-5 py-4 bg-white/10 border border-white/20 rounded-2xl text-white placeholder-white/30 focus:outline-none focus:border-secondary/50"
+                                    placeholder="••••••">
+                            </div>
+                        </div>
+                        <div id="loginError"
+                            class="hidden bg-red-500/20 border border-red-500/30 text-red-200 px-5 py-4 rounded-2xl font-khmer text-sm">
+                        </div>
+                        <button onclick="adminLogin()"
+                            class="btn-secondary w-full text-center font-khmer text-lg py-5 font-bold">
+                            <i class="fas fa-sign-in-alt mr-2"></i> ចូលប្រព័ន្ធ
+                        </button>
+                        <button onclick="navigateTo('home')"
+                            class="w-full text-center text-white/50 hover:text-white font-khmer py-3 transition-colors">
+                            <i class="fas fa-arrow-left mr-1"></i> ត្រឡប់ទៅគេហទំព័រ
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="page-admin-dashboard" class="page">
+            <div class="flex h-screen bg-gray-50">
+                <aside class="w-80 bg-dark text-white p-8 hidden lg:block overflow-y-auto">
+                    <div class="mb-12">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <div
+                                class="w-10 h-10 bg-gradient-to-br from-secondary to-secondary-light rounded-xl flex items-center justify-center">
+                                <i class="fas fa-shopping-bag text-white"></i></div>
+                            <h2 class="text-xl font-bold font-khmer">ខ្មែរសប</h2>
+                        </div>
+                        <p class="text-gray-500 text-xs tracking-wider">ADMIN PANEL</p>
+                    </div>
+                    <nav class="space-y-1">
+                        <button onclick="showAdminSection('dashboard')"
+                            class="admin-nav-btn w-full text-left px-5 py-4 rounded-2xl flex items-center space-x-4 bg-white/10 font-khmer transition-all">
+                            <i class="fas fa-tachometer-alt w-5 text-gold"></i><span>ផ្ទាំងគ្រប់គ្រង</span>
+                        </button>
+                        <button onclick="showAdminSection('products')"
+                            class="admin-nav-btn w-full text-left px-5 py-4 rounded-2xl flex items-center space-x-4 hover:bg-white/5 font-khmer transition-all">
+                            <i class="fas fa-box w-5 text-blue-400"></i><span>ផលិតផល</span>
+                        </button>
+                        <button onclick="showAdminSection('orders')"
+                            class="admin-nav-btn w-full text-left px-5 py-4 rounded-2xl flex items-center space-x-4 hover:bg-white/5 font-khmer transition-all">
+                            <i class="fas fa-shopping-cart w-5 text-green-400"></i><span>ការបញ្ជាទិញ</span>
+                        </button>
+                        <hr class="my-6 border-gray-700">
+                        <button onclick="adminLogout()"
+                            class="w-full text-left px-5 py-4 rounded-2xl flex items-center space-x-4 text-red-400 hover:bg-white/5 font-khmer transition-all">
+                            <i class="fas fa-sign-out-alt w-5"></i><span>ចាកចេញ</span>
+                        </button>
+                    </nav>
+                </aside>
+                <div class="flex-1 overflow-y-auto p-8 lg:p-12">
+                    <div id="admin-dashboard" class="admin-section">
+                        <h2 class="text-3xl font-display font-black text-dark mb-10 font-khmer">ផ្ទាំងគ្រប់គ្រង</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                            <div class="bg-white rounded-3xl shadow-sm p-8" data-aos="fade-up">
+                                <div class="flex items-center justify-between mb-4">
+                                    <div
+                                        class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center">
+                                        <i class="fas fa-box text-2xl text-blue-600"></i></div><span
+                                        class="text-green-500 text-sm font-bold">↑ 12%</span>
+                                </div>
+                                <p id="adminTotalProducts" class="text-4xl font-display font-black text-dark">0</p>
+                                <p class="text-gray-500 font-khmer text-sm mt-2">ផលិតផលសរុប</p>
+                            </div>
+                            <div class="bg-white rounded-3xl shadow-sm p-8" data-aos="fade-up" data-aos-delay="100">
+                                <div class="flex items-center justify-between mb-4">
+                                    <div
+                                        class="w-14 h-14 bg-green-50 rounded-2xl flex items-center justify-center">
+                                        <i class="fas fa-shopping-cart text-2xl text-green-600"></i></div><span
+                                        class="text-green-500 text-sm font-bold">↑ 8%</span>
+                                </div>
+                                <p id="adminTotalOrders" class="text-4xl font-display font-black text-dark">0</p>
+                                <p class="text-gray-500 font-khmer text-sm mt-2">ការបញ្ជាទិញ</p>
+                            </div>
+                            <div class="bg-white rounded-3xl shadow-sm p-8" data-aos="fade-up" data-aos-delay="200">
+                                <div class="flex items-center justify-between mb-4">
+                                    <div
+                                        class="w-14 h-14 bg-orange-50 rounded-2xl flex items-center justify-center">
+                                        <i class="fas fa-dollar-sign text-2xl text-orange-600"></i></div><span
+                                        class="text-green-500 text-sm font-bold">↑ 15%</span>
+                                </div>
+                                <p id="adminTotalRevenue" class="text-4xl font-display font-black text-dark">$0</p>
+                                <p class="text-gray-500 font-khmer text-sm mt-2">ចំណូលសរុប</p>
+                            </div>
+                            <div class="bg-white rounded-3xl shadow-sm p-8" data-aos="fade-up" data-aos-delay="300">
+                                <div class="flex items-center justify-between mb-4">
+                                    <div
+                                        class="w-14 h-14 bg-red-50 rounded-2xl flex items-center justify-center">
+                                        <i class="fas fa-clock text-2xl text-red-600"></i></div>
+                                </div>
+                                <p id="adminPendingOrders" class="text-4xl font-display font-black text-dark">0</p>
+                                <p class="text-gray-500 font-khmer text-sm mt-2">កំពុងរង់ចាំ</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="admin-products" class="admin-section hidden">
+                        <div class="flex justify-between items-center mb-8">
+                            <h2 class="text-3xl font-display font-black text-dark font-khmer">គ្រប់គ្រងផលិតផល</h2>
+                            <button onclick="showAddProductForm()" class="btn-secondary font-khmer"><i
+                                    class="fas fa-plus mr-2"></i> បន្ថែម</button>
+                        </div>
+                        <div id="productFormContainer" class="hidden bg-white rounded-3xl shadow-sm p-8 mb-8">
+                            <h3 id="productFormTitle" class="text-xl font-bold mb-6 font-khmer">បន្ថែមផលិតផល</h3><input
+                                type="hidden" id="editProductId">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                                <div><label
+                                        class="block text-sm font-bold mb-2 font-khmer">ឈ្មោះ *</label><input type="text"
+                                        id="productName"
+                                        class="w-full px-4 py-3 border rounded-2xl font-khmer"></div>
+                                <div><label
+                                        class="block text-sm font-bold mb-2 font-khmer">ប្រភេទ *</label><select
+                                        id="productCategory"
+                                        class="w-full px-4 py-3 border rounded-2xl font-khmer">
+                                        <option value="">ជ្រើសរើស</option>
+                                        <option>គ្រឿងអេឡិចត្រូនិក</option>
+                                        <option>សម្លៀកបំពាក់</option>
+                                        <option>ស្បែកជើង</option>
+                                    </select></div>
+                                <div><label
+                                        class="block text-sm font-bold mb-2 font-khmer">តម្លៃ ($) *</label><input
+                                        type="number" id="productPrice" step="0.01"
+                                        class="w-full px-4 py-3 border rounded-2xl"></div>
+                                <div><label
+                                        class="block text-sm font-bold mb-2 font-khmer">ស្តុក</label><input type="number"
+                                        id="productStock" value="0"
+                                        class="w-full px-4 py-3 border rounded-2xl"></div>
+                                <div class="md:col-span-2"><label
+                                        class="block text-sm font-bold mb-2 font-khmer">ការពិពណ៌នា</label><textarea
+                                        id="productDescription" rows="2"
+                                        class="w-full px-4 py-3 border rounded-2xl font-khmer"></textarea></div>
+                                <div class="md:col-span-2"><label
+                                        class="block text-sm font-bold mb-2 font-khmer">URL រូបភាព</label><input
+                                        type="url" id="productImage"
+                                        class="w-full px-4 py-3 border rounded-2xl" placeholder="https://..."></div>
+                            </div>
+                            <div class="flex justify-end space-x-3 mt-6"><button onclick="hideProductForm()"
+                                    class="px-6 py-3 border rounded-2xl font-khmer">បោះបង់</button><button
+                                    onclick="saveProduct()" class="btn-primary font-khmer">រក្សាទុក</button></div>
+                        </div>
+                        <div class="bg-white rounded-3xl shadow-sm overflow-x-auto">
+                            <table class="w-full">
+                                <thead>
+                                    <tr class="bg-gray-50">
+                                        <th class="p-5 text-left font-khmer">ឈ្មោះ</th>
+                                        <th class="p-5 text-left font-khmer">ប្រភេទ</th>
+                                        <th class="p-5 text-left font-khmer">តម្លៃ</th>
+                                        <th class="p-5 text-left font-khmer">ស្តុក</th>
+                                        <th class="p-5 text-left font-khmer">សកម្មភាព</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="adminProductsTable"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="admin-orders" class="admin-section hidden">
+                        <h2 class="text-3xl font-display font-black text-dark mb-8 font-khmer">ការបញ្ជាទិញ</h2>
+                        <div class="bg-white rounded-3xl shadow-sm overflow-x-auto">
+                            <table class="w-full">
+                                <thead>
+                                    <tr class="bg-gray-50">
+                                        <th class="p-5 text-left font-khmer">លេខ</th>
+                                        <th class="p-5 text-left font-khmer">អតិថិជន</th>
+                                        <th class="p-5 text-left font-khmer">ទូរស័ព្ទ</th>
+                                        <th class="p-5 text-left font-khmer">តម្លៃ</th>
+                                        <th class="p-5 text-left font-khmer">ស្ថានភាព</th>
+                                        <th class="p-5 text-left font-khmer">កាលបរិច្ឆេទ</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="adminOrdersTable"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white pt-20 pb-10">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div
+                            class="w-12 h-12 bg-gradient-to-br from-secondary to-secondary-light rounded-2xl flex items-center justify-center">
+                            <i class="fas fa-shopping-bag text-white text-xl"></i></div>
+                        <h3 class="text-2xl font-display font-black font-khmer">ខ្មែរសប</h3>
+                    </div>
+                    <p class="text-gray-400 font-khmer text-sm leading-relaxed">គេហទំព័រលក់ទំនិញអនឡាញលេខ១ នៅកម្ពុជា
+                        ផ្តល់ជូននូវផលិតផលមានគុណភាព</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6 font-khmer text-lg">តំណភ្ជាប់</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><button onclick="navigateTo('home')"
+                                class="hover:text-white font-khmer">ទំព័រដើម</button></li>
+                        <li><button onclick="navigateTo('products')"
+                                class="hover:text-white font-khmer">ផលិតផល</button></li>
+                        <li><button onclick="navigateTo('cart')"
+                                class="hover:text-white font-khmer">កន្ត្រក</button></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6 font-khmer text-lg">វិធីបង់ប្រាក់</h4>
+                    <div class="flex flex-wrap gap-2"><span
+                            class="bg-white/10 px-4 py-2 rounded-full text-sm">ABA</span><span
+                            class="bg-white/10 px-4 py-2 rounded-full text-sm">ACLEDA</span><span
+                            class="bg-white/10 px-4 py-2 rounded-full text-sm">Wing</span><span
+                            class="bg-white/10 px-4 py-2 rounded-full text-sm">COD</span></div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6 font-khmer text-lg">ទំនាក់ទំនង</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><i class="fas fa-phone mr-2 text-gold"></i> 012 345 678</li>
+                        <li><i class="fas fa-envelope mr-2 text-gold"></i> info@khmershop.com</li>
+                        <li><i class="fas fa-map-marker-alt mr-2 text-gold"></i> ភ្នំពេញ, កម្ពុជា</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="border-gray-800 mb-8">
+            <p class="text-center text-gray-500 font-khmer text-sm">&copy; 2024 ខ្មែរសប។ រក្សាសិទ្ធិគ្រប់យ៉ាង។ រចនាដោយក្តីស្រលាញ់
+                ❤️</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+    </script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: false,
+            mirror: false
+        });
+
+        // ==================== CONFIGURATION ====================
+        const CONFIG = {
+            API_BASE_URL: 'https://script.google.com/macros/s/AKfycbxhb2gDURYmXEM7GFj9g6O6uYAuGfyZGbgGfjgRUcue3MbCpPwd8bgZ5suei9r_G1rJsA/exec',
+            API_KEY: 'YOUR_SECRET_API_KEY_HERE',
+            STORAGE_KEYS: {
+                CART: 'khmerShop_cart_v2',
+                ADMIN: 'khmerShop_admin_v2'
+            }
+        };
+
+        // ==================== STATE ====================
+        let currentPage = 'home',
+            allProducts = [],
+            currentProduct = null;
+        let cart = JSON.parse(localStorage.getItem(CONFIG.STORAGE_KEYS.CART) || '[]');
+        let isAdminLoggedIn = localStorage.getItem(CONFIG.STORAGE_KEYS.ADMIN) === 'true';
+
+        // ==================== UTILS ====================
+        function formatCurrency(a) {
+            return '$' + parseFloat(a || 0).toFixed(2);
+        }
+
+        function showToast(m, t = 'info') {
+            const c = document.getElementById('toastContainer');
+            const icons = {
+                success: 'fa-check-circle',
+                error: 'fa-exclamation-circle',
+                info: 'fa-info-circle'
+            };
+            const toast = document.createElement('div');
+            toast.className = `toast toast-${t}`;
+            toast.innerHTML =
+            `<i class="fas ${icons[t]} text-xl"></i><span class="font-khmer">${m}</span>`;
+            c.appendChild(toast);
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                toast.style.transform = 'translateX(120%)';
+                setTimeout(() => toast.remove(), 400);
+            }, 3500);
+        }
+
+        function generateId() {
+            return 'PROD_' + Date.now() + '_' + Math.random().toString(36).substr(2, 6);
+        }
+
+        // ==================== NAVIGATION ====================
+        function navigateTo(page, param = null) {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            const el = document.getElementById(`page-${page}`);
+            if (el) {
+                el.classList.add('active');
+                currentPage = page;
+            }
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+            closeMobileMenu();
+            switch (page) {
+                case 'home':
+                    loadFeaturedProducts();
+                    break;
+                case 'products':
+                    loadAllProducts();
+                    break;
+                case 'product-detail':
+                    if (param) loadProductDetail(param);
+                    break;
+                case 'cart':
+                    renderCart();
+                    break;
+                case 'checkout':
+                    renderCheckout();
+                    break;
+                case 'admin-dashboard':
+                    if (isAdminLoggedIn) {
+                        showAdminSection('dashboard');
+                        loadAdminDashboard();
+                    } else navigateTo('admin-login');
+                    break;
+            }
+            updateCartCount();
+            setTimeout(() => AOS.refresh(), 300);
+        }
+
+        function closeMobileMenu() {
+            document.getElementById('mobileMenu').classList.remove('active');
+            document.getElementById('mobileMenuOverlay').classList.remove('active');
+        }
+        document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+            document.getElementById('mobileMenu').classList.toggle('active');
+            document.getElementById('mobileMenuOverlay').classList.toggle('active');
+        });
+        document.getElementById('mobileMenuOverlay').addEventListener('click', closeMobileMenu);
+
+        // ==================== API ====================
+        async function apiGet(p = {}) {
+            try {
+                const qs = Object.keys(p).map(k =>
+                    `${encodeURIComponent(k)}=${encodeURIComponent(p[k])}`).join('&');
+                const r = await fetch(`${CONFIG.API_BASE_URL}?${qs}`);
+                return await r.json();
+            } catch (e) {
+                console.error(e);
+                return {
+                    success: false,
+                    error: e.message
+                };
+            }
+        }
+        async function apiPost(d, k = null) {
+            try {
+                const u = k ? `${CONFIG.API_BASE_URL}?api_key=${k}` : CONFIG.API_BASE_URL;
+                const r = await fetch(u, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(d)
+                });
+                return await r.json();
+            } catch (e) {
+                console.error(e);
+                return {
+                    success: false,
+                    error: e.message
+                };
+            }
+        }
+
+        // ==================== CART ====================
+        function saveCart() {
+            localStorage.setItem(CONFIG.STORAGE_KEYS.CART, JSON.stringify(cart));
+            updateCartCount();
+        }
+
+        function updateCartCount() {
+            document.getElementById('cartCountBadge').textContent = cart.reduce((s, i) => s + i.quantity, 0);
+        }
+
+        function addToCart(p, q = 1) {
+            const ex = cart.find(i => i.id === p.id);
+            ex ? ex.quantity += q : cart.push({
+                id: p.id,
+                name: p.name,
+                price: parseFloat(p.price),
+                image_url: p.image_url || '',
+                category: p.category || '',
+                quantity: q
+            });
+            saveCart();
+            showToast('✅ បានបន្ថែមចូលកន្ត្រក', 'success');
+        }
+
+        function removeFromCart(pid) {
+            cart = cart.filter(i => i.id !== pid);
+            saveCart();
+            renderCart();
+        }
+
+        function updateCartQty(pid, q) {
+            const i = cart.find(x => x.id === pid);
+            if (!i) return;
+            if (q <= 0) {
+                removeFromCart(pid);
+                return;
+            }
+            i.quantity = q;
+            saveCart();
+            renderCart();
+        }
+
+        function getCartTotal() {
+            return cart.reduce((s, i) => s + i.price * i.quantity, 0);
+        }
+
+        function renderCart() {
+            const e = document.getElementById('cartEmpty'),
+                c = document.getElementById('cartContent');
+            if (cart.length === 0) {
+                e.classList.remove('hidden');
+                c.classList.add('hidden');
+                return;
+            }
+            e.classList.add('hidden');
+            c.classList.remove('hidden');
+            document.getElementById('cartItemsList').innerHTML = cart.map(i => `
+                <div class="bg-white rounded-3xl shadow-sm p-6 flex flex-col sm:flex-row items-center gap-6">
+                    <img src="${i.image_url||'https://via.placeholder.com/120'}" alt="${i.name}" class="w-28 h-28 object-cover rounded-2xl shadow-md" onerror="this.src='https://via.placeholder.com/120'">
+                    <div class="flex-1"><h4 class="font-bold font-khmer text-lg">${i.name}</h4><p class="text-dark font-bold text-2xl mt-2">${formatCurrency(i.price)}</p></div>
+                    <div class="flex items-center space-x-4">
+                        <button onclick="updateCartQty('${i.id}',${i.quantity-1})" class="w-10 h-10 rounded-xl border-2 border-gray-200 flex items-center justify-center font-bold hover:bg-dark hover:text-white hover:border-dark transition-all">-</button>
+                        <span class="text-lg font-bold">${i.quantity}</span>
+                        <button onclick="updateCartQty('${i.id}',${i.quantity+1})" class="w-10 h-10 rounded-xl border-2 border-gray-200 flex items-center justify-center font-bold hover:bg-dark hover:text-white hover:border-dark transition-all">+</button>
+                    </div>
+                    <div class="text-right"><p class="font-bold text-2xl">${formatCurrency(i.price*i.quantity)}</p><button onclick="removeFromCart('${i.id}')" class="text-danger text-sm font-khmer mt-2 hover:underline">លុប</button></div>
+                </div>
+            `).join('');
+            document.getElementById('cartSubtotal').textContent = formatCurrency(getCartTotal());
+            document.getElementById('cartTotal').textContent = formatCurrency(getCartTotal());
+        }
+
+        // ==================== PRODUCTS ====================
+        async function loadFeaturedProducts() {
+            const g = document.getElementById('featuredProductsGrid');
+            if (!g) return;
+            const r = await apiGet({
+                action: 'getProducts'
+            });
+            g.innerHTML = (r.success && r.data) ? r.data.slice(0, 8).map(p => createProductCard(p)).join('') :
+                '<div class="col-span-full text-center py-20 font-khmer text-gray-400 text-lg">មិនមានផលិតផលទេ</div>';
+        }
+        async function loadAllProducts() {
+            const g = document.getElementById('productsGrid');
+            if (!g) return;
+            const s = document.getElementById('productsSearch')?.value || '';
+            const p = {
+                action: 'getProducts'
+            };
+            if (s) p.search = s;
+            const r = await apiGet(p);
+            if (r.success && r.data) {
+                allProducts = r.data;
+                g.innerHTML = r.data.map(p => createProductCard(p)).join('');
+            } else g.innerHTML =
+                '<div class="col-span-full text-center py-20 font-khmer text-gray-400 text-lg">មិនមានផលិតផលទេ</div>';
+        }
+
+        function createProductCard(p) {
+            return `
+                <div class="product-card" data-aos="fade-up">
+                    <div class="product-image-wrapper cursor-pointer" onclick="navigateTo('product-detail','${p.id}')">
+                        <img src="${p.image_url||'https://via.placeholder.com/400x500'}" alt="${p.name}" class="product-image" loading="lazy" onerror="this.src='https://via.placeholder.com/400x500'">
+                        <div class="absolute top-4 left-4 flex flex-col gap-2"><span class="badge-premium">ថ្មី</span><span class="badge-hot">ពេញនិយម</span></div>
+                        <button class="wishlist-btn" onclick="event.stopPropagation(); this.classList.toggle('active');"><i class="far fa-heart"></i></button>
+                        <div class="quick-view-overlay">
+                            <button onclick="event.stopPropagation(); addToCart({id:'${p.id}',name:'${p.name.replace(/'/g,"\\'")}',price:${p.price},image_url:'${p.image_url||''}',category:'${p.category||''}'},1)" class="bg-white text-dark px-6 py-3 rounded-full font-bold font-khmer shadow-xl hover:bg-dark hover:text-white transition-all"><i class="fas fa-shopping-bag mr-2"></i>បន្ថែមចូលកន្ត្រក</button>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <p class="text-xs text-gray-400 font-khmer mb-2 tracking-wide">${p.category||'ទូទៅ'}</p>
+                            <h3 class="font-bold text-dark font-khmer text-lg cursor-pointer hover:text-secondary transition-colors line-clamp-2" onclick="navigateTo('product-detail','${p.id}')">${p.name}</h3>
+                        </div>
+                        <div class="flex items-center justify-between mt-4">
+                            <span class="text-2xl font-display font-black text-dark">${formatCurrency(p.price)}</span>
+                            <div class="flex text-gold text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </div>
+                    </div>
+                </div>`;
+        }
+
+        async function loadProductDetail(pid) {
+            const r = await apiGet({
+                action: 'getProductById',
+                id: pid
+            });
+            if (r.success && r.data) {
+                currentProduct = r.data;
+                document.getElementById('detailName').textContent = currentProduct.name;
+                document.getElementById('detailCategory').textContent = currentProduct.category || 'ទូទៅ';
+                document.getElementById('detailPrice').textContent = formatCurrency(currentProduct.price);
+                document.getElementById('detailDescription').textContent = currentProduct.description ||
+                    'មិនមានការពិពណ៌នា';
+                document.getElementById('detailStock').innerHTML = currentProduct.stock > 0 ?
+                    `<span class="text-success font-khmer font-bold"><i class="fas fa-check-circle"></i> មានក្នុងស្តុក (${currentProduct.stock})</span>` :
+                    `<span class="text-danger font-khmer font-bold"><i class="fas fa-times-circle"></i> អស់ស្តុក</span>`;
+                document.getElementById('detailImage').src = currentProduct.image_url ||
+                    'https://via.placeholder.com/500';
+                document.getElementById('detailQty').value = 1;
+                document.getElementById('detailAddToCart').onclick = () => addToCart(currentProduct, parseInt(document
+                    .getElementById('detailQty').value));
+                document.getElementById('detailBuyNow').onclick = () => {
+                    addToCart(currentProduct, parseInt(document.getElementById('detailQty').value));
+                    navigateTo('checkout');
+                };
+            }
+        }
+
+        function changeDetailQty(d) {
+            const inp = document.getElementById('detailQty');
+            let q = parseInt(inp.value) + d;
+            if (q < 1) q = 1;
+            if (currentProduct && q > currentProduct.stock) q = currentProduct.stock;
+            inp.value = q;
+        }
+
+        function searchProducts() {
+            navigateTo('products');
+        }
+
+        // ==================== CHECKOUT ====================
+        function renderCheckout() {
+            if (cart.length === 0) {
+                navigateTo('cart');
+                return;
+            }
+            document.getElementById('checkoutItems').innerHTML = cart.map(i =>
+                `<div class="flex justify-between text-sm"><span class="font-khmer">${i.name} x${i.quantity}</span><span class="font-bold">${formatCurrency(i.price*i.quantity)}</span></div>`
+                ).join('');
+            document.getElementById('checkoutTotal').textContent = formatCurrency(getCartTotal());
+            document.querySelectorAll('input[name="payment"]').forEach(r => r.addEventListener('change',
+            updateQRCode));
+            updateQRCode();
+            document.getElementById('checkoutFormContainer').style.display = '';
+            document.getElementById('orderSuccess').classList.add('hidden');
+            document.getElementById('placeOrderBtn').onclick = placeOrder;
+        }
+
+        function updateQRCode() {
+            const m = document.querySelector('input[name="payment"]:checked')?.value || 'ABA';
+            const qr = document.getElementById('qrSection'),
+                img = document.getElementById('qrCodeImg'),
+                ins = document.getElementById('qrInstructions');
+            if (m === 'COD') {
+                qr.classList.add('hidden');
+                return;
+            }
+            qr.classList.remove('hidden');
+            const accs = {
+                ABA: {
+                    a: 'ABA_ACC',
+                    n: 'ABA Pay'
+                },
+                ACLEDA: {
+                    a: 'ACLEDA_ACC',
+                    n: 'ACLEDA Bank'
+                },
+                Wing: {
+                    a: 'WING_ACC',
+                    n: 'Wing Money'
+                }
+            };
+            const info = accs[m];
+            img.src =
+                `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${info.a}_${getCartTotal().toFixed(2)}`;
+            ins.textContent =
+            `សូមបើក ${info.n} App ហើយស្កេន QR Code ដើម្បីទូទាត់ ${formatCurrency(getCartTotal())}`;
+        }
+        async function placeOrder() {
+            const n = document.getElementById('checkoutName').value.trim(),
+                p = document.getElementById('checkoutPhone').value.trim(),
+                a = document.getElementById('checkoutAddress').value.trim(),
+                pm = document.querySelector('input[name="payment"]:checked').value;
+            if (!n || !p || !a) {
+                showToast('សូមបំពេញព័ត៌មានទាំងអស់', 'error');
+                return;
+            }
+            const r = await apiPost({
+                action: 'createOrder',
+                customer_name: n,
+                phone: p,
+                address: a,
+                items: cart.map(i => ({
+                    id: i.id,
+                    name: i.name,
+                    quantity: i.quantity,
+                    price: i.price
+                })),
+                payment_method: pm
+            });
+            if (r.success) {
+                document.getElementById('checkoutFormContainer').style.display = 'none';
+                document.getElementById('orderSuccess').classList.remove('hidden');
+                document.getElementById('successOrderId').textContent = r.data.order_id;
+                cart = [];
+                saveCart();
+            } else showToast('មានបញ្ហា៖ ' + (r.error || 'Unknown'), 'error');
+        }
+
+        // ==================== ADMIN ====================
+        async function adminLogin() {
+            const u = document.getElementById('adminUsername').value.trim(),
+                pw = document.getElementById('adminPassword').value.trim();
+            if (!u || !pw) {
+                document.getElementById('loginError').textContent = 'សូមបញ្ចូលទាំងអស់';
+                document.getElementById('loginError').classList.remove('hidden');
+                return;
+            }
+            const r = await apiGet({
+                action: 'adminLogin',
+                username: u,
+                password: pw
+            });
+            if (r.success) {
+                localStorage.setItem(CONFIG.STORAGE_KEYS.ADMIN, 'true');
+                isAdminLoggedIn = true;
+                navigateTo('admin-dashboard');
+            } else {
+                document.getElementById('loginError').textContent = 'ឈ្មោះ ឬពាក្យសម្ងាត់មិនត្រឹមត្រូវ';
+                document.getElementById('loginError').classList.remove('hidden');
+            }
+        }
+
+        function adminLogout() {
+            localStorage.removeItem(CONFIG.STORAGE_KEYS.ADMIN);
+            isAdminLoggedIn = false;
+            navigateTo('admin-login');
+        }
+
+        function showAdminSection(s) {
+            document.querySelectorAll('.admin-section').forEach(e => e.classList.add('hidden'));
+            document.querySelectorAll('.admin-nav-btn').forEach(b => b.classList.remove('bg-white/10'));
+            document.getElementById(`admin-${s}`).classList.remove('hidden');
+            const btn = [...document.querySelectorAll('.admin-nav-btn')].find(b => b.textContent.includes(s ===
+                'dashboard' ? 'ផ្ទាំង' : s === 'products' ? 'ផលិតផល' : 'បញ្ជាទិញ'));
+            if (btn) btn.classList.add('bg-white/10');
+            if (s === 'dashboard') loadAdminDashboard();
+            if (s === 'products') loadAdminProducts();
+            if (s === 'orders') loadAdminOrders();
+        }
+        async function loadAdminDashboard() {
+            const pr = await apiGet({
+                action: 'getProducts'
+            });
+            if (pr.success) document.getElementById('adminTotalProducts').textContent = pr.count || 0;
+            const or_ = await apiGet({
+                action: 'getOrders',
+                api_key: CONFIG.API_KEY
+            });
+            if (or_.success && or_.data) {
+                document.getElementById('adminTotalOrders').textContent = or_.data.length;
+                document.getElementById('adminTotalRevenue').textContent = formatCurrency(or_.data.reduce((s, o) => s +
+                    parseFloat(o.total_amount || 0), 0));
+                document.getElementById('adminPendingOrders').textContent = or_.data.filter(o => o.order_status ===
+                    'pending').length;
+            }
+        }
+        async function loadAdminProducts() {
+            const r = await apiGet({
+                action: 'getProducts'
+            });
+            document.getElementById('adminProductsTable').innerHTML = r.success && r.data ? r.data.map(p =>
+                `<tr class="border-b hover:bg-gray-50"><td class="p-5 font-khmer font-bold">${p.name}</td><td class="p-5">${p.category||'ទូទៅ'}</td><td class="p-5 font-bold">${formatCurrency(p.price)}</td><td class="p-5">${p.stock||0}</td><td class="p-5"><button onclick="editAdminProduct('${p.id}')" class="text-blue-600 mr-4"><i class="fas fa-edit"></i></button><button onclick="deleteAdminProduct('${p.id}')" class="text-red-600"><i class="fas fa-trash"></i></button></td></tr>`
+                ).join('') :
+                '<tr><td colspan="5" class="text-center p-8 font-khmer text-gray-400">មិនមានផលិតផល</td></tr>';
+        }
+
+        function showAddProductForm() {
+            document.getElementById('productFormContainer').classList.remove('hidden');
+            document.getElementById('productFormTitle').textContent = 'បន្ថែមផលិតផលថ្មី';
+            ['editProductId', 'productName', 'productCategory', 'productPrice', 'productStock', 'productDescription',
+                'productImage'
+            ].forEach(id => document.getElementById(id).value = '');
+            document.getElementById('productStock').value = '0';
+        }
+
+        function hideProductForm() {
+            document.getElementById('productFormContainer').classList.add('hidden');
+        }
+
+        function editAdminProduct(pid) {
+            const p = allProducts.find(x => x.id === pid);
+            if (!p) return;
+            document.getElementById('productFormContainer').classList.remove('hidden');
+            document.getElementById('productFormTitle').textContent = 'កែសម្រួលផលិតផល';
+            document.getElementById('editProductId').value = p.id;
+            document.getElementById('productName').value = p.name;
+            document.getElementById('productCategory').value = p.category || '';
+            document.getElementById('productPrice').value = p.price;
+            document.getElementById('productStock').value = p.stock || 0;
+            document.getElementById('productDescription').value = p.description || '';
+            document.getElementById('productImage').value = p.image_url || '';
+        }
+        async function saveProduct() {
+            const id = document.getElementById('editProductId').value;
+            const d = {
+                action: id ? 'updateProduct' : 'addProduct',
+                id: id || generateId(),
+                name: document.getElementById('productName').value,
+                category: document.getElementById('productCategory').value,
+                price: parseFloat(document.getElementById('productPrice').value),
+                stock: parseInt(document.getElementById('productStock').value) || 0,
+                description: document.getElementById('productDescription').value,
+                image_url: document.getElementById('productImage').value,
+                is_active: true
+            };
+            const r = await apiPost(d, CONFIG.API_KEY);
+            if (r.success) {
+                showToast(id ? '✅ បានកែសម្រួល' : '✅ បានបន្ថែម', 'success');
+                hideProductForm();
+                loadAdminProducts();
+                loadAllProducts();
+            } else showToast('❌ មានបញ្ហា', 'error');
+        }
+        async function deleteAdminProduct(pid) {
+            if (!confirm('លុបផលិតផលនេះ?')) return;
+            const r = await apiPost({
+                action: 'deleteProduct',
+                id: pid
+            }, CONFIG.API_KEY);
+            if (r.success) {
+                showToast('✅ បានលុប', 'success');
+                loadAdminProducts();
+                loadAllProducts();
+            }
+        }
+        async function loadAdminOrders() {
+            const r = await apiGet({
+                action: 'getOrders',
+                api_key: CONFIG.API_KEY
+            });
+            const st = {
+                pending: 'កំពុងរង់ចាំ',
+                confirmed: 'បានបញ្ជាក់',
+                processing: 'កំពុងដំណើរការ',
+                shipping: 'កំពុងដឹក',
+                delivered: 'បានទទួល',
+                cancelled: 'បោះបង់'
+            };
+            document.getElementById('adminOrdersTable').innerHTML = r.success && r.data ? r.data.map(o =>
+                `<tr class="border-b hover:bg-gray-50"><td class="p-5 font-mono text-sm">${o.order_id}</td><td class="p-5 font-khmer font-bold">${o.customer_name}</td><td class="p-5">${o.phone}</td><td class="p-5 font-bold">${formatCurrency(o.total_amount)}</td><td class="p-5"><span class="px-3 py-1.5 rounded-full text-xs bg-yellow-100 text-yellow-800 font-khmer font-bold">${st[o.order_status]||o.order_status}</span></td><td class="p-5 text-sm">${new Date(o.created_at).toLocaleDateString('km-KH')}</td></tr>`
+                ).join('') :
+                '<tr><td colspan="6" class="text-center p-10 font-khmer text-gray-400">មិនមានការបញ្ជាទិញទេ</td></tr>';
+        }
+
+        // ==================== INIT ====================
+        document.addEventListener('DOMContentLoaded', () => {
+            updateCartCount();
+            loadFeaturedProducts();
+            document.getElementById('mainSearch')?.addEventListener('keypress', e => {
+                if (e.key === 'Enter') searchProducts();
+            });
+            document.getElementById('productsSearch')?.addEventListener('input', () => loadAllProducts());
+            if (isAdminLoggedIn && window.location.hash === '#admin') navigateTo('admin-dashboard');
+        });
+    </script>
+</body>
+</html>
