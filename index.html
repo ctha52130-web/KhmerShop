@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ខ្មែរសប - គេហទំព័រលក់ទំនិញអនឡាញលេខ១ នៅកម្ពុជា ផ្តល់ជូននូវផលិតផលមានគុណភាព តម្លៃសមរម្យ ដឹកជញ្ជូនទូទាំងប្រទេស">
-    <title>ខ្មែរសប | KhmerShop - ទិញទំនិញអនឡាញនៅកម្ពុជា</title>
+    <meta name="description" content="ខ្មែរសប - គេហទំព័រលក់ទំនិញអនឡាញលេខ១ នៅកម្ពុជា ផ្តល់ជូននូវផលិតផលមានគុណភាព តម្លៃសមរម្យ ដឹកជញ្ជូនទូទាំងប្រទេស បច្ចេកវិទ្យា AI ឆ្នាំ 2026">
+    <title>ខ្មែរសប 2026 | KhmerShop AI - ទិញទំនិញអនឡាញនៅកម្ពុជា</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -12,26 +12,31 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#1a1a2e',
-                        'primary-light': '#16213e',
-                        secondary: '#e94560',
-                        'secondary-light': '#ff6b81',
-                        accent: '#0f3460',
-                        'accent-light': '#1a508b',
-                        gold: '#f5c518',
-                        'gold-light': '#ffd700',
-                        cream: '#faf3e0',
-                        dark: '#0d1117',
-                        'dark-light': '#161b22',
-                        success: '#00c853',
-                        danger: '#ff1744',
-                        info: '#2979ff'
+                        primary: '#0a0a1a',
+                        'primary-light': '#1a1a3e',
+                        secondary: '#ff2d55',
+                        'secondary-light': '#ff6b8a',
+                        accent: '#7c3aed',
+                        'accent-light': '#a78bfa',
+                        gold: '#ffd60a',
+                        'gold-light': '#ffe866',
+                        cream: '#faf8f5',
+                        dark: '#050510',
+                        'dark-light': '#0f0f23',
+                        success: '#00d68f',
+                        danger: '#ff3b30',
+                        info: '#5e5ce6',
+                        'ai-purple': '#bf5af2',
+                        'ai-blue': '#0a84ff',
+                        'ai-cyan': '#64d2ff',
+                        'ai-mint': '#66d9e8'
                     },
                     fontFamily: {
                         khmer: ['Battambang', 'Kantumruy Pro', 'sans-serif'],
                         heading: ['Battambang', 'sans-serif'],
                         body: ['Inter', 'system-ui', 'sans-serif'],
-                        display: ['Poppins', 'sans-serif']
+                        display: ['Space Grotesk', 'Poppins', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace']
                     },
                     animation: {
                         'float': 'float 6s ease-in-out infinite',
@@ -48,7 +53,12 @@
                         'rotate-slow': 'rotateSlow 20s linear infinite',
                         'scale-in': 'scaleIn 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
                         'ripple': 'ripple 1.5s infinite',
-                        'sparkle': 'sparkle 1.5s infinite'
+                        'sparkle': 'sparkle 1.5s infinite',
+                        'glitch-1': 'glitch1 2s infinite',
+                        'glitch-2': 'glitch2 3s infinite',
+                        'scan-line': 'scanLine 8s linear infinite',
+                        'neural-pulse': 'neuralPulse 2s ease-in-out infinite',
+                        'hologram': 'hologram 4s ease-in-out infinite'
                     },
                     keyframes: {
                         float: {
@@ -60,8 +70,8 @@
                             '50%': { transform: 'scale(1.05)' }
                         },
                         pulseGlow: {
-                            '0%, 100%': { boxShadow: '0 0 20px rgba(233, 69, 96, 0.4)' },
-                            '50%': { boxShadow: '0 0 40px rgba(233, 69, 96, 0.8), 0 0 60px rgba(233, 69, 96, 0.4)' }
+                            '0%, 100%': { boxShadow: '0 0 20px rgba(255, 45, 85, 0.4)' },
+                            '50%': { boxShadow: '0 0 40px rgba(191, 90, 242, 0.8), 0 0 60px rgba(10, 132, 255, 0.4)' }
                         },
                         slideUp: {
                             '0%': { transform: 'translateY(40px)', opacity: '0' },
@@ -102,6 +112,32 @@
                         sparkle: {
                             '0%, 100%': { opacity: '0', transform: 'scale(0)' },
                             '50%': { opacity: '1', transform: 'scale(1)' }
+                        },
+                        glitch1: {
+                            '0%, 100%': { transform: 'translate(0)' },
+                            '20%': { transform: 'translate(-2px, 1px)' },
+                            '40%': { transform: 'translate(2px, -1px)' },
+                            '60%': { transform: 'translate(-1px, 2px)' },
+                            '80%': { transform: 'translate(1px, -2px)' }
+                        },
+                        glitch2: {
+                            '0%, 100%': { clip: 'rect(0, 9999px, 0, 0)' },
+                            '20%': { clip: 'rect(20px, 9999px, 40px, 0)' },
+                            '40%': { clip: 'rect(50px, 9999px, 70px, 0)' },
+                            '60%': { clip: 'rect(80px, 9999px, 100px, 0)' },
+                            '80%': { clip: 'rect(30px, 9999px, 60px, 0)' }
+                        },
+                        scanLine: {
+                            '0%': { transform: 'translateY(-100%)' },
+                            '100%': { transform: 'translateY(100%)' }
+                        },
+                        neuralPulse: {
+                            '0%, 100%': { opacity: '0.5', transform: 'scale(1)' },
+                            '50%': { opacity: '1', transform: 'scale(1.1)' }
+                        },
+                        hologram: {
+                            '0%, 100%': { opacity: '0.6', filter: 'hue-rotate(0deg)' },
+                            '50%': { opacity: '1', filter: 'hue-rotate(180deg)' }
                         }
                     }
                 }
@@ -109,18 +145,21 @@
         }
     </script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Battambang:wght@300;400;700;900&family=Inter:wght@300;400;500;600;700;800;900&family=Kantumruy+Pro:wght@300;400;700&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Battambang:wght@300;400;700;900&family=Inter:wght@300;400;500;600;700;800;900&family=Kantumruy+Pro:wght@300;400;700&family=Poppins:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <style>
         :root {
-            --primary: #1a1a2e;
-            --primary-light: #16213e;
-            --secondary: #e94560;
-            --accent: #0f3460;
-            --gold: #f5c518;
-            --dark: #0d1117;
+            --primary: #0a0a1a;
+            --primary-light: #1a1a3e;
+            --secondary: #ff2d55;
+            --accent: #7c3aed;
+            --gold: #ffd60a;
+            --dark: #050510;
+            --ai-purple: #bf5af2;
+            --ai-blue: #0a84ff;
+            --ai-cyan: #64d2ff;
         }
 
         * {
@@ -136,21 +175,48 @@
 
         body {
             font-family: 'Inter', 'Battambang', 'Kantumruy Pro', sans-serif;
-            background-color: #fafafa;
-            color: #1a1a2e;
+            background-color: #0a0a12;
+            color: #e0e0e0;
             line-height: 1.7;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
+            background-image: 
+                radial-gradient(ellipse at 20% 50%, rgba(124, 58, 237, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(10, 132, 255, 0.06) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 80%, rgba(191, 90, 242, 0.05) 0%, transparent 50%);
+            background-attachment: fixed;
         }
 
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 10px; }
-        ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, var(--secondary), #ff6b81); border-radius: 10px; }
+        /* AI-inspired grid overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(255, 45, 85, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 45, 85, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none;
+            z-index: 0;
+            animation: scanLine 10s linear infinite;
+        }
+
+        @keyframes scanLine {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(40px); }
+        }
+
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #0a0a1a; }
+        ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, var(--ai-purple), var(--ai-blue)); border-radius: 10px; }
         ::-webkit-scrollbar-thumb:hover { background: var(--gold); }
 
-        ::selection { background: var(--secondary); color: white; }
+        ::selection { background: var(--accent); color: white; }
 
-        .page { display: none; animation: fadeSlideIn 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+        .page { display: none; animation: fadeSlideIn 0.5s cubic-bezier(0.4, 0, 0.2, 1); position: relative; z-index: 1; }
         .page.active { display: block; }
         
         @keyframes fadeSlideIn {
@@ -158,65 +224,369 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        .glass { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px); border: 1px solid rgba(255, 255, 255, 0.5); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05); }
-        .glass-dark { background: rgba(13, 17, 23, 0.85); backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px); border: 1px solid rgba(255, 255, 255, 0.08); }
+        /* Futuristic glass morphism */
+        .glass { 
+            background: rgba(15, 15, 35, 0.7); 
+            backdrop-filter: blur(40px) saturate(180%); 
+            -webkit-backdrop-filter: blur(40px) saturate(180%); 
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        .glass-dark { 
+            background: rgba(5, 5, 16, 0.85); 
+            backdrop-filter: blur(40px) saturate(180%); 
+            -webkit-backdrop-filter: blur(40px) saturate(180%); 
+            border: 1px solid rgba(191, 90, 242, 0.1);
+        }
 
-        .gradient-text { background: linear-gradient(135deg, var(--secondary), #ff6b81, var(--gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 900; }
-        .gradient-text-gold { background: linear-gradient(135deg, var(--gold), #ffe082, var(--gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        /* AI-inspired gradient text */
+        .gradient-text { 
+            background: linear-gradient(135deg, #bf5af2, #0a84ff, #64d2ff, #bf5af2);
+            background-size: 300% 300%;
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+            background-clip: text; 
+            font-weight: 900; 
+            animation: gradientShift 4s ease infinite;
+        }
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
 
-        .glow { box-shadow: 0 0 30px rgba(233, 69, 96, 0.3), 0 0 60px rgba(233, 69, 96, 0.1); transition: all 0.4s ease; }
-        .glow:hover { box-shadow: 0 0 50px rgba(233, 69, 96, 0.5), 0 0 100px rgba(233, 69, 96, 0.2); }
+        .gradient-text-gold { 
+            background: linear-gradient(135deg, #ffd60a, #ff9f0a, #ff6b35);
+            background-size: 200% 200%;
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+            background-clip: text;
+            animation: gradientShift 3s ease infinite;
+        }
 
-        .product-card { background: white; border-radius: 24px; overflow: hidden; transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); position: relative; border: 1px solid rgba(0, 0, 0, 0.04); box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04); display: flex; flex-direction: column; }
-        .product-card:hover { transform: translateY(-12px); box-shadow: 0 24px 48px rgba(0, 0, 0, 0.1); }
+        /* Neon glow effects */
+        .glow { 
+            box-shadow: 0 0 30px rgba(191, 90, 242, 0.2), 0 0 60px rgba(10, 132, 255, 0.1); 
+            transition: all 0.4s ease; 
+        }
+        .glow:hover { 
+            box-shadow: 0 0 50px rgba(191, 90, 242, 0.4), 0 0 100px rgba(10, 132, 255, 0.3), 0 0 150px rgba(100, 210, 255, 0.2); 
+        }
 
-        .product-card .product-image-wrapper { position: relative; width: 100%; aspect-ratio: 4 / 5; overflow: hidden; background: #f5f5f5; flex-shrink: 0; }
+        /* Futuristic product card */
+        .product-card { 
+            background: rgba(15, 15, 35, 0.6); 
+            backdrop-filter: blur(20px);
+            border-radius: 20px; 
+            overflow: hidden; 
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); 
+            position: relative; 
+            border: 1px solid rgba(191, 90, 242, 0.15);
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+            display: flex; 
+            flex-direction: column; 
+        }
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(191, 90, 242, 0.05), rgba(10, 132, 255, 0.05));
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            z-index: 0;
+            pointer-events: none;
+        }
+        .product-card:hover::before {
+            opacity: 1;
+        }
+        .product-card:hover { 
+            transform: translateY(-8px); 
+            box-shadow: 0 20px 60px rgba(191, 90, 242, 0.15), 0 0 40px rgba(10, 132, 255, 0.1);
+            border-color: rgba(191, 90, 242, 0.3);
+        }
+
+        .product-card .product-image-wrapper { 
+            position: relative; 
+            width: 100%; 
+            aspect-ratio: 4 / 5; 
+            overflow: hidden; 
+            background: #0a0a1a; 
+            flex-shrink: 0; 
+            z-index: 1;
+        }
         @media (max-width: 640px) { .product-card .product-image-wrapper { aspect-ratio: 3 / 4; } }
 
-        .product-card .product-image { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1); }
-        .product-card:hover .product-image { transform: scale(1.12); }
+        .product-card .product-image { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            object-position: center; 
+            transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1), filter 0.5s ease; 
+            filter: brightness(0.9) saturate(1.1);
+        }
+        .product-card:hover .product-image { 
+            transform: scale(1.08); 
+            filter: brightness(1.1) saturate(1.3);
+        }
 
-        .wishlist-btn { position: absolute; top: 16px; right: 16px; z-index: 10; width: 40px; height: 40px; border-radius: 50%; background: white; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); transition: all 0.3s ease; cursor: pointer; }
-        .wishlist-btn:hover { transform: scale(1.15); box-shadow: 0 6px 20px rgba(233, 69, 96, 0.3); }
+        .wishlist-btn { 
+            position: absolute; 
+            top: 16px; 
+            right: 16px; 
+            z-index: 10; 
+            width: 40px; 
+            height: 40px; 
+            border-radius: 50%; 
+            background: rgba(15, 15, 35, 0.8); 
+            backdrop-filter: blur(10px);
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease; 
+            cursor: pointer; 
+            color: #fff;
+        }
+        .wishlist-btn:hover { 
+            transform: scale(1.1); 
+            box-shadow: 0 6px 20px rgba(191, 90, 242, 0.4);
+            border-color: rgba(191, 90, 242, 0.5);
+        }
 
-        .quick-view-overlay { position: absolute; inset: 0; background: rgba(0, 0, 0, 0.4); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.4s ease; }
+        .quick-view-overlay { 
+            position: absolute; 
+            inset: 0; 
+            background: rgba(0, 0, 0, 0.5); 
+            backdrop-filter: blur(4px);
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            opacity: 0; 
+            transition: opacity 0.4s ease; 
+            z-index: 2;
+        }
         .product-card:hover .quick-view-overlay { opacity: 1; }
 
-        .badge-premium { background: linear-gradient(135deg, #1a1a2e, #0f3460); color: var(--gold); font-size: 0.7rem; padding: 6px 16px; border-radius: 20px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; border: 1px solid rgba(245, 197, 24, 0.3); }
-        .badge-hot { background: linear-gradient(135deg, #e94560, #ff6b81); color: white; font-size: 0.7rem; padding: 6px 14px; border-radius: 20px; font-weight: 700; animation: pulseSoft 2s infinite; }
+        /* Futuristic badges */
+        .badge-premium { 
+            background: rgba(124, 58, 237, 0.2); 
+            color: #bf5af2; 
+            font-size: 0.7rem; 
+            padding: 6px 16px; 
+            border-radius: 20px; 
+            font-weight: 700; 
+            letter-spacing: 1px; 
+            text-transform: uppercase; 
+            border: 1px solid rgba(191, 90, 242, 0.3);
+            backdrop-filter: blur(10px);
+        }
+        .badge-hot { 
+            background: rgba(255, 45, 85, 0.2); 
+            color: #ff6b8a; 
+            font-size: 0.7rem; 
+            padding: 6px 14px; 
+            border-radius: 20px; 
+            font-weight: 700; 
+            animation: pulseSoft 2s infinite; 
+            border: 1px solid rgba(255, 45, 85, 0.3);
+            backdrop-filter: blur(10px);
+        }
 
-        .btn-primary { background: linear-gradient(135deg, #1a1a2e, #16213e); color: white; padding: 14px 32px; border-radius: 50px; font-weight: 600; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 8px 24px rgba(26, 26, 46, 0.3); letter-spacing: 0.5px; position: relative; overflow: hidden; }
-        .btn-primary:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(26, 26, 46, 0.4); }
+        /* AI-styled buttons */
+        .btn-primary { 
+            background: linear-gradient(135deg, #1a1a3e, #0a0a1a); 
+            color: #64d2ff; 
+            padding: 14px 32px; 
+            border-radius: 50px; 
+            font-weight: 600; 
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
+            box-shadow: 0 8px 24px rgba(10, 132, 255, 0.2); 
+            letter-spacing: 0.5px; 
+            position: relative; 
+            overflow: hidden; 
+            border: 1px solid rgba(100, 210, 255, 0.2);
+        }
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(100, 210, 255, 0.1), transparent 70%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        .btn-primary:hover::before { opacity: 1; }
+        .btn-primary:hover { 
+            transform: translateY(-4px); 
+            box-shadow: 0 12px 32px rgba(10, 132, 255, 0.4), 0 0 60px rgba(191, 90, 242, 0.2);
+            border-color: rgba(100, 210, 255, 0.5);
+        }
 
-        .btn-secondary { background: linear-gradient(135deg, #e94560, #ff6b81); color: white; padding: 14px 32px; border-radius: 50px; font-weight: 600; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 8px 24px rgba(233, 69, 96, 0.3); position: relative; overflow: hidden; }
-        .btn-secondary:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(233, 69, 96, 0.5); }
+        .btn-secondary { 
+            background: linear-gradient(135deg, #ff2d55, #bf5af2); 
+            color: white; 
+            padding: 14px 32px; 
+            border-radius: 50px; 
+            font-weight: 600; 
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
+            box-shadow: 0 8px 24px rgba(255, 45, 85, 0.3); 
+            position: relative; 
+            overflow: hidden; 
+            border: 1px solid rgba(255, 107, 138, 0.3);
+        }
+        .btn-secondary::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s ease;
+        }
+        .btn-secondary:hover::after { left: 100%; }
+        .btn-secondary:hover { 
+            transform: translateY(-4px); 
+            box-shadow: 0 12px 32px rgba(191, 90, 242, 0.5), 0 0 80px rgba(255, 45, 85, 0.3); 
+        }
 
-        .btn-gold { background: linear-gradient(135deg, #f5c518, #ffd700); color: #1a1a2e; padding: 14px 32px; border-radius: 50px; font-weight: 700; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 8px 24px rgba(245, 197, 24, 0.3); }
-        .btn-gold:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(245, 197, 24, 0.5); }
+        .btn-gold { 
+            background: linear-gradient(135deg, #ffd60a, #ff9f0a); 
+            color: #0a0a1a; 
+            padding: 14px 32px; 
+            border-radius: 50px; 
+            font-weight: 700; 
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
+            box-shadow: 0 8px 24px rgba(255, 214, 10, 0.3); 
+            border: 1px solid rgba(255, 214, 10, 0.4);
+        }
+        .btn-gold:hover { 
+            transform: translateY(-4px); 
+            box-shadow: 0 12px 32px rgba(255, 214, 10, 0.5), 0 0 60px rgba(255, 159, 10, 0.3); 
+        }
 
+        /* Futuristic toast notifications */
         .toast-container { position: fixed; bottom: 40px; right: 40px; z-index: 9999; display: flex; flex-direction: column; gap: 12px; }
-        .toast { padding: 18px 28px; border-radius: 20px; color: white; font-weight: 600; animation: slideInRight 0.5s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2); display: flex; align-items: center; gap: 14px; min-width: 320px; backdrop-filter: blur(20px); }
-        .toast-success { background: linear-gradient(135deg, #00c853, #00e676); }
-        .toast-error { background: linear-gradient(135deg, #ff1744, #ff5252); }
-        .toast-info { background: linear-gradient(135deg, #2979ff, #448aff); }
+        .toast { 
+            padding: 18px 28px; 
+            border-radius: 16px; 
+            color: white; 
+            font-weight: 600; 
+            animation: slideInRight 0.5s cubic-bezier(0.4, 0, 0.2, 1); 
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4); 
+            display: flex; 
+            align-items: center; 
+            gap: 14px; 
+            min-width: 320px; 
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .toast-success { background: rgba(0, 214, 143, 0.3); border-color: rgba(0, 214, 143, 0.4); }
+        .toast-error { background: rgba(255, 59, 48, 0.3); border-color: rgba(255, 59, 48, 0.4); }
+        .toast-info { background: rgba(94, 92, 230, 0.3); border-color: rgba(94, 92, 230, 0.4); }
         
         @keyframes slideInRight {
             from { transform: translateX(120%) scale(0.8); opacity: 0; }
             to { transform: translateX(0) scale(1); opacity: 1; }
         }
 
-        .hero-blob { position: absolute; border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; animation: blobMorph 8s ease-in-out infinite; }
+        /* AI blob animation */
+        .hero-blob { 
+            position: absolute; 
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; 
+            animation: blobMorph 8s ease-in-out infinite; 
+            filter: blur(80px);
+        }
         @keyframes blobMorph {
             0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
             50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
         }
 
-        .mobile-menu-overlay { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.7); z-index: 100; opacity: 0; visibility: hidden; transition: all 0.4s ease; backdrop-filter: blur(4px); }
+        .mobile-menu-overlay { 
+            position: fixed; 
+            inset: 0; 
+            background: rgba(0, 0, 0, 0.8); 
+            z-index: 100; 
+            opacity: 0; 
+            visibility: hidden; 
+            transition: all 0.4s ease; 
+            backdrop-filter: blur(8px); 
+        }
         .mobile-menu-overlay.active { opacity: 1; visibility: visible; }
-        .mobile-menu { position: fixed; top: 0; left: -100%; width: 85%; max-width: 400px; height: 100%; background: white; z-index: 101; transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 0 80px rgba(0, 0, 0, 0.3); border-radius: 0 30px 30px 0; }
+        .mobile-menu { 
+            position: fixed; 
+            top: 0; 
+            left: -100%; 
+            width: 85%; 
+            max-width: 400px; 
+            height: 100%; 
+            background: rgba(15, 15, 35, 0.95); 
+            backdrop-filter: blur(40px);
+            z-index: 101; 
+            transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1); 
+            box-shadow: 0 0 80px rgba(0, 0, 0, 0.5); 
+            border-right: 1px solid rgba(191, 90, 242, 0.2);
+        }
         .mobile-menu.active { left: 0; }
 
-        .sparkle-dot { position: absolute; width: 4px; height: 4px; background: var(--gold); border-radius: 50%; animation: sparkle 2s infinite; box-shadow: 0 0 8px var(--gold); }
+        /* AI sparkle dots */
+        .sparkle-dot { 
+            position: fixed; 
+            width: 4px; 
+            height: 4px; 
+            background: var(--ai-cyan); 
+            border-radius: 50%; 
+            animation: sparkle 2s infinite; 
+            box-shadow: 0 0 12px var(--ai-cyan), 0 0 24px var(--ai-purple); 
+            z-index: 0;
+        }
+
+        /* Scan line effect for hero section */
+        .scan-line-effect {
+            position: relative;
+            overflow: hidden;
+        }
+        .scan-line-effect::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(100, 210, 255, 0.3), transparent);
+            animation: scanLineMove 4s linear infinite;
+        }
+        @keyframes scanLineMove {
+            0% { top: -2px; }
+            100% { top: 100%; }
+        }
+
+        /* Holographic effect */
+        .holographic {
+            position: relative;
+        }
+        .holographic::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, 
+                rgba(191, 90, 242, 0.05) 0%, 
+                rgba(10, 132, 255, 0.05) 25%, 
+                rgba(100, 210, 255, 0.05) 50%, 
+                rgba(191, 90, 242, 0.05) 75%, 
+                rgba(10, 132, 255, 0.05) 100%
+            );
+            animation: hologram 4s ease-in-out infinite;
+            pointer-events: none;
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -229,50 +599,56 @@
     <div class="toast-container" id="toastContainer"></div>
 
     <header id="mainHeader" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
-        <div class="bg-dark text-white/80 py-2 hidden md:block">
+        <div class="bg-dark/80 backdrop-blur-xl text-white/70 py-2 hidden md:block border-b border-white/5">
             <div class="container mx-auto px-6 flex justify-between items-center text-xs tracking-wider">
                 <div class="flex items-center space-x-8">
-                    <span class="flex items-center"><i class="fas fa-phone-alt mr-2 text-gold text-xs"></i> 0979534762</span>
-                    <span class="flex items-center"><i class="fas fa-envelope mr-2 text-gold text-xs"></i> ctha52130@gmail.com</span>
+                    <span class="flex items-center"><i class="fas fa-phone-alt mr-2 text-ai-cyan text-xs"></i> 0979534762</span>
+                    <span class="flex items-center"><i class="fas fa-envelope mr-2 text-ai-cyan text-xs"></i> ctha52130@gmail.com</span>
                 </div>
                 <div class="flex items-center space-x-6">
                     <span class="font-khmer">🚚 ដឹកជញ្ជូនឥតគិតថ្លៃ សម្រាប់ការបញ្ជាទិញលើសពី 50$</span>
-                    <span class="text-gold">|</span>
+                    <span class="text-ai-purple">|</span>
                     <span class="font-khmer">📞 ជំនួយ 24/7</span>
                 </div>
             </div>
         </div>
 
-        <nav class="glass border-b border-white/10 transition-all duration-500" id="mainNav">
-            <div class="container mx-auto px-6 py-4">
-                <div class="flex justify-between items-center">
-                    <div onclick="navigateTo('home')" class="cursor-pointer group">
-                        <img src="logo.png" alt="Logo" class="h-10 md:h-12 w-auto object-contain group-hover:scale-105 transition-all duration-300">
-                    </div>
+       <nav class="glass-dark border-b border-white/5 transition-all duration-500" id="mainNav">
+    <div class="container mx-auto px-6 py-4">
+        <div class="flex justify-between items-center">
+            <div onclick="navigateTo('home')" class="cursor-pointer group flex items-center space-x-2">
+                
+                <!-- ចំណុចដែលត្រូវប្ដូរ៖ ដាក់រូបភាព Logo របស់អ្នក -->
+                <div class="w-10 h-10 group-hover:scale-110 transition-all duration-300">
+                    <img src="images/my-logo.png" alt="Logo" class="w-full h-full object-contain">
+                </div>
+                
+                <span class="text-white font-display font-bold text-xl tracking-tight">KHMER<span class="text-ai-cyan">SHOP</span></span>
+            </div>
 
                     <div class="hidden lg:flex items-center space-x-1">
-                        <button onclick="navigateTo('home')" class="nav-link px-5 py-2.5 rounded-full font-khmer font-semibold text-sm text-gray-700 hover:bg-secondary/10 hover:text-secondary transition-all duration-300">ទំព័រដើម</button>
-                        <button onclick="navigateTo('products')" class="nav-link px-5 py-2.5 rounded-full font-khmer font-semibold text-sm text-gray-700 hover:bg-secondary/10 hover:text-secondary transition-all duration-300">ផលិតផល</button>
-                        <button onclick="navigateTo('about')" class="nav-link px-5 py-2.5 rounded-full font-khmer font-semibold text-sm text-gray-700 hover:bg-secondary/10 hover:text-secondary transition-all duration-300">អំពីយើង</button>
-                        <button onclick="navigateTo('contact')" class="nav-link px-5 py-2.5 rounded-full font-khmer font-semibold text-sm text-gray-700 hover:bg-secondary/10 hover:text-secondary transition-all duration-300">ទំនាក់ទំនង</button>
+                        <button onclick="navigateTo('home')" class="nav-link px-5 py-2.5 rounded-full font-khmer font-semibold text-sm text-gray-400 hover:text-ai-cyan hover:bg-ai-cyan/5 transition-all duration-300">ទំព័រដើម</button>
+                        <button onclick="navigateTo('products')" class="nav-link px-5 py-2.5 rounded-full font-khmer font-semibold text-sm text-gray-400 hover:text-ai-cyan hover:bg-ai-cyan/5 transition-all duration-300">ផលិតផល</button>
+                        <button onclick="navigateTo('about')" class="nav-link px-5 py-2.5 rounded-full font-khmer font-semibold text-sm text-gray-400 hover:text-ai-cyan hover:bg-ai-cyan/5 transition-all duration-300">អំពីយើង</button>
+                        <button onclick="navigateTo('contact')" class="nav-link px-5 py-2.5 rounded-full font-khmer font-semibold text-sm text-gray-400 hover:text-ai-cyan hover:bg-ai-cyan/5 transition-all duration-300">ទំនាក់ទំនង</button>
                     </div>
 
                     <div class="hidden md:flex flex-1 max-w-lg mx-8">
                         <div class="relative w-full group">
-                            <div class="absolute inset-0 bg-gradient-to-r from-secondary to-gold rounded-full blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
-                            <input type="text" id="mainSearch" placeholder="ស្វែងរកផលិតផល..." class="relative w-full pl-12 pr-4 py-3 bg-white border-2 border-gray-100 rounded-full focus:outline-none focus:border-secondary/50 transition-all font-khmer text-sm shadow-sm">
-                            <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-hover:text-secondary transition-colors"></i>
-                            <button onclick="searchProducts()" class="absolute right-1.5 top-1/2 -translate-y-1/2 bg-gradient-to-r from-secondary to-secondary-light text-white px-5 py-2 rounded-full hover:shadow-lg transition-all font-khmer text-xs font-bold">ស្វែងរក</button>
+                            <div class="absolute inset-0 bg-gradient-to-r from-ai-purple to-ai-blue rounded-full blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
+                            <input type="text" id="mainSearch" placeholder="ស្វែងរកផលិតផល..." class="relative w-full pl-12 pr-4 py-3 bg-dark/80 border border-white/10 rounded-full focus:outline-none focus:border-ai-purple/50 transition-all font-khmer text-sm text-white placeholder-gray-500 backdrop-blur-xl">
+                            <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 group-hover:text-ai-cyan transition-colors"></i>
+                            <button onclick="searchProducts()" class="absolute right-1.5 top-1/2 -translate-y-1/2 bg-gradient-to-r from-ai-purple to-ai-blue text-white px-5 py-2 rounded-full hover:shadow-lg hover:shadow-ai-purple/30 transition-all font-khmer text-xs font-bold">ស្វែងរក</button>
                         </div>
                     </div>
 
                     <div class="flex items-center space-x-2">
-                        <button onclick="navigateTo('cart')" class="relative p-2.5 hover:bg-gray-100 rounded-full transition-all group">
-                            <i class="fas fa-shopping-bag text-lg text-gray-700 group-hover:text-secondary transition-colors"></i>
-                            <span id="cartCountBadge" class="absolute -top-0.5 -right-0.5 bg-gradient-to-r from-secondary to-secondary-light text-white text-[10px] w-5 h-5 rounded-full flex items-center justify-center font-bold shadow-lg animate-bounce-gentle">0</span>
+                        <button onclick="navigateTo('cart')" class="relative p-2.5 hover:bg-white/5 rounded-full transition-all group">
+                            <i class="fas fa-shopping-bag text-lg text-gray-400 group-hover:text-ai-cyan transition-colors"></i>
+                            <span id="cartCountBadge" class="absolute -top-0.5 -right-0.5 bg-gradient-to-r from-ai-purple to-ai-blue text-white text-[10px] w-5 h-5 rounded-full flex items-center justify-center font-bold shadow-lg animate-bounce-gentle">0</span>
                         </button>
-                        <button id="mobileMenuBtn" class="lg:hidden p-2.5 hover:bg-gray-100 rounded-full transition-all">
-                            <i class="fas fa-bars text-xl text-gray-700"></i>
+                        <button id="mobileMenuBtn" class="lg:hidden p-2.5 hover:bg-white/5 rounded-full transition-all">
+                            <i class="fas fa-bars text-xl text-gray-400"></i>
                         </button>
                     </div>
                 </div>
@@ -281,79 +657,94 @@
     </header>
 
     <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
-    <div class="mobile-menu" id="mobileMenu">
-        <div class="p-8">
-            <div class="flex justify-between items-center mb-10">
-                <div><img src="logo.png" alt="Logo" class="h-8 w-auto object-contain"></div>
-                <button onclick="closeMobileMenu()" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition-all"><i class="fas fa-times text-lg"></i></button>
+<div class="mobile-menu" id="mobileMenu">
+    <div class="p-8">
+        <div class="flex justify-between items-center mb-10">
+            <div class="flex items-center space-x-2">
+                
+                <div class="w-10 h-10">
+                    <img src="images/my-logo.png" alt="Logo" class="w-full h-full object-contain">
+                </div>
+                    <span class="text-white font-display font-bold">KHMER<span class="text-ai-cyan">SHOP</span></span>
+                </div>
+                <button onclick="closeMobileMenu()" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 transition-all"><i class="fas fa-times text-lg text-white"></i></button>
             </div>
             <div class="space-y-1">
-                <button onclick="navigateTo('home'); closeMobileMenu();" class="w-full text-left px-5 py-4 rounded-2xl hover:bg-secondary/5 font-khmer font-semibold flex items-center space-x-4 transition-all"><span class="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center"><i class="fas fa-home text-secondary"></i></span><span>ទំព័រដើម</span></button>
-                <button onclick="navigateTo('products'); closeMobileMenu();" class="w-full text-left px-5 py-4 rounded-2xl hover:bg-secondary/5 font-khmer font-semibold flex items-center space-x-4 transition-all"><span class="w-10 h-10 rounded-xl bg-green-50 flex items-center justify-center"><i class="fas fa-th-large text-accent"></i></span><span>ផលិតផល</span></button>
-                <button onclick="navigateTo('cart'); closeMobileMenu();" class="w-full text-left px-5 py-4 rounded-2xl hover:bg-secondary/5 font-khmer font-semibold flex items-center space-x-4 transition-all"><span class="w-10 h-10 rounded-xl bg-orange-50 flex items-center justify-center"><i class="fas fa-shopping-bag text-orange-500"></i></span><span>កន្ត្រកទំនិញ</span></button>
-                <button onclick="navigateTo('checkout'); closeMobileMenu();" class="w-full text-left px-5 py-4 rounded-2xl hover:bg-secondary/5 font-khmer font-semibold flex items-center space-x-4 transition-all"><span class="w-10 h-10 rounded-xl bg-purple-50 flex items-center justify-center"><i class="fas fa-credit-card text-purple-500"></i></span><span>ការទូទាត់</span></button>
+                <button onclick="navigateTo('home'); closeMobileMenu();" class="w-full text-left px-5 py-4 rounded-2xl hover:bg-ai-purple/10 font-khmer font-semibold flex items-center space-x-4 transition-all text-white"><span class="w-10 h-10 rounded-xl bg-ai-purple/20 flex items-center justify-center"><i class="fas fa-home text-ai-purple"></i></span><span>ទំព័រដើម</span></button>
+                <button onclick="navigateTo('products'); closeMobileMenu();" class="w-full text-left px-5 py-4 rounded-2xl hover:bg-ai-blue/10 font-khmer font-semibold flex items-center space-x-4 transition-all text-white"><span class="w-10 h-10 rounded-xl bg-ai-blue/20 flex items-center justify-center"><i class="fas fa-th-large text-ai-blue"></i></span><span>ផលិតផល</span></button>
+                <button onclick="navigateTo('cart'); closeMobileMenu();" class="w-full text-left px-5 py-4 rounded-2xl hover:bg-ai-cyan/10 font-khmer font-semibold flex items-center space-x-4 transition-all text-white"><span class="w-10 h-10 rounded-xl bg-ai-cyan/20 flex items-center justify-center"><i class="fas fa-shopping-bag text-ai-cyan"></i></span><span>កន្ត្រកទំនិញ</span></button>
+                <button onclick="navigateTo('checkout'); closeMobileMenu();" class="w-full text-left px-5 py-4 rounded-2xl hover:bg-purple-500/10 font-khmer font-semibold flex items-center space-x-4 transition-all text-white"><span class="w-10 h-10 rounded-xl bg-purple-500/20 flex items-center justify-center"><i class="fas fa-credit-card text-purple-400"></i></span><span>ការទូទាត់</span></button>
             </div>
         </div>
     </div>
 
     <main id="mainContent" class="min-h-screen pt-16 md:pt-24">
         <div id="page-home" class="page active">
-            <section class="relative w-full bg-white select-none group" id="adsSliderSection">
+            <section class="relative w-full select-none group scan-line-effect" id="adsSliderSection">
                 <div class="container mx-auto px-6 pt-4">
-                    <div class="relative w-full overflow-hidden rounded-[30px] shadow-lg bg-gray-50" id="sliderWrapper" style="height: auto;">
+                    <div class="relative w-full overflow-hidden rounded-[24px] shadow-2xl shadow-ai-purple/10 bg-dark/50 border border-white/5" id="sliderWrapper" style="height: auto;">
                         <div id="slidesContainer" class="relative w-full flex transition-transform duration-700 cubic-bezier(0.4, 0, 0.2, 1) will-change-transform cursor-grab active:cursor-grabbing">
                         </div>
 
-                        <button id="prevAdBtn" class="absolute left-4 top-[35%] md:top-[40%] z-20 w-10 h-10 md:w-12 md:h-12 rounded-full bg-black/40 backdrop-blur-md text-white border border-white/10 flex items-center justify-center opacity-0 group-hover:opacity-100 focus:opacity-100 hover:bg-secondary hover:scale-110 transition-all duration-300 shadow-xl">
+                        <button id="prevAdBtn" class="absolute left-4 top-[35%] md:top-[40%] z-20 w-10 h-10 md:w-12 md:h-12 rounded-full bg-black/60 backdrop-blur-xl text-white border border-white/10 flex items-center justify-center opacity-0 group-hover:opacity-100 focus:opacity-100 hover:bg-ai-purple hover:scale-110 transition-all duration-300 shadow-xl">
                             <i class="fas fa-chevron-left text-sm md:text-lg"></i>
                         </button>
-                        <button id="nextAdBtn" class="absolute right-4 top-[35%] md:top-[40%] z-20 w-10 h-10 md:w-12 md:h-12 rounded-full bg-black/40 backdrop-blur-md text-white border border-white/10 flex items-center justify-center opacity-0 group-hover:opacity-100 focus:opacity-100 hover:bg-secondary hover:scale-110 transition-all duration-300 shadow-xl">
+                        <button id="nextAdBtn" class="absolute right-4 top-[35%] md:top-[40%] z-20 w-10 h-10 md:w-12 md:h-12 rounded-full bg-black/60 backdrop-blur-xl text-white border border-white/10 flex items-center justify-center opacity-0 group-hover:opacity-100 focus:opacity-100 hover:bg-ai-purple hover:scale-110 transition-all duration-300 shadow-xl">
                             <i class="fas fa-chevron-right text-sm md:text-lg"></i>
                         </button>
 
-                        <div id="sliderIndicators" class="absolute right-6 bottom-6 z-20 flex space-x-2 bg-black/10 backdrop-blur-md px-3 py-1.5 rounded-full border border-black/5"></div>
+                        <div id="sliderIndicators" class="absolute right-6 bottom-6 z-20 flex space-x-2 bg-black/30 backdrop-blur-xl px-3 py-1.5 rounded-full border border-white/10"></div>
                     </div>
                 </div>
             </section>
 
-            <section class="py-20 bg-white relative">
+            <section class="py-20 relative">
                 <div class="container mx-auto px-6">
                     <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                        <div class="group text-center p-8 rounded-3xl hover:bg-white hover:shadow-2xl transition-all duration-500 cursor-pointer border border-transparent hover:border-gray-100" data-aos="fade-up" data-aos-delay="0">
-                            <div class="w-20 h-20 bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:shadow-xl transition-all duration-500"><i class="fas fa-truck text-3xl text-blue-600"></i></div>
-                            <h3 class="font-bold text-lg mb-3 font-khmer">ដឹកជញ្ជូនឥតគិតថ្លៃ</h3>
+                        <div class="group text-center p-8 rounded-3xl hover:bg-white/5 transition-all duration-500 cursor-pointer border border-transparent hover:border-ai-purple/20 hover:shadow-lg hover:shadow-ai-purple/5" data-aos="fade-up" data-aos-delay="0">
+                            <div class="w-20 h-20 bg-gradient-to-br from-ai-blue/20 to-ai-blue/10 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:shadow-xl group-hover:shadow-ai-blue/20 transition-all duration-500 border border-ai-blue/20">
+                                <i class="fas fa-truck text-3xl text-ai-cyan"></i>
+                            </div>
+                            <h3 class="font-bold text-lg mb-3 font-khmer text-white">ដឹកជញ្ជូនឥតគិតថ្លៃ</h3>
                             <p class="text-gray-500 text-sm font-khmer">សម្រាប់ការបញ្ជាទិញលើសពី 50$</p>
                         </div>
-                        <div class="group text-center p-8 rounded-3xl hover:bg-white hover:shadow-2xl transition-all duration-500 cursor-pointer border border-transparent hover:border-gray-100" data-aos="fade-up" data-aos-delay="100">
-                            <div class="w-20 h-20 bg-gradient-to-br from-green-50 to-green-100 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:shadow-xl transition-all duration-500"><i class="fas fa-shield-halved text-3xl text-green-600"></i></div>
-                            <h3 class="font-bold text-lg mb-3 font-khmer">ការពារអ្នកទិញ</h3>
+                        <div class="group text-center p-8 rounded-3xl hover:bg-white/5 transition-all duration-500 cursor-pointer border border-transparent hover:border-green-500/20 hover:shadow-lg hover:shadow-green-500/5" data-aos="fade-up" data-aos-delay="100">
+                            <div class="w-20 h-20 bg-gradient-to-br from-green-500/20 to-green-500/10 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:shadow-xl group-hover:shadow-green-500/20 transition-all duration-500 border border-green-500/20">
+                                <i class="fas fa-shield-halved text-3xl text-green-400"></i>
+                            </div>
+                            <h3 class="font-bold text-lg mb-3 font-khmer text-white">ការពារអ្នកទិញ</h3>
                             <p class="text-gray-500 text-sm font-khmer">សងប្រាក់វិញ 100% បើមានបញ្ហា</p>
                         </div>
-                        <div class="group text-center p-8 rounded-3xl hover:bg-white hover:shadow-2xl transition-all duration-500 cursor-pointer border border-transparent hover:border-gray-100" data-aos="fade-up" data-aos-delay="200">
-                            <div class="w-20 h-20 bg-gradient-to-br from-orange-50 to-orange-100 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:shadow-xl transition-all duration-500"><i class="fas fa-credit-card text-3xl text-orange-600"></i></div>
-                            <h3 class="font-bold text-lg mb-3 font-khmer">បង់ប្រាក់ងាយស្រួល</h3>
+                        <div class="group text-center p-8 rounded-3xl hover:bg-white/5 transition-all duration-500 cursor-pointer border border-transparent hover:border-orange-500/20 hover:shadow-lg hover:shadow-orange-500/5" data-aos="fade-up" data-aos-delay="200">
+                            <div class="w-20 h-20 bg-gradient-to-br from-orange-500/20 to-orange-500/10 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:shadow-xl group-hover:shadow-orange-500/20 transition-all duration-500 border border-orange-500/20">
+                                <i class="fas fa-credit-card text-3xl text-orange-400"></i>
+                            </div>
+                            <h3 class="font-bold text-lg mb-3 font-khmer text-white">បង់ប្រាក់ងាយស្រួល</h3>
                             <p class="text-gray-500 text-sm font-khmer">ABA, ACLEDA, Wing, COD</p>
                         </div>
-                        <div class="group text-center p-8 rounded-3xl hover:bg-white hover:shadow-2xl transition-all duration-500 cursor-pointer border border-transparent hover:border-gray-100" data-aos="fade-up" data-aos-delay="300">
-                            <div class="w-20 h-20 bg-gradient-to-br from-purple-50 to-purple-100 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:shadow-xl transition-all duration-500"><i class="fas fa-headset text-3xl text-purple-600"></i></div>
-                            <h3 class="font-bold text-lg mb-3 font-khmer">ជំនួយ 24/7</h3>
+                        <div class="group text-center p-8 rounded-3xl hover:bg-white/5 transition-all duration-500 cursor-pointer border border-transparent hover:border-purple-500/20 hover:shadow-lg hover:shadow-purple-500/5" data-aos="fade-up" data-aos-delay="300">
+                            <div class="w-20 h-20 bg-gradient-to-br from-purple-500/20 to-purple-500/10 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:shadow-xl group-hover:shadow-purple-500/20 transition-all duration-500 border border-purple-500/20">
+                                <i class="fas fa-headset text-3xl text-purple-400"></i>
+                            </div>
+                            <h3 class="font-bold text-lg mb-3 font-khmer text-white">ជំនួយ 24/7</h3>
                             <p class="text-gray-500 text-sm font-khmer">គាំទ្រអតិថិជនគ្រប់ពេល</p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section class="py-20 bg-gray-50/50">
-                <div class="container mx-auto px-6">
+            <section class="py-20 relative">
+                <div class="absolute inset-0 bg-gradient-to-b from-transparent via-ai-purple/5 to-transparent"></div>
+                <div class="container mx-auto px-6 relative z-10">
                     <div class="text-center mb-16" data-aos="fade-up">
-                        <span class="text-secondary font-bold text-sm tracking-widest uppercase mb-4 block font-khmer">ផលិតផលពេញនិយម</span>
-                        <h2 class="text-4xl md:text-5xl font-display font-black text-dark mb-6 font-khmer">អ្វីដែលអតិថិជន <span class="gradient-text">ចូលចិត្ត</span></h2>
-                        <p class="text-gray-500 font-khmer max-w-2xl mx-auto text-lg">ស្វែងយល់ពីផលិតផលដែលអតិថិជនភាគច្រើនជ្រើសរើស និងពេញចិត្តបំផុត</p>
+                        <span class="text-ai-cyan font-bold text-sm tracking-widest uppercase mb-4 block font-khmer">ផលិតផលពេញនិយម</span>
+                        <h2 class="text-4xl md:text-5xl font-display font-black text-white mb-6 font-khmer">អ្វីដែលអតិថិជន <span class="gradient-text">ចូលចិត្ត</span></h2>
+                        <p class="text-gray-400 font-khmer max-w-2xl mx-auto text-lg">ស្វែងយល់ពីផលិតផលដែលអតិថិជនភាគច្រើនជ្រើសរើស និងពេញចិត្តបំផុត</p>
                     </div>
                     <div id="featuredProductsGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
                         <div class="col-span-full flex justify-center py-20">
                             <div class="text-center">
-                                <div class="w-20 h-20 border-4 border-secondary border-t-transparent rounded-full animate-spin mx-auto mb-6"></div>
+                                <div class="w-16 h-16 border-3 border-ai-purple/30 border-t-ai-cyan rounded-full animate-spin mx-auto mb-6"></div>
                                 <p class="text-gray-400 font-khmer text-lg">កំពុងផ្ទុកផលិតផលល្អៗ...</p>
                             </div>
                         </div>
@@ -363,12 +754,12 @@
 
             <section class="py-20">
                 <div class="container mx-auto px-6">
-                    <div class="relative bg-gradient-to-br from-dark via-primary to-accent rounded-[40px] p-12 md:p-20 text-center overflow-hidden" data-aos="fade-up">
-                        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 20% 80%, #fff 1px, transparent 1px), radial-gradient(circle at 80% 20%, #fff 1px, transparent 1px); background-size: 60px 60px;"></div>
-                        <div class="hero-blob absolute -top-20 -right-20 w-80 h-80 bg-secondary/20 blur-3xl"></div>
-                        <div class="hero-blob absolute -bottom-20 -left-20 w-80 h-80 bg-gold/20 blur-3xl" style="animation-delay: 4s;"></div>
+                    <div class="relative bg-gradient-to-br from-dark via-primary to-accent/30 rounded-[32px] p-12 md:p-20 text-center overflow-hidden border border-ai-purple/20" data-aos="fade-up">
+                        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 20% 80%, rgba(100,210,255,0.5) 1px, transparent 1px), radial-gradient(circle at 80% 20%, rgba(191,90,242,0.5) 1px, transparent 1px); background-size: 60px 60px;"></div>
+                        <div class="hero-blob absolute -top-20 -right-20 w-80 h-80 bg-ai-purple/20 blur-3xl"></div>
+                        <div class="hero-blob absolute -bottom-20 -left-20 w-80 h-80 bg-ai-blue/20 blur-3xl" style="animation-delay: 4s;"></div>
                         <div class="relative z-10">
-                            <span class="inline-block bg-white/20 backdrop-blur-xl text-white px-6 py-2 rounded-full text-sm font-bold mb-6 font-khmer border border-white/20">🎁 ពិសេសសម្រាប់អ្នក</span>
+                            <span class="inline-block bg-white/10 backdrop-blur-xl text-ai-cyan px-6 py-2 rounded-full text-sm font-bold mb-6 font-khmer border border-ai-cyan/20">🎁 ពិសេសសម្រាប់អ្នក</span>
                             <h2 class="text-4xl md:text-6xl font-display font-black text-white mb-6 font-khmer leading-tight">បញ្ចុះតម្លៃរហូតដល់ <span class="gradient-text-gold">50%</span></h2>
                             <p class="text-xl text-white/70 mb-10 font-khmer max-w-2xl mx-auto">សម្រាប់សមាជិកថ្មី! ប្រញាប់ឡើង ចំនួនមានកំណត់</p>
                             <button onclick="navigateTo('products')" class="btn-gold text-xl px-12 py-5 font-khmer font-bold inline-flex items-center gap-3">ទិញឥឡូវនេះ <i class="fas fa-arrow-right animate-bounce-gentle"></i></button>
@@ -381,20 +772,20 @@
         <div id="page-products" class="page">
             <div class="container mx-auto px-6 py-16">
                 <div class="text-center mb-16">
-                    <span class="text-secondary font-bold text-sm tracking-widest uppercase mb-4 block font-khmer">ផលិតផលទាំងអស់</span>
-                    <h2 class="text-4xl md:text-5xl font-display font-black text-dark mb-6 font-khmer">ស្វែងរក <span class="gradient-text">អ្វីដែលអ្នកត្រូវការ</span></h2>
+                    <span class="text-ai-cyan font-bold text-sm tracking-widest uppercase mb-4 block font-khmer">ផលិតផលទាំងអស់</span>
+                    <h2 class="text-4xl md:text-5xl font-display font-black text-white mb-6 font-khmer">ស្វែងរក <span class="gradient-text">អ្វីដែលអ្នកត្រូវការ</span></h2>
                     <div class="flex justify-center mt-8">
                         <div class="relative w-full max-w-xl">
-                            <div class="absolute inset-0 bg-gradient-to-r from-secondary/20 to-gold/20 rounded-full blur-xl"></div>
-                            <input type="text" id="productsSearch" placeholder="ស្វែងរកផលិតផល..." class="relative w-full pl-14 pr-6 py-4 bg-white border-2 border-gray-100 rounded-full focus:outline-none focus:border-secondary/50 transition-all font-khmer text-lg shadow-lg">
-                            <i class="fas fa-search absolute left-5 top-1/2 -translate-y-1/2 text-gray-400 text-xl"></i>
+                            <div class="absolute inset-0 bg-gradient-to-r from-ai-purple/20 to-ai-blue/20 rounded-full blur-xl"></div>
+                            <input type="text" id="productsSearch" placeholder="ស្វែងរកផលិតផល..." class="relative w-full pl-14 pr-6 py-4 bg-dark/80 border border-white/10 rounded-full focus:outline-none focus:border-ai-purple/50 transition-all font-khmer text-lg text-white placeholder-gray-500 backdrop-blur-xl">
+                            <i class="fas fa-search absolute left-5 top-1/2 -translate-y-1/2 text-gray-500 text-xl"></i>
                         </div>
                     </div>
                 </div>
                 <div id="productsGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
                     <div class="col-span-full flex justify-center py-20">
                         <div class="text-center">
-                            <div class="w-20 h-20 border-4 border-secondary border-t-transparent rounded-full animate-spin mx-auto mb-6"></div>
+                            <div class="w-16 h-16 border-3 border-ai-purple/30 border-t-ai-cyan rounded-full animate-spin mx-auto mb-6"></div>
                             <p class="text-gray-400 font-khmer text-lg">កំពុងផ្ទុក...</p>
                         </div>
                     </div>
@@ -404,41 +795,41 @@
 
         <div id="page-product-detail" class="page">
             <div class="container mx-auto px-6 py-16">
-                <div class="bg-white rounded-[40px] shadow-2xl overflow-hidden" data-aos="fade-up">
+                <div class="bg-dark/50 backdrop-blur-xl rounded-[32px] shadow-2xl overflow-hidden border border-white/5 holographic" data-aos="fade-up">
                     <div class="grid grid-cols-1 lg:grid-cols-2">
-                        <div class="bg-gradient-to-br from-gray-50 to-gray-100 p-12 flex items-center justify-center relative overflow-hidden">
-                            <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(circle, #000 1px, transparent 1px); background-size: 20px 20px;"></div>
-                            <img id="detailImage" src="https://via.placeholder.com/500" alt="Product" class="relative max-w-full max-h-[500px] object-contain rounded-3xl shadow-2xl">
+                        <div class="bg-gradient-to-br from-dark to-primary p-12 flex items-center justify-center relative overflow-hidden scan-line-effect">
+                            <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(circle, rgba(100,210,255,0.5) 1px, transparent 1px); background-size: 20px 20px;"></div>
+                            <img id="detailImage" src="https://via.placeholder.com/500" alt="Product" class="relative max-w-full max-h-[500px] object-contain rounded-3xl shadow-2xl z-10">
                         </div>
                         <div class="p-12 lg:p-16 space-y-8">
                             <div class="flex flex-wrap gap-2">
                                 <span class="badge-premium font-khmer">ម៉ូតថ្មី</span>
                                 <span class="badge-hot font-khmer">ពេញនិយម</span>
                             </div>
-                            <h1 id="detailName" class="text-3xl lg:text-4xl font-display font-black text-dark font-khmer leading-tight"></h1>
-                            <p id="detailCategory" class="text-sm text-gray-400 font-khmer tracking-wide"></p>
+                            <h1 id="detailName" class="text-3xl lg:text-4xl font-display font-black text-white font-khmer leading-tight"></h1>
+                            <p id="detailCategory" class="text-sm text-ai-cyan font-khmer tracking-wide"></p>
                             <div class="flex items-center space-x-2">
                                 <div class="flex text-gold"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
-                                <span class="text-sm text-gray-400">(128 ការវាយតម្លៃ)</span>
+                                <span class="text-sm text-gray-500">(128 ការវាយតម្លៃ)</span>
                             </div>
-                            <p id="detailPrice" class="text-5xl font-display font-black text-dark"></p>
-                            <p id="detailDescription" class="text-gray-600 leading-relaxed font-khmer text-lg"></p>
+                            <p id="detailPrice" class="text-5xl font-display font-black text-white"></p>
+                            <p id="detailDescription" class="text-gray-400 leading-relaxed font-khmer text-lg whitespace-pre-line break-words overflow-wrap-anywhere max-h-[250px] overflow-y-auto pr-2"></p>
                             <p id="detailStock" class="font-khmer text-lg"></p>
                             <div class="flex items-center space-x-6">
-                                <span class="font-khmer font-bold text-dark">ចំនួន៖</span>
+                                <span class="font-khmer font-bold text-white">ចំនួន៖</span>
                                 <div class="flex items-center space-x-3">
-                                    <button onclick="changeDetailQty(-1)" class="w-12 h-12 rounded-2xl border-2 border-gray-200 flex items-center justify-center text-xl font-bold hover:bg-dark hover:text-white hover:border-dark transition-all">-</button>
-                                    <input type="number" id="detailQty" value="1" min="1" class="w-16 text-center border-2 border-gray-200 rounded-2xl py-3 text-lg font-bold" readonly>
-                                    <button onclick="changeDetailQty(1)" class="w-12 h-12 rounded-2xl border-2 border-gray-200 flex items-center justify-center text-xl font-bold hover:bg-dark hover:text-white hover:border-dark transition-all">+</button>
+                                    <button onclick="changeDetailQty(-1)" class="w-12 h-12 rounded-2xl border border-white/10 bg-white/5 flex items-center justify-center text-xl font-bold text-white hover:bg-ai-purple hover:border-ai-purple transition-all">-</button>
+                                    <input type="number" id="detailQty" value="1" min="1" class="w-16 text-center border border-white/10 bg-white/5 rounded-2xl py-3 text-lg font-bold text-white" readonly>
+                                    <button onclick="changeDetailQty(1)" class="w-12 h-12 rounded-2xl border border-white/10 bg-white/5 flex items-center justify-center text-xl font-bold text-white hover:bg-ai-purple hover:border-ai-purple transition-all">+</button>
                                 </div>
                             </div>
                             <div class="flex flex-col sm:flex-row gap-4 pt-6">
                                 <button id="detailAddToCart" class="btn-primary flex-1 text-center font-khmer text-lg py-5"><i class="fas fa-shopping-bag mr-2"></i> បន្ថែមចូលកន្ត្រក</button>
                                 <button id="detailBuyNow" class="btn-secondary flex-1 text-center font-khmer text-lg py-5"><i class="fas fa-bolt mr-2"></i> ទិញភ្លាមៗ</button>
                             </div>
-                            <div class="flex items-center space-x-6 pt-4 text-sm text-gray-400">
-                                <span class="flex items-center"><i class="fas fa-truck mr-2 text-accent"></i> ដឹកជញ្ជូនឥតគិតថ្លៃ</span>
-                                <span class="flex items-center"><i class="fas fa-undo mr-2 text-blue-400"></i> សងវិញ 7ថ្ងៃ</span>
+                            <div class="flex items-center space-x-6 pt-4 text-sm text-gray-500">
+                                <span class="flex items-center"><i class="fas fa-truck mr-2 text-ai-cyan"></i> ដឹកជញ្ជូនឥតគិតថ្លៃ</span>
+                                <span class="flex items-center"><i class="fas fa-undo mr-2 text-ai-blue"></i> សងវិញ 7ថ្ងៃ</span>
                             </div>
                         </div>
                     </div>
@@ -449,30 +840,30 @@
         <div id="page-cart" class="page">
             <div class="container mx-auto px-6 py-16">
                 <div class="text-center mb-12">
-                    <span class="text-secondary font-bold text-sm tracking-widest uppercase mb-4 block font-khmer">កន្ត្រកទំនិញ</span>
-                    <h2 class="text-4xl md:text-5xl font-display font-black text-dark font-khmer">ទំនិញរបស់អ្នក</h2>
+                    <span class="text-ai-cyan font-bold text-sm tracking-widest uppercase mb-4 block font-khmer">កន្ត្រកទំនិញ</span>
+                    <h2 class="text-4xl md:text-5xl font-display font-black text-white font-khmer">ទំនិញរបស់អ្នក</h2>
                 </div>
                 <div id="cartEmpty" class="text-center py-20 hidden">
-                    <i class="fas fa-shopping-bag text-8xl text-gray-200 mb-8"></i>
-                    <p class="text-2xl text-gray-400 font-khmer mb-8">កន្ត្រកទំនិញរបស់អ្នកទទេ</p>
+                    <i class="fas fa-shopping-bag text-8xl text-gray-700 mb-8"></i>
+                    <p class="text-2xl text-gray-500 font-khmer mb-8">កន្ត្រកទំនិញរបស់អ្នកទទេ</p>
                     <button onclick="navigateTo('products')" class="btn-secondary font-khmer text-lg px-10 py-4"><i class="fas fa-store mr-2"></i> បន្តទិញទំនិញ</button>
                 </div>
                 <div id="cartContent" class="hidden">
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
                         <div id="cartItemsList" class="lg:col-span-2 space-y-6"></div>
                         <div class="lg:col-span-1">
-                            <div class="bg-white rounded-[30px] shadow-2xl p-10 sticky top-32">
-                                <h3 class="text-2xl font-display font-black text-dark mb-8 font-khmer">សង្ខេប</h3>
+                            <div class="bg-dark/50 backdrop-blur-xl rounded-[24px] shadow-2xl p-10 sticky top-32 border border-white/5">
+                                <h3 class="text-2xl font-display font-black text-white mb-8 font-khmer">សង្ខេប</h3>
                                 <div class="space-y-5 text-lg">
-                                    <div class="flex justify-between"><span class="font-khmer text-gray-500">សរុបទំនិញ</span><span id="cartSubtotal" class="font-bold">$0.00</span></div>
-                                    <div class="flex justify-between"><span class="font-khmer text-gray-500">ដឹកជញ្ជូន</span><span class="text-success font-bold font-khmer">ឥតគិតថ្លៃ</span></div>
-                                    <hr class="border-gray-100">
+                                    <div class="flex justify-between"><span class="font-khmer text-gray-400">សរុបទំនិញ</span><span id="cartSubtotal" class="font-bold text-white">$0.00</span></div>
+                                    <div class="flex justify-between"><span class="font-khmer text-gray-400">ដឹកជញ្ជូន</span><span class="text-green-400 font-bold font-khmer">ឥតគិតថ្លៃ</span></div>
+                                    <hr class="border-white/10">
                                     <div class="flex justify-between text-2xl font-display font-black">
-                                        <span class="font-khmer">សរុប</span><span id="cartTotal" class="text-dark">$0.00</span>
+                                        <span class="font-khmer text-white">សរុប</span><span id="cartTotal" class="text-ai-cyan">$0.00</span>
                                     </div>
                                 </div>
                                 <button onclick="navigateTo('checkout')" class="btn-gold w-full text-center mt-8 text-lg font-khmer font-bold py-5"><i class="fas fa-lock mr-2"></i> បន្តទៅការទូទាត់</button>
-                                <div class="flex justify-center space-x-3 mt-6 text-sm text-gray-400">
+                                <div class="flex justify-center space-x-3 mt-6 text-sm text-gray-500">
                                     <span>ABA</span><span>•</span><span>ACLEDA</span><span>•</span><span>Wing</span><span>•</span><span>COD</span>
                                 </div>
                             </div>
@@ -485,217 +876,233 @@
         <div id="page-checkout" class="page">
             <div class="container mx-auto px-6 py-16">
                 <div class="text-center mb-12">
-                    <span class="text-secondary font-bold text-sm tracking-widest uppercase mb-4 block font-khmer">ការទូទាត់</span>
-                    <h2 class="text-4xl md:text-5xl font-display font-black text-dark font-khmer">បញ្ចប់ការបញ្ជាទិញ</h2>
+                    <span class="text-ai-cyan font-bold text-sm tracking-widest uppercase mb-4 block font-khmer">ការទូទាត់</span>
+                    <h2 class="text-4xl md:text-5xl font-display font-black text-white font-khmer">បញ្ចប់ការបញ្ជាទិញ</h2>
                 </div>
                 <div id="checkoutFormContainer">
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
                         <div class="lg:col-span-2 space-y-8">
-                            <div class="bg-white rounded-[30px] shadow-xl p-10">
-                                <h3 class="text-xl font-display font-bold mb-8 font-khmer flex items-center"><span class="w-10 h-10 rounded-2xl bg-red-50 flex items-center justify-center mr-3"><i class="fas fa-map-marker-alt text-secondary"></i></span>ព័ត៌មានដឹកជញ្ជូន</h3>
+                            <div class="bg-dark/50 backdrop-blur-xl rounded-[24px] shadow-xl p-10 border border-white/5">
+                                <h3 class="text-xl font-display font-bold mb-8 font-khmer flex items-center text-white"><span class="w-10 h-10 rounded-2xl bg-ai-purple/20 flex items-center justify-center mr-3 border border-ai-purple/30"><i class="fas fa-map-marker-alt text-ai-purple"></i></span>ព័ត៌មានដឹកជញ្ជូន</h3>
                                 <div class="space-y-6">
                                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                        <div><label class="block text-sm font-bold mb-2 font-khmer">ឈ្មោះពេញ *</label><input type="text" id="checkoutName" class="w-full px-5 py-4 border-2 border-gray-100 rounded-2xl focus:border-secondary focus:outline-none font-khmer" placeholder="សូមបញ្ចូលឈ្មោះ"></div>
-                                        <div><label class="block text-sm font-bold mb-2 font-khmer">លេខទូរស័ព្ទ *</label><input type="tel" id="checkoutPhone" class="w-full px-5 py-4 border-2 border-gray-100 rounded-2xl focus:border-secondary focus:outline-none" placeholder="012 345 678"></div>
+                                        <div><label class="block text-sm font-bold mb-2 font-khmer text-gray-300">ឈ្មោះពេញ *</label><input type="text" id="checkoutName" class="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-2xl focus:border-ai-purple focus:outline-none font-khmer text-white placeholder-gray-600" placeholder="សូមបញ្ចូលឈ្មោះ"></div>
+                                        <div><label class="block text-sm font-bold mb-2 font-khmer text-gray-300">លេខទូរស័ព្ទ *</label><input type="tel" id="checkoutPhone" class="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-2xl focus:border-ai-purple focus:outline-none text-white placeholder-gray-600" placeholder="012 345 678"></div>
                                     </div>
-                                    <div><label class="block text-sm font-bold mb-2 font-khmer">អាសយដ្ឋាន *</label><textarea id="checkoutAddress" rows="3" class="w-full px-5 py-4 border-2 border-gray-100 rounded-2xl focus:border-secondary focus:outline-none font-khmer" placeholder="ផ្ទះលេខ ផ្លូវ សង្កាត់ ខណ្ឌ ក្រុង"></textarea></div>
+                                    <div><label class="block text-sm font-bold mb-2 font-khmer text-gray-300">អាសយដ្ឋាន *</label><textarea id="checkoutAddress" rows="3" class="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-2xl focus:border-ai-purple focus:outline-none font-khmer text-white placeholder-gray-600" placeholder="ផ្ទះលេខ ផ្លូវ សង្កាត់ ខណ្ឌ ក្រុង"></textarea></div>
                                 </div>
                             </div>
-                            <div class="bg-white rounded-[30px] shadow-xl p-10">
-                                <h3 class="text-xl font-display font-bold mb-8 font-khmer flex items-center"><span class="w-10 h-10 rounded-2xl bg-green-50 flex items-center justify-center mr-3"><i class="fas fa-wallet text-accent"></i></span>វិធីបង់ប្រាក់</h3>
+                            <div class="bg-dark/50 backdrop-blur-xl rounded-[24px] shadow-xl p-10 border border-white/5">
+                                <h3 class="text-xl font-display font-bold mb-8 font-khmer flex items-center text-white"><span class="w-10 h-10 rounded-2xl bg-green-500/20 flex items-center justify-center mr-3 border border-green-500/30"><i class="fas fa-wallet text-green-400"></i></span>វិធីបង់ប្រាក់ !ចំណាំ: ដោយសារតែប្រព័ន្ធធនាគារមិនទាន់អាប់ដេតពេញលេញសូមកុំធ្វើការបង់ប្រាក់តាមរយៈ website ក្រុមការងារនិងទាក់ទងទៅអ្នកតាមរយៈលេខទូរសព្ទឬក៏ Telegram នៅពេលដែលបញ្ចប់ការទិញ🙏</h3>
                                 <div class="space-y-4" id="paymentMethods">
-                                    <label class="flex items-center p-5 border-2 border-gray-100 rounded-2xl cursor-pointer hover:border-secondary/50 transition-all"><input type="radio" name="payment" value="ABA" checked class="w-5 h-5 text-secondary mr-4">
+                                    <label class="flex items-center p-5 border border-white/10 rounded-2xl cursor-pointer hover:border-ai-purple/50 transition-all bg-white/5"><input type="radio" name="payment" value="ABA" checked class="w-5 h-5 text-ai-purple mr-4">
                                         <div>
-                                            <p class="font-bold font-khmer">ABA Pay</p>
+                                            <p class="font-bold font-khmer text-white">ABA Pay</p>
                                             <p class="text-sm text-gray-500 font-khmer">ស្កេន QR Code ដើម្បីទូទាត់</p>
                                         </div>
                                     </label>
-                                    <label class="flex items-center p-5 border-2 border-gray-100 rounded-2xl cursor-pointer hover:border-secondary/50 transition-all"><input type="radio" name="payment" value="ACLEDA" class="w-5 h-5 text-secondary mr-4">
+                                    <label class="flex items-center p-5 border border-white/10 rounded-2xl cursor-pointer hover:border-ai-purple/50 transition-all bg-white/5"><input type="radio" name="payment" value="ACLEDA" class="w-5 h-5 text-ai-purple mr-4">
                                         <div>
-                                            <p class="font-bold font-khmer">ACLEDA Bank</p>
+                                            <p class="font-bold font-khmer text-white">ACLEDA Bank</p>
                                             <p class="text-sm text-gray-500 font-khmer">ស្កេន QR Code ដើម្បីទូទាត់</p>
                                         </div>
                                     </label>
-                                    <label class="flex items-center p-5 border-2 border-gray-100 rounded-2xl cursor-pointer hover:border-secondary/50 transition-all"><input type="radio" name="payment" value="Wing" class="w-5 h-5 text-secondary mr-4">
+                                    <label class="flex items-center p-5 border border-white/10 rounded-2xl cursor-pointer hover:border-ai-purple/50 transition-all bg-white/5"><input type="radio" name="payment" value="Wing" class="w-5 h-5 text-ai-purple mr-4">
                                         <div>
-                                            <p class="font-bold font-khmer">Wing Money</p>
+                                            <p class="font-bold font-khmer text-white">Wing Money</p>
                                             <p class="text-sm text-gray-500 font-khmer">ស្កេន QR Code ដើម្បីទូទាត់</p>
                                         </div>
                                     </label>
-                                    <label class="flex items-center p-5 border-2 border-gray-100 rounded-2xl cursor-pointer hover:border-secondary/50 transition-all"><input type="radio" name="payment" value="COD" class="w-5 h-5 text-secondary mr-4">
+                                    <label class="flex items-center p-5 border border-white/10 rounded-2xl cursor-pointer hover:border-ai-purple/50 transition-all bg-white/5"><input type="radio" name="payment" value="COD" class="w-5 h-5 text-ai-purple mr-4">
                                         <div>
-                                            <p class="font-bold font-khmer">បង់ពេលទទួលទំនិញ (COD)</p>
+                                            <p class="font-bold font-khmer text-white">បង់ពេលទទួលទំនិញ (COD)</p>
                                             <p class="text-sm text-gray-500 font-khmer">បង់ប្រាក់នៅពេលទទួលទំនិញ</p>
                                         </div>
                                     </label>
                                 </div>
-                                <div id="qrSection" class="mt-8 p-8 bg-gray-50 rounded-2xl text-center">
-                                    <p class="font-bold mb-4 font-khmer text-lg">ស្កេន QR Code ដើម្បីទូទាត់</p>
-                                    <img id="qrCodeImg" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=ABA" alt="QR Code" class="mx-auto rounded-2xl shadow-lg">
+                                <div id="qrSection" class="mt-8 p-8 bg-white/5 rounded-2xl text-center border border-white/5">
+                                    <p class="font-bold mb-4 font-khmer text-white text-lg">ស្កេន QR Code ដើម្បីទូទាត់</p>
+                                    <img id="qrCodeImg" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=ABA" alt="QR Code" class="mx-auto rounded-2xl shadow-lg bg-white p-2">
                                     <p id="qrInstructions" class="text-sm text-gray-500 mt-4 font-khmer"></p>
                                 </div>
                             </div>
                         </div>
                         <div class="lg:col-span-1">
-                            <div class="bg-white rounded-[30px] shadow-2xl p-10 sticky top-32">
-                                <h3 class="text-xl font-display font-bold mb-8 font-khmer">សង្ខេប</h3>
+                            <div class="bg-dark/50 backdrop-blur-xl rounded-[24px] shadow-2xl p-10 sticky top-32 border border-white/5">
+                                <h3 class="text-xl font-display font-bold mb-8 font-khmer text-white">សង្ខេប</h3>
                                 <div id="checkoutItems" class="space-y-4 mb-6 max-h-60 overflow-y-auto"></div>
-                                <hr class="mb-6 border-gray-100">
-                                <div class="flex justify-between text-2xl font-display font-black mb-8"><span class="font-khmer">សរុប</span><span id="checkoutTotal" class="text-dark">$0.00</span></div>
+                                <hr class="mb-6 border-white/10">
+                                <div class="flex justify-between text-2xl font-display font-black mb-8"><span class="font-khmer text-white">សរុប</span><span id="checkoutTotal" class="text-ai-cyan">$0.00</span></div>
                                 <button id="placeOrderBtn" class="btn-gold w-full text-center text-lg font-khmer font-bold py-5"><i class="fas fa-check-circle mr-2"></i> បញ្ជាការទិញ</button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div id="orderSuccess" class="hidden text-center py-20">
-                    <div class="w-28 h-28 bg-gradient-to-br from-green-50 to-green-100 rounded-full flex items-center justify-center mx-auto mb-8 animate-bounce-gentle shadow-2xl">
-                        <i class="fas fa-check-circle text-6xl text-success"></i>
+                    <div class="w-28 h-28 bg-gradient-to-br from-green-500/20 to-green-500/10 rounded-full flex items-center justify-center mx-auto mb-8 animate-bounce-gentle shadow-2xl border border-green-500/30">
+                        <i class="fas fa-check-circle text-6xl text-green-400"></i>
                     </div>
-                    <h2 class="text-4xl font-display font-black text-dark mb-4 font-khmer">ការបញ្ជាទិញជោគជ័យ! 🎉</h2>
-                    <p class="text-gray-500 mb-2 font-khmer text-lg">លេខសម្គាល់៖ <strong id="successOrderId" class="text-dark text-2xl"></strong></p>
-                    <p class="text-gray-400 font-khmer mb-10">យើងនឹងផ្ញើរព័ត៌មានទៅកាន់អ្នកក្នុងពេលឆាប់ៗ</p>
+                    <h2 class="text-4xl font-display font-black text-white mb-4 font-khmer">ការបញ្ជាទិញជោគជ័យ! 🎉</h2>
+                    <p class="text-gray-400 mb-2 font-khmer text-lg">លេខសម្គាល់៖ <strong id="successOrderId" class="text-ai-cyan text-2xl"></strong></p>
+                    <p class="text-gray-500 font-khmer mb-10">យើងនឹងផ្ញើរព័ត៌មានទៅកាន់អ្នកក្នុងពេលឆាប់ៗ</p>
                     <button onclick="navigateTo('home')" class="btn-primary font-khmer text-lg px-12 py-5"><i class="fas fa-home mr-2"></i> ទៅកាន់ទំព័រដើម</button>
                 </div>
             </div>
         </div>
 
-        <div id="page-admin-login" class="page">
-            <div class="min-h-screen flex items-center justify-center bg-gradient-to-br from-dark via-primary to-accent p-6">
-                <div class="bg-white/10 backdrop-blur-2xl rounded-[40px] p-12 w-full max-w-md border border-white/20 shadow-2xl" data-aos="zoom-in">
-                    <div class="text-center mb-10">
-                        <div class="w-24 h-24 bg-gradient-to-br from-secondary to-secondary-light rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl animate-pulse-glow">
-                            <i class="fas fa-user-shield text-4xl text-white"></i>
-                        </div>
-                        <h2 class="text-3xl font-display font-black text-white font-khmer">Admin Panel</h2>
-                        <p class="text-white/60 font-khmer mt-2">ចូលប្រព័ន្ធគ្រប់គ្រង</p>
-                    </div>
-                    <div class="space-y-5">
-                        <div>
-                            <label class="block text-sm font-bold mb-2 font-khmer text-white/80">ឈ្មោះអ្នកប្រើ</label>
-                            <div class="relative">
-                                <i class="fas fa-user absolute left-5 top-1/2 -translate-y-1/2 text-white/40"></i>
-                                <input type="text" id="adminUsername" class="w-full pl-14 pr-5 py-4 bg-white/10 border border-white/20 rounded-2xl text-white placeholder-white/30 focus:outline-none focus:border-secondary/50 font-khmer" placeholder="admin">
-                            </div>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-bold mb-2 font-khmer text-white/80">ពាក្យសម្ងាត់</label>
-                            <div class="relative">
-                                <i class="fas fa-lock absolute left-5 top-1/2 -translate-y-1/2 text-white/40"></i>
-                                <input type="password" id="adminPassword" class="w-full pl-14 pr-5 py-4 bg-white/10 border border-white/20 rounded-2xl text-white placeholder-white/30 focus:outline-none focus:border-secondary/50" placeholder="•••••">
-                            </div>
-                        </div>
-                        <div id="loginError" class="hidden bg-red-500/20 border border-red-500/30 text-red-200 px-5 py-4 rounded-2xl font-khmer text-sm"></div>
-                        <button onclick="adminLogin()" class="btn-secondary w-full text-center font-khmer text-lg py-5 font-bold"><i class="fas fa-sign-in-alt mr-2"></i> ចូលប្រព័ន្ធ</button>
-                        <button onclick="navigateTo('home')" class="w-full text-center text-white/50 hover:text-white font-khmer py-3 transition-colors"><i class="fas fa-arrow-left mr-1"></i> ត្រឡប់ទៅគេហទំព័រ</button>
+      <div id="page-admin-login" class="page">
+    <div class="min-h-screen flex items-center justify-center bg-dark p-6">
+        <div class="bg-white/5 backdrop-blur-2xl rounded-[32px] p-12 w-full max-w-md border border-ai-purple/20 shadow-2xl shadow-ai-purple/5 holographic" data-aos="zoom-in">
+            
+            <div class="text-center mb-10">
+                <div class="w-24 h-24 relative flex items-center justify-center mx-auto mb-6">
+                    <div class="absolute inset-0 rounded-full border-4 border-dashed border-ai-purple/50 animate-pulse-glow shadow-[0_0_15px_rgba(168,85,247,0.3)]"></div>
+                    <div class="absolute inset-0 rounded-full border-2 border-l-ai-purple border-t-ai-blue/30 border-r-ai-blue/30 border-b-ai-purple/70"></div>
+                    <img src="images/my-logo.png" alt="AI Core Logo" class="w-12 h-12 object-contain relative z-10 filter drop-shadow-[0_0_8px_rgba(59,130,246,0.8)]">
+                </div>
+                
+                <h2 class="text-3xl font-display font-black text-white font-khmer">Admin Panel</h2>
+                <p class="text-gray-400 font-khmer mt-2">ចូលប្រព័ន្ធគ្រប់គ្រង </p>
+            </div>
+
+            <div class="space-y-5">
+                <div>
+                    <label class="block text-sm font-bold mb-2 font-khmer text-gray-300">ឈ្មោះអ្នកប្រើ</label>
+                    <div class="relative">
+                        <i class="fas fa-user absolute left-5 top-1/2 -translate-y-1/2 text-gray-500"></i>
+                        <input type="text" id="adminUsername" class="w-full pl-14 pr-5 py-4 bg-white/5 border border-white/10 rounded-2xl text-white placeholder-gray-600 focus:outline-none focus:border-ai-purple/50 font-khmer" placeholder="admin">
                     </div>
                 </div>
+
+                <div>
+                    <label class="block text-sm font-bold mb-2 font-khmer text-gray-300">ពាក្យសម្ងាត់</label>
+                    <div class="relative">
+                        <i class="fas fa-lock absolute left-5 top-1/2 -translate-y-1/2 text-gray-500"></i>
+                        <input type="password" id="adminPassword" class="w-full pl-14 pr-5 py-4 bg-white/5 border border-white/10 rounded-2xl text-white placeholder-gray-600 focus:outline-none focus:border-ai-purple/50" placeholder="•••••">
+                    </div>
+                </div>
+
+                <div id="loginError" class="hidden bg-red-500/20 border border-red-500/30 text-red-300 px-5 py-4 rounded-2xl font-khmer text-sm backdrop-blur-xl"></div>
+                
+                <button onclick="adminLogin()" class="btn-secondary w-full text-center font-khmer text-lg py-5 font-bold">
+                    <i class="fas fa-sign-in-alt mr-2"></i> ចូលប្រព័ន្ធ
+                </button>
+                
+                <button onclick="navigateTo('home')" class="w-full text-center text-gray-500 hover:text-ai-cyan font-khmer py-3 transition-colors">
+                    <i class="fas fa-arrow-left mr-1"></i> ត្រឡប់ទៅគេហទំព័រ
+                </button>
             </div>
+
         </div>
+    </div>
+</div>
 
         <div id="page-admin-dashboard" class="page">
-            <div class="flex h-screen bg-gray-50">
-                <aside class="w-80 bg-dark text-white p-8 hidden lg:block overflow-y-auto">
+            <div class="flex h-screen bg-dark">
+                <aside class="w-80 bg-dark/80 backdrop-blur-xl text-white p-8 hidden lg:block overflow-y-auto border-r border-white/5">
                     <div class="mb-12">
                         <div class="flex items-center space-x-3 mb-2">
-                            <div class="w-10 h-10 bg-gradient-to-br from-secondary to-secondary-light rounded-xl flex items-center justify-center"><i class="fas fa-shopping-bag text-white"></i></div>
+                            <div class="w-10 h-10">
+    <img src="images/my-logo.png" alt="Logo" class="w-full h-full object-contain">
+</div>
                             <h2 class="text-xl font-bold font-khmer">ខ្មែរសប</h2>
                         </div>
-                        <p class="text-gray-500 text-xs tracking-wider">ADMIN PANEL</p>
+                        <p class="text-gray-500 text-xs tracking-wider">ADMIN PANEL 2026</p>
                     </div>
                     <nav class="space-y-1">
-                        <button onclick="showAdminSection('dashboard')" class="admin-nav-btn w-full text-left px-5 py-4 rounded-2xl flex items-center space-x-4 bg-white/10 font-khmer transition-all"><i class="fas fa-tachometer-alt w-5 text-gold"></i><span>ផ្ទាំងគ្រប់គ្រង</span></button>
-                        <button onclick="showAdminSection('products')" class="admin-nav-btn w-full text-left px-5 py-4 rounded-2xl flex items-center space-x-4 hover:bg-white/5 font-khmer transition-all"><i class="fas fa-box w-5 text-blue-400"></i><span>ផលិតផល</span></button>
-                        <button onclick="showAdminSection('orders')" class="admin-nav-btn w-full text-left px-5 py-4 rounded-2xl flex items-center space-x-4 hover:bg-white/5 font-khmer transition-all"><i class="fas fa-shopping-cart w-5 text-green-400"></i><span>ការបញ្ជាទិញ</span></button>
-                        <hr class="my-6 border-gray-700">
+                        <button onclick="showAdminSection('dashboard')" class="admin-nav-btn w-full text-left px-5 py-4 rounded-2xl flex items-center space-x-4 bg-ai-purple/10 font-khmer transition-all text-white"><i class="fas fa-tachometer-alt w-5 text-ai-purple"></i><span>ផ្ទាំងគ្រប់គ្រង</span></button>
+                        <button onclick="showAdminSection('products')" class="admin-nav-btn w-full text-left px-5 py-4 rounded-2xl flex items-center space-x-4 hover:bg-white/5 font-khmer transition-all text-gray-400"><i class="fas fa-box w-5 text-ai-cyan"></i><span>ផលិតផល</span></button>
+                        <button onclick="showAdminSection('orders')" class="admin-nav-btn w-full text-left px-5 py-4 rounded-2xl flex items-center space-x-4 hover:bg-white/5 font-khmer transition-all text-gray-400"><i class="fas fa-shopping-cart w-5 text-green-400"></i><span>ការបញ្ជាទិញ</span></button>
+                        <hr class="my-6 border-white/5">
                         <button onclick="adminLogout()" class="w-full text-left px-5 py-4 rounded-2xl flex items-center space-x-4 text-red-400 hover:bg-white/5 font-khmer transition-all"><i class="fas fa-sign-out-alt w-5"></i><span>ចាកចេញ</span></button>
                     </nav>
                 </aside>
                 <div class="flex-1 overflow-y-auto p-8 lg:p-12">
                     <div id="admin-dashboard" class="admin-section">
-                        <h2 class="text-3xl font-display font-black text-dark mb-10 font-khmer">ផ្ទាំងគ្រប់គ្រង</h2>
+                        <h2 class="text-3xl font-display font-black text-white mb-10 font-khmer">ផ្ទាំងគ្រប់គ្រង </h2>
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-                            <div class="bg-white rounded-3xl shadow-sm p-8" data-aos="fade-up">
+                            <div class="bg-dark/50 backdrop-blur-xl rounded-3xl shadow-sm p-8 border border-ai-blue/20" data-aos="fade-up">
                                 <div class="flex items-center justify-between mb-4">
-                                    <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center"><i class="fas fa-box text-2xl text-blue-600"></i></div><span class="text-green-500 text-sm font-bold">↑ 12%</span>
+                                    <div class="w-14 h-14 bg-ai-blue/20 rounded-2xl flex items-center justify-center border border-ai-blue/30"><i class="fas fa-box text-2xl text-ai-cyan"></i></div><span class="text-green-400 text-sm font-bold">↑ 12%</span>
                                 </div>
-                                <p id="adminTotalProducts" class="text-4xl font-display font-black text-dark">0</p>
+                                <p id="adminTotalProducts" class="text-4xl font-display font-black text-white">0</p>
                                 <p class="text-gray-500 font-khmer text-sm mt-2">ផលិតផលសរុប</p>
                             </div>
-                            <div class="bg-white rounded-3xl shadow-sm p-8" data-aos="fade-up" data-aos-delay="100">
+                            <div class="bg-dark/50 backdrop-blur-xl rounded-3xl shadow-sm p-8 border border-green-500/20" data-aos="fade-up" data-aos-delay="100">
                                 <div class="flex items-center justify-between mb-4">
-                                    <div class="w-14 h-14 bg-green-50 rounded-2xl flex items-center justify-center"><i class="fas fa-shopping-cart text-2xl text-green-600"></i></div><span class="text-green-500 text-sm font-bold">↑ 8%</span>
+                                    <div class="w-14 h-14 bg-green-500/20 rounded-2xl flex items-center justify-center border border-green-500/30"><i class="fas fa-shopping-cart text-2xl text-green-400"></i></div><span class="text-green-400 text-sm font-bold">↑ 8%</span>
                                 </div>
-                                <p id="adminTotalOrders" class="text-4xl font-display font-black text-dark">0</p>
+                                <p id="adminTotalOrders" class="text-4xl font-display font-black text-white">0</p>
                                 <p class="text-gray-500 font-khmer text-sm mt-2">ការបញ្ជាទិញ</p>
                             </div>
-                            <div class="bg-white rounded-3xl shadow-sm p-8" data-aos="fade-up" data-aos-delay="200">
+                            <div class="bg-dark/50 backdrop-blur-xl rounded-3xl shadow-sm p-8 border border-orange-500/20" data-aos="fade-up" data-aos-delay="200">
                                 <div class="flex items-center justify-between mb-4">
-                                    <div class="w-14 h-14 bg-orange-50 rounded-2xl flex items-center justify-center"><i class="fas fa-dollar-sign text-2xl text-orange-600"></i></div><span class="text-green-500 text-sm font-bold">↑ 15%</span>
+                                    <div class="w-14 h-14 bg-orange-500/20 rounded-2xl flex items-center justify-center border border-orange-500/30"><i class="fas fa-dollar-sign text-2xl text-orange-400"></i></div><span class="text-green-400 text-sm font-bold">↑ 15%</span>
                                 </div>
-                                <p id="adminTotalRevenue" class="text-4xl font-display font-black text-dark">$0</p>
+                                <p id="adminTotalRevenue" class="text-4xl font-display font-black text-white">$0</p>
                                 <p class="text-gray-500 font-khmer text-sm mt-2">ចំណូលសរុប</p>
                             </div>
-                            <div class="bg-white rounded-3xl shadow-sm p-8" data-aos="fade-up" data-aos-delay="300">
+                            <div class="bg-dark/50 backdrop-blur-xl rounded-3xl shadow-sm p-8 border border-red-500/20" data-aos="fade-up" data-aos-delay="300">
                                 <div class="flex items-center justify-between mb-4">
-                                    <div class="w-14 h-14 bg-red-50 rounded-2xl flex items-center justify-center"><i class="fas fa-clock text-2xl text-red-600"></i></div>
+                                    <div class="w-14 h-14 bg-red-500/20 rounded-2xl flex items-center justify-center border border-red-500/30"><i class="fas fa-clock text-2xl text-red-400"></i></div>
                                 </div>
-                                <p id="adminPendingOrders" class="text-4xl font-display font-black text-dark">0</p>
+                                <p id="adminPendingOrders" class="text-4xl font-display font-black text-white">0</p>
                                 <p class="text-gray-500 font-khmer text-sm mt-2">កំពុងរង់ចាំ</p>
                             </div>
                         </div>
                     </div>
                     <div id="admin-products" class="admin-section hidden">
                         <div class="flex justify-between items-center mb-8">
-                            <h2 class="text-3xl font-display font-black text-dark font-khmer">គ្រប់គ្រងផលិតផល</h2>
+                            <h2 class="text-3xl font-display font-black text-white font-khmer">គ្រប់គ្រងផលិតផល</h2>
                             <button onclick="showAddProductForm()" class="btn-secondary font-khmer"><i class="fas fa-plus mr-2"></i> បន្ថែម</button>
                         </div>
-                        <div id="productFormContainer" class="hidden bg-white rounded-3xl shadow-sm p-8 mb-8">
-                            <h3 id="productFormTitle" class="text-xl font-bold mb-6 font-khmer">បន្ថែមផលិតផល</h3><input type="hidden" id="editProductId">
+                        <div id="productFormContainer" class="hidden bg-dark/50 backdrop-blur-xl rounded-3xl shadow-sm p-8 mb-8 border border-white/5">
+                            <h3 id="productFormTitle" class="text-xl font-bold mb-6 font-khmer text-white">បន្ថែមផលិតផល</h3><input type="hidden" id="editProductId">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                                <div><label class="block text-sm font-bold mb-2 font-khmer">ឈ្មោះ *</label><input type="text" id="productName" class="w-full px-4 py-3 border rounded-2xl font-khmer"></div>
-                                <div><label class="block text-sm font-bold mb-2 font-khmer">ប្រភេទ *</label><select id="productCategory" class="w-full px-4 py-3 border rounded-2xl font-khmer">
+                                <div><label class="block text-sm font-bold mb-2 font-khmer text-gray-300">ឈ្មោះ *</label><input type="text" id="productName" class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-2xl font-khmer text-white"></div>
+                                <div><label class="block text-sm font-bold mb-2 font-khmer text-gray-300">ប្រភេទ *</label><select id="productCategory" class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-2xl font-khmer text-white">
                                         <option value="">ជ្រើសរើស</option>
                                         <option>គ្រឿងអេឡិចត្រូនិក</option>
                                         <option>សម្លៀកបំពាក់</option>
                                         <option>ស្បែកជើង</option>
                                     </select></div>
-                                <div><label class="block text-sm font-bold mb-2 font-khmer">តម្លៃ ($) *</label><input type="number" id="productPrice" step="0.01" class="w-full px-4 py-3 border rounded-2xl"></div>
-                                <div><label class="block text-sm font-bold mb-2 font-khmer">ស្តុក</label><input type="number" id="productStock" value="0" class="w-full px-4 py-3 border rounded-2xl"></div>
-                                <div class="md:col-span-2"><label class="block text-sm font-bold mb-2 font-khmer">ការពិពណ៌នា</label><textarea id="productDescription" rows="2" class="w-full px-4 py-3 border rounded-2xl font-khmer"></textarea></div>
-                                <div class="md:col-span-2"><label class="block text-sm font-bold mb-2 font-khmer">URL រូបភាព</label><input type="url" id="productImage" class="w-full px-4 py-3 border rounded-2xl" placeholder="https://..."></div>
+                                <div><label class="block text-sm font-bold mb-2 font-khmer text-gray-300">តម្លៃ ($) *</label><input type="number" id="productPrice" step="0.01" class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-2xl text-white"></div>
+                                <div><label class="block text-sm font-bold mb-2 font-khmer text-gray-300">ស្តុក</label><input type="number" id="productStock" value="0" class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-2xl text-white"></div>
+                                <div class="md:col-span-2"><label class="block text-sm font-bold mb-2 font-khmer text-gray-300">ការពិពណ៌នា</label><textarea id="productDescription" rows="2" class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-2xl font-khmer text-white"></textarea></div>
+                                <div class="md:col-span-2"><label class="block text-sm font-bold mb-2 font-khmer text-gray-300">URL រូបភាព</label><input type="url" id="productImage" class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-2xl text-white" placeholder="https://..."></div>
                             </div>
-                            <div class="flex justify-end space-x-3 mt-6"><button onclick="hideProductForm()" class="px-6 py-3 border rounded-2xl font-khmer">បោះបង់</button><button onclick="saveProduct()" class="btn-primary font-khmer">រក្សាទុក</button></div>
+                            <div class="flex justify-end space-x-3 mt-6"><button onclick="hideProductForm()" class="px-6 py-3 border border-white/10 rounded-2xl font-khmer text-gray-400 hover:bg-white/5">បោះបង់</button><button onclick="saveProduct()" class="btn-primary font-khmer">រក្សាទុក</button></div>
                         </div>
-                        <div class="bg-white rounded-3xl shadow-sm overflow-x-auto">
+                        <div class="bg-dark/50 backdrop-blur-xl rounded-3xl shadow-sm overflow-x-auto border border-white/5">
                             <table class="w-full">
                                 <thead>
-                                    <tr class="bg-gray-50">
-                                        <th class="p-5 text-left font-khmer">ឈ្មោះ</th>
-                                        <th class="p-5 text-left font-khmer">ប្រភេទ</th>
-                                        <th class="p-5 text-left font-khmer">តម្លៃ</th>
-                                        <th class="p-5 text-left font-khmer">ស្តុក</th>
-                                        <th class="p-5 text-left font-khmer">សកម្មភាព</th>
+                                    <tr class="bg-white/5">
+                                        <th class="p-5 text-left font-khmer text-gray-300">ឈ្មោះ</th>
+                                        <th class="p-5 text-left font-khmer text-gray-300">ប្រភេទ</th>
+                                        <th class="p-5 text-left font-khmer text-gray-300">តម្លៃ</th>
+                                        <th class="p-5 text-left font-khmer text-gray-300">ស្តុក</th>
+                                        <th class="p-5 text-left font-khmer text-gray-300">សកម្មភាព</th>
                                     </tr>
                                 </thead>
-                                <tbody id="adminProductsTable"></tbody>
+                                <tbody id="adminProductsTable" class="text-white"></tbody>
                             </table>
                         </div>
                     </div>
                     <div id="admin-orders" class="admin-section hidden">
-                        <h2 class="text-3xl font-display font-black text-dark mb-8 font-khmer">ការបញ្ជាទិញ</h2>
-                        <div class="bg-white rounded-3xl shadow-sm overflow-x-auto">
+                        <h2 class="text-3xl font-display font-black text-white mb-8 font-khmer">ការបញ្ជាទិញ</h2>
+                        <div class="bg-dark/50 backdrop-blur-xl rounded-3xl shadow-sm overflow-x-auto border border-white/5">
                             <table class="w-full">
                                 <thead>
-                                    <tr class="bg-gray-50">
-                                        <th class="p-5 text-left font-khmer">លេខ</th>
-                                        <th class="p-5 text-left font-khmer">អតិថិជន</th>
-                                        <th class="p-5 text-left font-khmer">ទូរស័ព្ទ</th>
-                                        <th class="p-5 text-left font-khmer">តម្លៃ</th>
-                                        <th class="p-5 text-left font-khmer">ស្ថានភាព</th>
-                                        <th class="p-5 text-left font-khmer">កាលបរិច្ឆេទ</th>
+                                    <tr class="bg-white/5">
+                                        <th class="p-5 text-left font-khmer text-gray-300">លេខ</th>
+                                        <th class="p-5 text-left font-khmer text-gray-300">អតិថិជន</th>
+                                        <th class="p-5 text-left font-khmer text-gray-300">ទូរស័ព្ទ</th>
+                                        <th class="p-5 text-left font-khmer text-gray-300">តម្លៃ</th>
+                                        <th class="p-5 text-left font-khmer text-gray-300">ស្ថានភាព</th>
+                                        <th class="p-5 text-left font-khmer text-gray-300">កាលបរិច្ឆេទ</th>
                                     </tr>
                                 </thead>
-                                <tbody id="adminOrdersTable"></tbody>
+                                <tbody id="adminOrdersTable" class="text-white"></tbody>
                             </table>
                         </div>
                     </div>
@@ -704,56 +1111,62 @@
         </div>
     </main>
 
-    <footer class="bg-dark text-white pt-20 pb-10">
+    <footer class="bg-dark/80 backdrop-blur-xl text-white pt-20 pb-10 border-t border-white/5">
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
                 <div>
-                    <div class="mb-6"><img src="logo.png" alt="Logo" class="h-10 w-auto object-contain"></div>
-                    <p class="text-gray-400 font-khmer text-sm leading-relaxed">គេហទំព័រលក់ទំនិញអនឡាញលេខ១ នៅកម្ពុជា ផ្តល់ជូននូវផលិតផលមានគុណភាព</p>
+                   <div class="mb-6 flex items-center space-x-2">
+    
+    <div class="w-10 h-10">
+        <img src="images/my-logo.png" alt="Logo" class="w-full h-full object-contain">
+    </div>
+                        <span class="text-white font-display font-bold text-xl">KHMER<span class="text-ai-cyan">SHOP</span></span>
+                    </div>
+                    <p class="text-gray-500 font-khmer text-sm leading-relaxed">គេហទំព័រលក់ទំនិញអនឡាញលេខ១ នៅកម្ពុជា បំពាក់ដោយបច្ចេកវិទ្យា AI ឆ្នាំ 2026</p>
                 </div>
                 <div>
-                    <h4 class="font-bold mb-6 font-khmer text-lg">តំណភ្ជាប់</h4>
-                    <ul class="space-y-3 text-gray-400">
-                        <li><button onclick="navigateTo('home')" class="hover:text-white font-khmer">ទំព័រដើម</button></li>
-                        <li><button onclick="navigateTo('products')" class="hover:text-white font-khmer">ផលិតផល</button></li>
-                        <li><button onclick="navigateTo('cart')" class="hover:text-white font-khmer">កន្ត្រក</button></li>
+                    <h4 class="font-bold mb-6 font-khmer text-lg text-white">តំណភ្ជាប់</h4>
+                    <ul class="space-y-3 text-gray-500">
+                        <li><button onclick="navigateTo('home')" class="hover:text-ai-cyan font-khmer transition-colors">ទំព័រដើម</button></li>
+                        <li><button onclick="navigateTo('products')" class="hover:text-ai-cyan font-khmer transition-colors">ផលិតផល</button></li>
+                        <li><button onclick="navigateTo('cart')" class="hover:text-ai-cyan font-khmer transition-colors">កន្ត្រក</button></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-bold mb-6 font-khmer text-lg">វិធីបង់ប្រាក់</h4>
-                    <div class="flex flex-wrap gap-2"><span class="bg-white/10 px-4 py-2 rounded-full text-sm">ABA</span><span class="bg-white/10 px-4 py-2 rounded-full text-sm">ACLEDA</span><span class="bg-white/10 px-4 py-2 rounded-full text-sm">Wing</span><span class="bg-white/10 px-4 py-2 rounded-full text-sm">COD</span></div>
+                    <h4 class="font-bold mb-6 font-khmer text-lg text-white">វិធីបង់ប្រាក់</h4>
+                    <div class="flex flex-wrap gap-2"><span class="bg-white/5 backdrop-blur-xl px-4 py-2 rounded-full text-sm text-gray-400 border border-white/5">ABA</span><span class="bg-white/5 backdrop-blur-xl px-4 py-2 rounded-full text-sm text-gray-400 border border-white/5">ACLEDA</span><span class="bg-white/5 backdrop-blur-xl px-4 py-2 rounded-full text-sm text-gray-400 border border-white/5">Wing</span><span class="bg-white/5 backdrop-blur-xl px-4 py-2 rounded-full text-sm text-gray-400 border border-white/5">COD</span></div>
                 </div>
                 <div>
-                    <h4 class="font-bold mb-6 font-khmer text-lg">ទំនាក់ទំនង</h4>
-                    <ul class="space-y-3 text-gray-400">
-                        <li><i class="fas fa-phone mr-2 text-gold"></i> 0979534762</li>
-                        <li><i class="fas fa-envelope mr-2 text-gold"></i> ctha52130@gmail.com</li>
-                        <li><i class="fas fa-map-marker-alt mr-2 text-gold"></i> ភ្នំពេញ, កម្ពុជា</li>
+                    <h4 class="font-bold mb-6 font-khmer text-lg text-white">ទំនាក់ទំនង</h4>
+                    <ul class="space-y-3 text-gray-500">
+                        <li><i class="fas fa-phone mr-2 text-ai-cyan"></i> 0979534762</li>
+                        <li><i class="fas fa-envelope mr-2 text-ai-cyan"></i> ctha52130@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt mr-2 text-ai-cyan"></i> ភ្នំពេញ, កម្ពុជា</li>
                     </ul>
                     <div class="mt-6">
                         <p class="font-bold mb-3 font-khmer text-white text-sm">ទំនាក់ទំនងមកយើងឥឡូវនេះ</p>
                         <div class="flex flex-wrap gap-3">
-                            <a href="https://facebook.com/yourpage" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full text-sm font-khmer transition-all duration-300 hover:scale-105 shadow-lg"><i class="fab fa-facebook-f"></i><span>Facebook</span></a>
-                            <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 bg-sky-500 hover:bg-sky-600 text-white px-4 py-2 rounded-full text-sm font-khmer transition-all duration-300 hover:scale-105 shadow-lg"><i class="fab fa-telegram-plane"></i><span>Telegram</span></a>
-                            <a href="https://tiktok.com/@yourusername" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 bg-black hover:bg-gray-900 text-white px-4 py-2 rounded-full text-sm font-khmer transition-all duration-300 hover:scale-105 shadow-lg border border-gray-700"><i class="fab fa-tiktok"></i><span>TikTok</span></a>
+                            <a href="https://www.facebook.com/share/1BPJ1qpYyE/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 bg-blue-600/80 backdrop-blur-xl hover:bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-khmer transition-all duration-300 hover:scale-105 shadow-lg border border-blue-500/30"><i class="fab fa-facebook-f"></i><span>Facebook</span></a>
+                            <a href="https://t.me/chantha_khmershop" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 bg-sky-500/80 backdrop-blur-xl hover:bg-sky-500 text-white px-4 py-2 rounded-full text-sm font-khmer transition-all duration-300 hover:scale-105 shadow-lg border border-sky-400/30"><i class="fab fa-telegram-plane"></i><span>Telegram</span></a>
+                            <a href="https://www.tiktok.com/@.cmcmusic?_r=1&_t=ZS-96xIQAbtDWx" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 bg-black/80 backdrop-blur-xl hover:bg-black text-white px-4 py-2 rounded-full text-sm font-khmer transition-all duration-300 hover:scale-105 shadow-lg border border-gray-700"><i class="fab fa-tiktok"></i><span>TikTok</span></a>
                         </div>
                     </div>
                 </div>
             </div>
-            <hr class="border-gray-800 mb-8">
-            <p class="text-center text-gray-500 font-khmer text-sm">&copy; 2024 ខ្មែរសប។ រក្សាសិទ្ធិគ្រប់យ៉ាង។ រចនាដោយក្តីស្រលាញ់ ❤️</p>
+            <hr class="border-white/5 mb-8">
+            <p class="text-center text-gray-600 font-khmer text-sm">&copy; 2026 ខ្មែរសប រក្សាសិទ្ធិគ្រប់យ៉ាង។ រចនាដោយបច្ចេកវិទ្យា </p>
         </div>
     </footer>
 
     <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end space-y-3 no-print">
-        <button id="contactToggle" class="w-14 h-14 bg-gradient-to-br from-secondary to-secondary-light text-white rounded-full shadow-2xl flex items-center justify-center text-2xl hover:scale-110 transition-all duration-300 animate-pulse-glow">
+        <button id="contactToggle" class="w-14 h-14 bg-gradient-to-br from-ai-purple to-ai-blue text-white rounded-full shadow-2xl flex items-center justify-center text-2xl hover:scale-110 transition-all duration-300 animate-pulse-glow shadow-ai-purple/30">
             <i class="fas fa-comments"></i>
         </button>
         <div id="contactLinks" class="hidden flex-col items-end space-y-3 mb-2">
-            <a href="https://facebook.com/yourpage" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-blue-600 text-white rounded-full shadow-lg flex items-center justify-center text-xl hover:scale-110 transition-all duration-300" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-sky-500 text-white rounded-full shadow-lg flex items-center justify-center text-xl hover:scale-110 transition-all duration-300" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
-            <a href="https://tiktok.com/@yourusername" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-black text-white rounded-full shadow-lg flex items-center justify-center text-xl hover:scale-110 transition-all duration-300 border border-gray-700" title="TikTok"><i class="fab fa-tiktok"></i></a>
-            <a href="tel:012345678" class="w-12 h-12 bg-green-500 text-white rounded-full shadow-lg flex items-center justify-center text-xl hover:scale-110 transition-all duration-300" title="ទូរស័ព្ទ"><i class="fas fa-phone"></i></a>
+            <a href="https://www.facebook.com/share/1BPJ1qpYyE/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-blue-600/80 backdrop-blur-xl text-white rounded-full shadow-lg flex items-center justify-center text-xl hover:scale-110 transition-all duration-300 border border-blue-500/30" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://t.me/chantha_khmershop" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-sky-500/80 backdrop-blur-xl text-white rounded-full shadow-lg flex items-center justify-center text-xl hover:scale-110 transition-all duration-300 border border-sky-400/30" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
+            <a href="https://www.tiktok.com/@.cmcmusic?_r=1&_t=ZS-96xIQAbtDWx" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-black/80 backdrop-blur-xl text-white rounded-full shadow-lg flex items-center justify-center text-xl hover:scale-110 transition-all duration-300 border border-gray-700" title="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="tel:0979534762" class="w-12 h-12 bg-green-500/80 backdrop-blur-xl text-white rounded-full shadow-lg flex items-center justify-center text-xl hover:scale-110 transition-all duration-300 border border-green-400/30" title="ទូរស័ព្ទ"><i class="fas fa-phone"></i></a>
         </div>
     </div>
 
@@ -849,15 +1262,15 @@
                     : `<img src="${ad.src}" alt="Ads" class="w-full h-full object-cover pointer-events-none">`;
 
                 return `
-                    <div class="w-full flex-shrink-0 flex flex-col bg-white overflow-hidden">
-                        <div class="relative w-full h-[35vh] sm:h-[45vh] md:h-[50vh] lg:h-[55vh] xl:h-[60vh] overflow-hidden rounded-[24px]">
+                    <div class="w-full flex-shrink-0 flex flex-col bg-transparent overflow-hidden">
+                        <div class="relative w-full h-[35vh] sm:h-[45vh] md:h-[50vh] lg:h-[55vh] xl:h-[60vh] overflow-hidden rounded-[20px] border border-white/5">
                             ${mediaTag}
                         </div>
                         
-                        <div class="w-full py-5 px-2 flex flex-col items-start text-left space-y-2 bg-white">
-                            <span class="inline-block bg-secondary text-white px-3 py-1 rounded-full text-[10px] font-bold font-khmer tracking-wider">PROMOTION</span>
-                            <h2 class="text-xl md:text-2xl font-black text-dark font-khmer leading-tight">${ad.title}</h2>
-                            <p class="text-gray-500 font-khmer text-xs md:text-sm max-w-xl">${ad.desc}</p>
+                        <div class="w-full py-5 px-2 flex flex-col items-start text-left space-y-2">
+                            <span class="inline-block bg-ai-purple/20 text-ai-purple px-3 py-1 rounded-full text-[10px] font-bold font-khmer tracking-wider border border-ai-purple/30">PROMOTION</span>
+                            <h2 class="text-xl md:text-2xl font-black text-white font-khmer leading-tight">${ad.title}</h2>
+                            <p class="text-gray-400 font-khmer text-xs md:text-sm max-w-xl">${ad.desc}</p>
                             <button onclick="navigateTo('${ad.link}')" class="btn-secondary font-khmer text-xs px-4 py-2.5 mt-1 flex items-center gap-2 hover:scale-105 transition-all shadow-md">
                                 <i class="fas fa-shopping-bag"></i> ទិញឥឡូវនេះ
                             </button>
@@ -868,7 +1281,7 @@
 
             // បង្កើត Indicators (ចំណុចអុជៗ)
             indicatorsContainer.innerHTML = ADS_CONFIG.map((_, idx) => `
-                <button onclick="goToSlide(${idx})" class="w-2 h-2 rounded-full bg-black/20 transition-all duration-300" data-index="${idx}"></button>
+                <button onclick="goToSlide(${idx})" class="w-2 h-2 rounded-full bg-white/20 transition-all duration-300" data-index="${idx}"></button>
             `).join('');
 
             let currentSlide = 0;
@@ -889,9 +1302,9 @@
                 const dots = indicatorsContainer.querySelectorAll('button');
                 dots.forEach((dot, idx) => {
                     if (idx === currentSlide) {
-                        dot.className = 'w-5 h-2 rounded-full bg-gradient-to-r from-secondary to-secondary-light transition-all duration-300';
+                        dot.className = 'w-5 h-2 rounded-full bg-gradient-to-r from-ai-purple to-ai-blue transition-all duration-300';
                     } else {
-                        dot.className = 'w-2 h-2 rounded-full bg-black/20 transition-all duration-300';
+                        dot.className = 'w-2 h-2 rounded-full bg-white/20 transition-all duration-300';
                     }
                 });
                 prevTranslate = -currentSlide * container.clientWidth;
@@ -1060,15 +1473,15 @@
             e.classList.add('hidden');
             c.classList.remove('hidden');
             document.getElementById('cartItemsList').innerHTML = cart.map(i => `
-                <div class="bg-white rounded-3xl shadow-sm p-6 flex flex-col sm:flex-row items-center gap-6">
+                <div class="bg-dark/50 backdrop-blur-xl rounded-3xl shadow-sm p-6 flex flex-col sm:flex-row items-center gap-6 border border-white/5">
                     <img src="${i.image_url||'https://via.placeholder.com/120'}" alt="${i.name}" class="w-28 h-28 object-cover rounded-2xl shadow-md" onerror="this.onerror=null;this.src='https://placehold.co/120x120'">
-                    <div class="flex-1"><h4 class="font-bold font-khmer text-lg">${i.name}</h4><p class="text-dark font-bold text-2xl mt-2">${formatCurrency(i.price)}</p></div>
+                    <div class="flex-1"><h4 class="font-bold font-khmer text-lg text-white">${i.name}</h4><p class="text-ai-cyan font-bold text-2xl mt-2">${formatCurrency(i.price)}</p></div>
                     <div class="flex items-center space-x-4">
-                        <button onclick="updateCartQty('${i.id}',${i.quantity-1})" class="w-10 h-10 rounded-xl border-2 border-gray-200 flex items-center justify-center font-bold hover:bg-dark hover:text-white hover:border-dark transition-all">-</button>
-                        <span class="text-lg font-bold">${i.quantity}</span>
-                        <button onclick="updateCartQty('${i.id}',${i.quantity+1})" class="w-10 h-10 rounded-xl border-2 border-gray-200 flex items-center justify-center font-bold hover:bg-dark hover:text-white hover:border-dark transition-all">+</button>
+                        <button onclick="updateCartQty('${i.id}',${i.quantity-1})" class="w-10 h-10 rounded-xl border border-white/10 bg-white/5 flex items-center justify-center font-bold text-white hover:bg-ai-purple hover:border-ai-purple transition-all">-</button>
+                        <span class="text-lg font-bold text-white">${i.quantity}</span>
+                        <button onclick="updateCartQty('${i.id}',${i.quantity+1})" class="w-10 h-10 rounded-xl border border-white/10 bg-white/5 flex items-center justify-center font-bold text-white hover:bg-ai-purple hover:border-ai-purple transition-all">+</button>
                     </div>
-                    <div class="text-right"><p class="font-bold text-2xl">${formatCurrency(i.price*i.quantity)}</p><button onclick="removeFromCart('${i.id}')" class="text-danger text-sm font-khmer mt-2 hover:underline">លុប</button></div>
+                    <div class="text-right"><p class="font-bold text-2xl text-white">${formatCurrency(i.price*i.quantity)}</p><button onclick="removeFromCart('${i.id}')" class="text-red-400 text-sm font-khmer mt-2 hover:underline">លុប</button></div>
                 </div>
             `).join('');
             document.getElementById('cartSubtotal').textContent = formatCurrency(getCartTotal());
@@ -1081,7 +1494,7 @@
             if (!g) return;
             const r = await apiGet({ action: 'getProducts' });
             g.innerHTML = (r.success && r.data) ? r.data.slice(0, 8).map(p => createProductCard(p)).join('') :
-                '<div class="col-span-full text-center py-20 font-khmer text-gray-400 text-lg">មិនមានផលិតផលទេ</div>';
+                '<div class="col-span-full text-center py-20 font-khmer text-gray-500 text-lg">មិនមានផលិតផលទេ</div>';
         }
 
         async function loadAllProducts() {
@@ -1094,33 +1507,61 @@
             if (r.success && r.data) {
                 allProducts = r.data;
                 g.innerHTML = r.data.map(p => createProductCard(p)).join('');
-            } else g.innerHTML = '<div class="col-span-full text-center py-20 font-khmer text-gray-400 text-lg">មិនមានផលិតផលទេ</div>';
+            } else g.innerHTML = '<div class="col-span-full text-center py-20 font-khmer text-gray-500 text-lg">មិនមានផលិតផលទេ</div>';
         }
 
-        function createProductCard(p) {
-            return `
-                <div class="product-card" data-aos="fade-up">
-                    <div class="product-image-wrapper cursor-pointer" onclick="navigateTo('product-detail','${p.id}')">
-                        <img src="${p.image_url||'https://via.placeholder.com/400x500'}" alt="${p.name}" class="product-image" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x500'">
-                        <div class="absolute top-4 left-4 flex flex-col gap-2"><span class="badge-premium">ថ្មី</span><span class="badge-hot">ពេញនិយម</span></div>
-                        <button class="wishlist-btn" onclick="event.stopPropagation(); this.classList.toggle('active');"><i class="far fa-heart"></i></button>
-                        <div class="quick-view-overlay">
-                            <button onclick="event.stopPropagation(); addToCart({id:'${p.id}',name:'${p.name.replace(/'/g,"\\'")}',price:${p.price},image_url:'${p.image_url||''}',category:'${p.category||''}'},1)" class="bg-white text-dark px-6 py-3 rounded-full font-bold font-khmer shadow-xl hover:bg-dark hover:text-white transition-all"><i class="fas fa-shopping-bag mr-2"></i>បន្ថែមចូលកន្ត្រក</button>
-                        </div>
-                    </div>
-                    <div class="p-6 flex-1 flex flex-col justify-between">
-                        <div>
-                            <p class="text-xs text-gray-400 font-khmer mb-2 tracking-wide">${p.category||'ទូទៅ'}</p>
-                            <h3 class="font-bold text-dark font-khmer text-lg cursor-pointer hover:text-secondary transition-colors line-clamp-2" onclick="navigateTo('product-detail','${p.id}')">${p.name}</h3>
-                        </div>
-                        <div class="flex items-center justify-between mt-4">
-                            <span class="text-2xl font-display font-black text-dark">${formatCurrency(p.price)}</span>
-                            <div class="flex text-gold text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                        </div>
-                    </div>
-                </div>`;
-        }
+   function createProductCard(p) {
+    // ការពារការដាច់កូដពេលមានសញ្ញា ' នៅក្នុងឈ្មោះផលិតផល
+    const safeName = p.name ? p.name.replace(/'/g, "\\'") : '';
+    const imageUrl = p.image_url || 'https://placehold.co/400x500';
 
+    return `
+        <div class="product-card group relative bg-slate-900 rounded-2xl overflow-hidden flex flex-col h-full transition-all duration-300 hover:shadow-2xl hover:-translate-y-1" data-aos="fade-up">
+            
+            <div class="product-image-wrapper relative aspect-[4/5] w-full overflow-hidden cursor-pointer bg-slate-800" onclick="navigateTo('product-detail','${p.id}')">
+                <img src="${imageUrl}" alt="${p.name}" class="product-image w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x500'">
+                
+                <div class="absolute top-2 left-2 md:top-4 md:left-4 flex flex-col gap-1 md:gap-2 z-20">
+                    <span class="badge-premium bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-[10px] md:text-xs px-2 py-0.5 md:py-1 rounded-md font-khmer font-medium shadow">ថ្មី</span>
+                    <span class="badge-hot bg-gradient-to-r from-red-500 to-orange-500 text-white text-[10px] md:text-xs px-2 py-0.5 md:py-1 rounded-md font-khmer font-medium shadow">ពេញនិយម</span>
+                </div>
+                
+                <button class="wishlist-btn absolute top-2 right-2 md:top-4 md:right-4 z-20 w-8 h-8 md:w-10 md:h-10 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-white hover:text-red-500 transition-all duration-300" onclick="event.stopPropagation(); this.classList.toggle('active');">
+                    <i class="far fa-heart text-sm md:text-base"></i>
+                </button>
+                
+                <div class="quick-view-overlay hidden md:flex absolute inset-0 bg-black/40 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 items-center justify-center p-4 z-10">
+                    <button onclick="event.stopPropagation(); addToCart({id:'${p.id}',name:'${safeName}',price:${p.price},image_url:'${imageUrl}',category:'${p.category||''}'},1)" class="bg-white text-slate-900 px-5 py-2.5 rounded-full font-bold font-khmer shadow-xl hover:bg-purple-600 hover:text-white transition-all transform translate-y-4 group-hover:translate-y-0 duration-300 text-sm">
+                        <i class="fas fa-shopping-bag mr-2"></i>បន្ថែមចូលកន្ត្រក
+                    </button>
+                </div>
+            </div>
+            
+            <div class="p-3 md:p-5 flex-1 flex flex-col justify-between bg-slate-900/80 backdrop-blur-md relative z-10">
+                <div>
+                    <p class="text-[10px] md:text-xs text-cyan-400 font-khmer mb-1 md:mb-2 tracking-wide uppercase">${p.category || 'ទូទៅ'}</p>
+                    <h3 class="font-bold text-white font-khmer text-sm md:text-lg cursor-pointer hover:text-cyan-400 transition-colors line-clamp-2 min-h-[40px] md:min-h-[56px] leading-snug" onclick="navigateTo('product-detail','${p.id}')">
+                        ${p.name}
+                    </h3>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mt-2 md:mt-4">
+                    <span class="text-lg md:text-2xl font-black text-white">${formatCurrency(p.price)}</span>
+                    
+                    <div class="flex items-center justify-between sm:justify-end gap-2">
+                        <div class="flex text-amber-400 text-xs md:text-sm">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        
+                        <button onclick="event.stopPropagation(); addToCart({id:'${p.id}',name:'${safeName}',price:${p.price},image_url:'${imageUrl}',category:'${p.category||''}'},1)" class="md:hidden bg-purple-600 text-white w-8 h-8 rounded-full flex items-center justify-center shadow-lg active:scale-95 transition-transform">
+                            <i class="fas fa-shopping-bag text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>`;
+}
         async function loadProductDetail(pid) {
             const r = await apiGet({ action: 'getProductById', id: pid });
             if (r.success && r.data) {
@@ -1130,8 +1571,8 @@
                 document.getElementById('detailPrice').textContent = formatCurrency(currentProduct.price);
                 document.getElementById('detailDescription').textContent = currentProduct.description || 'មិនមានការពិពណ៌នា';
                 document.getElementById('detailStock').innerHTML = currentProduct.stock > 0 ?
-                    `<span class="text-success font-khmer font-bold"><i class="fas fa-check-circle"></i> មានក្នុងស្តុក (${currentProduct.stock})</span>` :
-                    `<span class="text-danger font-khmer font-bold"><i class="fas fa-times-circle"></i> អស់ស្តុក</span>`;
+                    `<span class="text-green-400 font-khmer font-bold"><i class="fas fa-check-circle"></i> មានក្នុងស្តុក (${currentProduct.stock})</span>` :
+                    `<span class="text-red-400 font-khmer font-bold"><i class="fas fa-times-circle"></i> អស់ស្តុក</span>`;
                 document.getElementById('detailImage').src = currentProduct.image_url || 'https://via.placeholder.com/500';
                 document.getElementById('detailQty').value = 1;
                 document.getElementById('detailAddToCart').onclick = () => addToCart(currentProduct, parseInt(document.getElementById('detailQty').value));
@@ -1161,7 +1602,7 @@
                 return;
             }
             document.getElementById('checkoutItems').innerHTML = cart.map(i =>
-                `<div class="flex justify-between text-sm"><span class="font-khmer">${i.name} x${i.quantity}</span><span class="font-bold">${formatCurrency(i.price*i.quantity)}</span></div>`
+                `<div class="flex justify-between text-sm"><span class="font-khmer text-gray-400">${i.name} x${i.quantity}</span><span class="font-bold text-white">${formatCurrency(i.price*i.quantity)}</span></div>`
                 ).join('');
             document.getElementById('checkoutTotal').textContent = formatCurrency(getCartTotal());
             document.querySelectorAll('input[name="payment"]').forEach(r => r.addEventListener('change', updateQRCode));
@@ -1242,10 +1683,10 @@
 
         function showAdminSection(s) {
             document.querySelectorAll('.admin-section').forEach(e => e.classList.add('hidden'));
-            document.querySelectorAll('.admin-nav-btn').forEach(b => b.classList.remove('bg-white/10'));
+            document.querySelectorAll('.admin-nav-btn').forEach(b => b.classList.remove('bg-ai-purple/10', 'text-white'));
             document.getElementById(`admin-${s}`).classList.remove('hidden');
             const btn = [...document.querySelectorAll('.admin-nav-btn')].find(b => b.textContent.includes(s === 'dashboard' ? 'ផ្ទាំង' : s === 'products' ? 'ផលិតផល' : 'បញ្ជាទិញ'));
-            if (btn) btn.classList.add('bg-white/10');
+            if (btn) { btn.classList.add('bg-ai-purple/10', 'text-white'); }
             if (s === 'dashboard') loadAdminDashboard();
             if (s === 'products') loadAdminProducts();
             if (s === 'orders') loadAdminOrders();
@@ -1265,8 +1706,8 @@
         async function loadAdminProducts() {
             const r = await apiGet({ action: 'getProducts' });
             document.getElementById('adminProductsTable').innerHTML = r.success && r.data ? r.data.map(p =>
-                `<tr class="border-b hover:bg-gray-50"><td class="p-5 font-khmer font-bold">${p.name}</td><td class="p-5">${p.category||'ទូទៅ'}</td><td class="p-5 font-bold">${formatCurrency(p.price)}</td><td class="p-5">${p.stock||0}</td><td class="p-5"><button onclick="editAdminProduct('${p.id}')" class="text-blue-600 mr-4"><i class="fas fa-edit"></i></button><button onclick="deleteAdminProduct('${p.id}')" class="text-red-600"><i class="fas fa-trash"></i></button></td></tr>`
-                ).join('') : '<tr><td colspan="5" class="text-center p-8 font-khmer text-gray-400">មិនមានផលិតផល</td></tr>';
+                `<tr class="border-b border-white/5 hover:bg-white/5"><td class="p-5 font-khmer font-bold">${p.name}</td><td class="p-5 text-gray-400">${p.category||'ទូទៅ'}</td><td class="p-5 font-bold text-ai-cyan">${formatCurrency(p.price)}</td><td class="p-5 text-gray-400">${p.stock||0}</td><td class="p-5"><button onclick="editAdminProduct('${p.id}')" class="text-ai-cyan mr-4 hover:text-ai-purple transition-colors"><i class="fas fa-edit"></i></button><button onclick="deleteAdminProduct('${p.id}')" class="text-red-400 hover:text-red-300 transition-colors"><i class="fas fa-trash"></i></button></td></tr>`
+                ).join('') : '<tr><td colspan="5" class="text-center p-8 font-khmer text-gray-500">មិនមានផលិតផល</td></tr>';
         }
 
         function showAddProductForm() {
@@ -1330,14 +1771,14 @@
             const r = await apiGet({ action: 'getOrders', api_key: CONFIG.API_KEY });
             const st = { pending: 'កំពុងរង់ចាំ', confirmed: 'បានបញ្ជាក់', processing: 'កំពុងដំណើរការ', shipping: 'កំពុងដឹក', delivered: 'បានទទួល', cancelled: 'បោះបង់' };
             document.getElementById('adminOrdersTable').innerHTML = r.success && r.data ? r.data.map(o =>
-                `<tr class="border-b hover:bg-gray-50"><td class="p-5 font-mono text-sm">${o.order_id}</td><td class="p-5 font-khmer font-bold">${o.customer_name}</td><td class="p-5">${o.phone}</td><td class="p-5 font-bold">${formatCurrency(o.total_amount)}</td><td class="p-5"><span class="px-3 py-1.5 rounded-full text-xs bg-yellow-100 text-yellow-800 font-khmer font-bold">${st[o.order_status]||o.order_status}</span></td><td class="p-5 text-sm">${new Date(o.created_at).toLocaleDateString('km-KH')}</td></tr>`
-                ).join('') : '<tr><td colspan="6" class="text-center p-10 font-khmer text-gray-400">មិនមានការបញ្ជាទិញទេ</td></tr>';
+                `<tr class="border-b border-white/5 hover:bg-white/5"><td class="p-5 font-mono text-sm text-ai-cyan">${o.order_id}</td><td class="p-5 font-khmer font-bold">${o.customer_name}</td><td class="p-5 text-gray-400">${o.phone}</td><td class="p-5 font-bold text-white">${formatCurrency(o.total_amount)}</td><td class="p-5"><span class="px-3 py-1.5 rounded-full text-xs bg-yellow-500/20 text-yellow-400 font-khmer font-bold border border-yellow-500/30">${st[o.order_status]||o.order_status}</span></td><td class="p-5 text-sm text-gray-400">${new Date(o.created_at).toLocaleDateString('km-KH')}</td></tr>`
+                ).join('') : '<tr><td colspan="6" class="text-center p-10 font-khmer text-gray-500">មិនមានការបញ្ជាទិញទេ</td></tr>';
         }
 
         // ==================== INIT ====================
         document.addEventListener('DOMContentLoaded', () => {
             updateCartCount();
-            initAdsSlider(); // ដំណើរការប្រព័ន្ធ Ads Slider ពេលវេបសាយដើរ
+            initAdsSlider();
             loadFeaturedProducts();
             document.getElementById('mainSearch')?.addEventListener('keypress', e => {
                 if (e.key === 'Enter') searchProducts();
