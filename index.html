@@ -798,6 +798,217 @@
                 </div>
             </div>
         </div>
+        <div id="page-about" class="page" style="background-color: #0a0a1a; color: #fff; font-family: 'Kanthar', 'Koh Santepheap', sans-serif;">
+    
+    <!-- CSS Styles សម្រាប់បង្កើនភាពរស់រវើក (លោត និងភ្លឺពេលកណ្តុរដៅចំ) -->
+    <style>
+        .about-glass {
+            background: rgba(255, 255, 255, 0.03) !important;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05) !important;
+            border-radius: 20px;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        .about-glass:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.06) !important;
+            border-color: rgba(100, 210, 255, 0.3) !important;
+            box-shadow: 0 15px 35px rgba(100, 210, 255, 0.15);
+        }
+        .about-stat:hover {
+            border-color: rgba(48, 209, 88, 0.3) !important;
+            box-shadow: 0 15px 35px rgba(48, 209, 88, 0.15);
+        }
+        .about-team-card img {
+            transition: transform 0.4s ease, border-color 0.4s ease;
+        }
+        .about-team-card:hover img {
+            transform: scale(1.1) rotate(3deg);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+        }
+        .about-socials a {
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+        }
+        .about-socials a:hover {
+            transform: scale(1.05);
+            opacity: 0.8;
+        }
+        .about-cta-btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(10, 132, 255, 0.6) !important;
+        }
+        /* ស្ទីលសម្រាប់បន្ទាត់ Timeline ឱ្យមើលទៅស្អាត */
+        .about-timeline-item {
+            position: relative;
+            margin-bottom: 25px;
+        }
+    </style>
+
+    <!-- About Hero Section -->
+    <section class="about-hero" style="position: relative; overflow: hidden; padding: 120px 20px; text-align: center; background: radial-gradient(circle at top, rgba(100,210,255,0.1) 0%, rgba(10,10,26,0) 70%);">
+        <div class="about-hero-content" data-aos="zoom-out">
+            <h1 style="font-size: 3.5rem; font-weight: 800; margin-bottom: 25px; background: linear-gradient(45deg, #64d2ff, #bf5af2, #ff6b8a); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 1px;">អំពី KHMERSHOP</h1>
+            <p style="font-size: 1.25rem; max-width: 800px; margin: 0 auto; line-height: 1.9; color: #d0d0e0; font-weight: 300;">
+                វេទិកាលក់ទំនិញអនឡាញសម្រាប់ប្រជាជនកម្ពុជា។ យើងភ្ជាប់អ្នកលក់ និងអ្នកទិញឱ្យជួបគ្នាបានយ៉ាងងាយស្រួល ប្រកបដោយសុវត្ថិភាព និងទំនុកចិត្ត។
+            </p>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="section" style="padding: 60px 0;">
+        <div class="container">
+            <h2 class="about-section-title" style="text-align: center; margin-bottom: 40px; font-weight: 700; font-size: 2rem;"><i class="fas fa-bullseye" style="color: #ff453a; margin-right: 12px; filter: drop-shadow(0 0 8px rgba(255,69,58,0.4));"></i>បេសកកម្មរបស់យើង</h2>
+            <div class="about-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; padding: 0 20px;">
+                <div class="about-glass" data-aos="fade-up" style="padding: 25px;">
+                    <h3 style="color: #64d2ff; margin-bottom: 12px; font-size: 1.3rem; font-weight: 600;"><i class="fas fa-bolt" style="color: #ffd60a; margin-right: 8px;"></i> ល្បឿន</h3>
+                    <p style="color: #b0b0c0; line-height: 1.6;">ធ្វើឱ្យការទិញ និងលក់មានភាពរហ័ស ងាយស្រួល និងមានប្រសិទ្ធភាពខ្ពស់បំផុត។</p>
+                </div>
+                <div class="about-glass" data-aos="fade-up" data-aos-delay="100" style="padding: 25px;">
+                    <h3 style="color: #64d2ff; margin-bottom: 12px; font-size: 1.3rem; font-weight: 600;"><i class="fas fa-shield-alt" style="color: #30d158; margin-right: 8px;"></i> ទំនុកចិត្ត</h3>
+                    <p style="color: #b0b0c0; line-height: 1.6;">ផ្តល់សេវាកម្មដែលមានសុវត្ថិភាព និងអាចទុកចិត្តបានបំផុត។</p>
+                </div>
+                <div class="about-glass" data-aos="fade-up" data-aos-delay="200" style="padding: 25px;">
+                    <h3 style="color: #64d2ff; margin-bottom: 12px; font-size: 1.3rem; font-weight: 600;"><i class="fas fa-ribbon" style="color: #bf5af2; margin-right: 8px;"></i> គុណភាព</h3>
+                    <p style="color: #b0b0c0; line-height: 1.6;">ប្រមូលផ្តុំផលិតផលដែលមានគុណភាពខ្ពស់ និងតម្លៃសមរម្យ។</p>
+                </div>
+                <div class="about-glass" data-aos="fade-up" data-aos-delay="300" style="padding: 25px;">
+                    <h3 style="color: #64d2ff; margin-bottom: 12px; font-size: 1.3rem; font-weight: 600;"><i class="fas fa-rocket" style="color: #ff9f0a; margin-right: 8px;"></i> អនាគតឌីជីថល</h3>
+                    <p style="color: #b0b0c0; line-height: 1.6;">ជួយជម្រុញអាជីវកម្មកម្ពុជាឱ្យឈានចូលទៅកាន់ពិភព E-Commerce។</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="section" style="padding: 60px 0;">
+        <div class="container">
+            <h2 class="about-section-title" style="text-align: center; margin-bottom: 40px; font-weight: 700; font-size: 2rem;"><i class="fas fa-chart-line" style="color: #30d158; margin-right: 12px; filter: drop-shadow(0 0 8px rgba(48,209,88,0.4));"></i>KHMERSHOP ក្នុងតួលេខ</h2>
+            <div class="about-stats" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 25px; padding: 0 20px;">
+                <div class="about-glass about-stat" data-aos="zoom-in" style="padding: 30px 20px; text-align: center;">
+                    <i class="fas fa-users" style="font-size: 2.2rem; color: #64d2ff; margin-bottom: 15px; filter: drop-shadow(0 0 10px rgba(100,210,255,0.3));"></i>
+                    <h2 style="font-size: 2.8rem; font-weight: bold; color: #fff; margin: 5px 0;">10K+</h2>
+                    <p style="color: #b0b0c0; font-size: 1rem; margin: 0;">អតិថិជន</p>
+                </div>
+                <div class="about-glass about-stat" data-aos="zoom-in" data-aos-delay="100" style="padding: 30px 20px; text-align: center;">
+                    <i class="fas fa-box-open" style="font-size: 2.2rem; color: #ff9f0a; margin-bottom: 15px; filter: drop-shadow(0 0 10px rgba(255,159,10,0.3));"></i>
+                    <h2 style="font-size: 2.8rem; font-weight: bold; color: #fff; margin: 5px 0;">5K+</h2>
+                    <p style="color: #b0b0c0; font-size: 1rem; margin: 0;">ផលិតផល</p>
+                </div>
+                <div class="about-glass about-stat" data-aos="zoom-in" data-aos-delay="200" style="padding: 30px 20px; text-align: center;">
+                    <i class="fas fa-store" style="font-size: 2.2rem; color: #bf5af2; margin-bottom: 15px; filter: drop-shadow(0 0 10px rgba(191,90,242,0.3));"></i>
+                    <h2 style="font-size: 2.8rem; font-weight: bold; color: #fff; margin: 5px 0;">500+</h2>
+                    <p style="color: #b0b0c0; font-size: 1rem; margin: 0;">ហាងដៃគូ</p>
+                </div>
+                <div class="about-glass about-stat" data-aos="zoom-in" data-aos-delay="300" style="padding: 30px 20px; text-align: center;">
+                    <i class="fas fa-headset" style="font-size: 2.2rem; color: #30d158; margin-bottom: 15px; filter: drop-shadow(0 0 10px rgba(48,209,88,0.3));"></i>
+                    <h2 style="font-size: 2.8rem; font-weight: bold; color: #fff; margin: 5px 0;">24/7</h2>
+                    <p style="color: #b0b0c0; font-size: 1rem; margin: 0;">គាំទ្រអតិថិជន</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="section" style="padding: 60px 0;">
+        <div class="container">
+            <h2 class="about-section-title" style="text-align: center; margin-bottom: 40px; font-weight: 700; font-size: 2rem;"><i class="fas fa-history" style="color: #ff9f0a; margin-right: 12px; filter: drop-shadow(0 0 8px rgba(255,159,10,0.4));"></i>ដំណើររបស់យើង</h2>
+            <div class="about-timeline" style="max-width: 800px; margin: 0 auto; padding: 0 20px;">
+                <div class="about-timeline-item" data-aos="fade-right">
+                    <div class="about-glass" style="padding: 20px 25px;">
+                        <h3 style="color: #ff9f0a; font-weight: bold; font-size: 1.4rem; margin-bottom: 8px;"><i class="fas fa-lightbulb" style="margin-right: 8px;"></i> 2025</h3>
+                        <p style="color: #e0e0e0; margin: 0;">ចាប់ផ្តើមគម្រោង KHMERSHOP</p>
+                    </div>
+                </div>
+                <div class="about-timeline-item" data-aos="fade-left">
+                    <div class="about-glass" style="padding: 20px 25px;">
+                        <h3 style="color: #64d2ff; font-weight: bold; font-size: 1.4rem; margin-bottom: 8px;"><i class="fas fa-code" style="margin-right: 8px;"></i> 2026</h3>
+                        <p style="color: #e0e0e0; margin: 0;">បើកដំណើរការវេទិកា E-Commerce Version 1.0</p>
+                    </div>
+                </div>
+                <div class="about-timeline-item" data-aos="fade-right">
+                    <div class="about-glass" style="padding: 20px 25px;">
+                        <h3 style="color: #bf5af2; font-weight: bold; font-size: 1.4rem; margin-bottom: 8px;"><i class="fas fa-mobile-alt" style="margin-right: 8px;"></i> 2028</h3>
+                        <p style="color: #e0e0e0; margin: 0;">បន្ថែម Marketplace និង Mobile App</p>
+                    </div>
+                </div>
+                <div class="about-timeline-item" data-aos="fade-left">
+                    <div class="about-glass" style="padding: 20px 25px;">
+                        <h3 style="color: #30d158; font-weight: bold; font-size: 1.4rem; margin-bottom: 8px;"><i class="fas fa-globe-asia" style="margin-right: 8px;"></i> 2030</h3>
+                        <p style="color: #e0e0e0; margin: 0;">ពង្រីកសេវាកម្មទូទាំងប្រទេស</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Section -->
+    <section class="section" style="padding: 60px 0;">
+        <div class="container" style="max-width: 900px; margin: 0 auto; padding: 0 20px;">
+            <h2 class="about-section-title" style="text-align: center; margin-bottom: 40px; font-weight: 700; font-size: 2rem;"><i class="fas fa-user-tie" style="color: #64d2ff; margin-right: 12px; filter: drop-shadow(0 0 8px rgba(100,210,255,0.4));"></i>ស្ថាបនិក</h2>
+            <div class="about-glass about-founder-box" data-aos="fade-up" style="display: flex; flex-wrap: wrap; align-items: center; gap: 35px; padding: 40px; border-left: 4px solid #64d2ff !important;">
+                <div style="flex: 1; min-width: 200px; text-align: center;">
+                    <img src="images/founder.jpg" class="about-founder-img" alt="Founder" onerror="this.onerror=null;this.src='https://placehold.co/200x200/0a0a1a/64d2ff?text=CEO';" style="border-radius: 50%; width: 180px; height: 180px; object-fit: cover; border: 3px solid #64d2ff; box-shadow: 0 0 25px rgba(100,210,255,0.3); transition: transform 0.3s ease;">
+                </div>
+                <div style="flex: 2; min-width: 280px;">
+                    <h2 style="color: #fff; font-size: 2rem; font-weight: 700; margin: 0 0 5px 0;">Chantha</h2>
+                    <h4 style="color: #64d2ff; margin: 0 0 15px 0; font-weight: 500; font-size: 1.1rem; letter-spacing: 0.5px;">Founder & CEO of KHMERSHOP</h4>
+                    <p style="color: #b0b0c0; line-height: 1.8; margin-bottom: 25px; font-size: 1.05rem;">ខ្ញុំបានបង្កើត KHMERSHOP ដើម្បីជួយអាជីវកម្មខ្នាតតូច និងមធ្យម នៅកម្ពុជា ឱ្យអាចលក់ទំនិញអនឡាញបានយ៉ាងងាយស្រួល និងមានប្រសិទ្ធភាព។</p>
+                    <div class="about-socials" style="gap: 20px; display: flex;">
+                        <a href="https://www.facebook.com/share/1EcFEfgQ5u/" target="_blank" rel="noopener noreferrer" style="color: #1877f2; font-size: 0.95rem;"><i class="fab fa-facebook-f" style="margin-right: 8px; font-size: 1.1rem;"></i> Facebook</a>
+                        <a href="https://t.me/chantha_khmershop" target="_blank" rel="noopener noreferrer" style="color: #0088cc; font-size: 0.95rem;"><i class="fab fa-telegram-plane" style="margin-right: 8px; font-size: 1.1rem;"></i> Telegram</a>
+                        <a href="#" style="color: #0a66c2; font-size: 0.95rem;"><i class="fab fa-linkedin-in" style="margin-right: 8px; font-size: 1.1rem;"></i> LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="section" style="padding: 60px 0;">
+        <div class="container" style="max-width: 900px; margin: 0 auto; padding: 0 20px;">
+            <h2 class="about-section-title" style="text-align: center; margin-bottom: 40px; font-weight: 700; font-size: 2rem;"><i class="fab fa-youtube" style="color: #ff3b30; margin-right: 12px; filter: drop-shadow(0 0 8px rgba(255,59,48,0.4));"></i>ស្វែងយល់អំពី KHMERSHOP</h2>
+            <div class="about-glass" style="padding: 15px; box-shadow: 0 20px 40px rgba(0,0,0,0.4);">
+                <iframe width="100%" height="500" src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen style="border:none; border-radius: 16px; display: block;"></iframe>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Info Section -->
+    <section class="section" style="padding: 60px 0;">
+        <div class="container">
+            <h2 class="about-section-title" style="text-align: center; margin-bottom: 40px; font-weight: 700; font-size: 2rem;"><i class="fas fa-envelope-open-text" style="color: #64d2ff; margin-right: 12px; filter: drop-shadow(0 0 8px rgba(100,210,255,0.4));"></i>ទាក់ទងមកយើង</h2>
+            <div class="about-glass about-contact-info" style="max-width: 600px; margin: auto; line-height: 2.2; padding: 35px; border-top: 4px solid #64d2ff !important;">
+                <p style="margin: 0 0 12px 0; display: flex; align-items: center; font-size: 1.05rem;"><i class="fas fa-map-marker-alt" style="color: #ff453a; width: 30px; font-size: 1.2rem;"></i> <strong style="margin-right: 8px;">ទីតាំង:</strong> Phnom Penh, Cambodia</p>
+                <p style="margin: 0 0 12px 0; display: flex; align-items: center; font-size: 1.05rem;"><i class="fas fa-phone-alt" style="color: #30d158; width: 30px; font-size: 1.1rem;"></i> <strong style="margin-right: 8px;">ទូរស័ព្ទ:</strong> +855 97 953 4762</p>
+                <p style="margin: 0 0 12px 0; display: flex; align-items: center; font-size: 1.05rem;"><i class="fas fa-envelope" style="color: #ff9f0a; width: 30px; font-size: 1.1rem;"></i> <strong style="margin-right: 8px;">អ៊ីមែល:</strong> ctha52130@gmail.com</p>
+                <p style="margin: 0; display: flex; align-items: center; font-size: 1.05rem;"><i class="fas fa-globe" style="color: #64d2ff; width: 30px; font-size: 1.1rem;"></i> <strong style="margin-right: 8px;">គេហទំព័រ:</strong> <a href="https://khmershop.store" target="_blank" style="color: #64d2ff; text-decoration: none; font-weight: 600; border-bottom: 1px dashed rgba(100,210,255,0.5);">www.khmershop.store</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="section" style="padding: 60px 0;">
+        <div class="container" style="max-width: 900px; margin: 0 auto; padding: 0 20px;">
+            <h2 class="about-section-title" style="text-align: center; margin-bottom: 40px; font-weight: 700; font-size: 2rem;"><i class="fas fa-map-marked-alt" style="color: #ff453a; margin-right: 12px; filter: drop-shadow(0 0 8px rgba(255,69,58,0.4));"></i>ទីតាំងរបស់យើង</h2>
+            <div class="about-glass" style="padding: 15px; box-shadow: 0 20px 40px rgba(0,0,0,0.4);">
+                <iframe src="https://www.google.com/maps/place/11%C2%B004'03.2%22N+106%C2%B008'58.2%22E/@11.0677303,106.1488037,231m/data=!3m1!1e3!4m4!3m3!8m2!3d11.0675636!4d106.1495111?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D" width="100%" height="450" style="border:0; border-radius: 16px; display: block;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section style="text-align: center; padding: 120px 20px; background: linear-gradient(180deg, rgba(10,10,26,0) 0%, rgba(100,210,255,0.03) 100%); position: relative; overflow: hidden;">
+        <h2 style="margin-bottom: 30px; color: #fff; font-size: 2.5rem; font-weight: 700; letter-spacing: 0.5px;">ចាប់ផ្តើមទិញទំនិញជាមួយ KHMERSHOP</h2>
+        <button onclick="navigateTo('products')" class="about-cta-btn" style="padding: 16px 45px; font-size: 1.15rem; font-weight: bold; border-radius: 50px; background: linear-gradient(45deg, #64d2ff, #0a84ff); color: white; border: none; cursor: pointer; box-shadow: 0 6px 25px rgba(10,132,255,0.3); transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);">
+            ចូលទិញឥឡូវនេះ <i class="fas fa-arrow-right" style="margin-left: 10px; font-size: 1rem;"></i>
+        </button>
+    </section>
+</div>
 
         <div id="page-product-detail" class="page">
             <div class="container mx-auto px-6 py-16">
